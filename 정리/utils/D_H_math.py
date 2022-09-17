@@ -26,7 +26,13 @@ def monte_carlo_paths(S_0,time_to_expiry,sigma,drift,seed,n_sims,\
     # 몬테카를로 구현?
     S_T = S * np.cumprod(np.exp((r-sigma**2/2)*dt+sigma*np.sqrt(dt)*\
         stdnorm_random_variates),axis=1)
-     
+    #print(S_T.shape) # (5000,30)
+    #print(np.c_[np.ones(n_sims)*S_0,S_T])
+    #print(np.c_[np.ones(n_sims)*S_0,S_T].shape) #(5000,31)
+    #print(np.transpose(np.c_[np.ones(n_sims)*S_0,S_T]))
+    #print(np.transpose(np.c_[np.ones(n_sims)*S_0,S_T]).shape) # (31,5000)
+
     # 전치행렬 이해
     return np.reshape(np.transpose(np.c_[np.ones(n_sims)*S_0,S_T]),\
         (n_timesteps+1,n_sims,1))
+    
