@@ -2,6 +2,7 @@
 import tensorflow._api.v2.compat.v1 as tf # tf 1버전으로 진행
 import numpy as np
 import datetime as dt
+#from IPython.core.debugger import set_trace
 
 class Agent(object):
     ### cVAR : 손실 금액이 VaR를 넘어섰을 때 기대되는 평균적인 손실 규모
@@ -12,7 +13,7 @@ class Agent(object):
         self.batch_size = batch_size # 배치의 옵션 수
         self.S_t_input = tf.placeholder(tf.float32,[time_steps,batch_size,\
             features]) # 스팟
-        self.k = tf.placeholder(tf.float32,batch_size) # 행사가
+        self.K = tf.placeholder(tf.float32,batch_size) # 행사가
         self.alpha = tf.placeholder(tf.float32) # cVAR를 위한 알파
 
         S_T = self.S_t_input[-1,:,0] # T에서의 스팟
@@ -33,7 +34,7 @@ class Agent(object):
         # 전략 텐서는 모든 셀의 출력을 보유함.
         self.strategy, state = tf.nn.static_rnn(lstm,S_t,initial_state=\
             lstm.zero_state(batch_size,tf.float32),dtype=tf.float32)
-        self.strategy = tf.reshape(self.strategy, (time_steps-1), batch_size)
+        self.strategy = tf.reshape(self.strategy, (time_steps-1, batch_size))
 
         # 4. 옵션 가격
         self.option = tf.maximum(S_T - self.K, 0)
