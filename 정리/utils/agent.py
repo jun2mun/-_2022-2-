@@ -83,6 +83,7 @@ class Agent(object):
                         self.K : strikes[indices],\
                         self.alpha : riskaversion})
                         # 5: 평가 및 비훈련
+                                                                               
                 else:
                     pnl, strategy = sess.run([self.Hedging_PnL, self.strategy],\
                         {self.S_t_input: batch,\
@@ -100,9 +101,10 @@ class Agent(object):
                     print('Epoch',epoch,'CVaR',CVaR)
                     #Saving the model 모델 저장
                     self.saver.save(sess,"model.ckpt")
-                
-                    # 8: CVaR 및 기타 매개변수 변환
-                    return CVaR, np.concatenate(pnls), np.concatenate(strategies,axis=1)
+                    
+        self.saver.save(sess, "model.ckpt")    
+        # 8: CVaR 및 기타 매개변수 변환
+        return CVaR, np.concatenate(pnls), np.concatenate(strategies,axis=1)
 
     # session input variable -> sess로 내가 임의 수정
     def training(self,paths,strikes,riskaversion,epochs,sess, init=True):
@@ -111,10 +113,12 @@ class Agent(object):
             # session
         self._execute_graph_batchwise(paths,strikes,riskaversion, sess,\
             epochs, train_flag=True)
-    
-    def predict(self,paths,strikes,riskaversion,session):
-        return self._execute_graph_batchwise(paths,strikes,riskaversion,\
-            session,1,train_flag=False)
-    
-    def restore(self,sess,checkpoint):
-        self.saver.restore(sess,checkpoint)
+
+    def predict(self, paths, strikes, riskaversion, session):
+        return self._execute_graph_batchwise(paths, strikes, riskaversion,session, 1, train_flag=False)
+
+
+    def restore(self,session,checkpoint):
+        self.saver.restore(session,checkpoint)
+
+

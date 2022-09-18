@@ -1,5 +1,7 @@
 from tkinter import N
 import numpy as np
+import scipy.stats as stats
+
 
 def monte_carlo_paths(S_0,time_to_expiry,sigma,drift,seed,n_sims,\
     n_timesteps):
@@ -35,4 +37,21 @@ def monte_carlo_paths(S_0,time_to_expiry,sigma,drift,seed,n_sims,\
     # 전치행렬 이해
     return np.reshape(np.transpose(np.c_[np.ones(n_sims)*S_0,S_T]),\
         (n_timesteps+1,n_sims,1))
-    
+
+
+### 도우미 함수 ###
+def BS_d1(S, dt, r, sigma, K):
+    return (np.log(S/K) + (r+sigma**2/2)*dt) / (sigma*np.sqrt(dt))
+
+def BlackScholes_price(S,T,r,sigma,K,t=0):
+    dt = T-t
+    Phi = stats.norm(loc=0,scale=1).cdf
+    d1 = BS_d1(S,dt,r,sigma,K)
+    d2 = d1 - sigma*np.sqrt(dt)
+    return S*Phi(d1) - K*np.exp(-r*dt)*Phi(d2)
+
+def BS_delta(S,T,r,sigma,K, t=0):
+    dt = T-t
+    d1 = BS_d1(S,dt,r,sigma,K)
+    Phi = stats.norm(loc=0,scale=1).cdf
+    return Phi(d1)
