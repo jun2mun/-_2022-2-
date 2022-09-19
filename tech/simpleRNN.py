@@ -20,7 +20,7 @@ model = Sequential([
 
 model.compile(optimizer='adam',loss='mse')
 model.summary()
-'''
+
 
 model = Sequential()
 model.add(layers.Embedding(input_dim=1000,output_dim=64))
@@ -34,6 +34,7 @@ model.add(layers.GRU(256,return_sequences=True))
 model.add(layers.SimpleRNN(128))
 model.add(layers.Dense(10))
 model.summary()
+'''
 
 encoder_vocab = 1000
 decoder_vocab = 2000
@@ -48,3 +49,14 @@ output, state_h, state_c = layers.LSTM(64,return_state=True,name="encoder")(
 encoder_state = [state_h,state_c]
 
 decoder_input = layers.Input(shape=(None,))
+decoder_embedded = layers.Embedding(input_dim=decoder_vocab,output_dim=64)(
+    decoder_input
+)
+
+decoder_output = layers.LSTM(64, name="decoder")(
+    decoder_embedded, initial_state=encoder_state
+)
+output = layers.Dense(10)(decoder_output)
+
+model = keras.Model([encoder_input,decoder_input],output)
+model.summary()

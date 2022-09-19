@@ -1,1 +1,7 @@
 데이터분석캡스톤 2022-2학기
+
+keras 모델 설계
+
+1. Sequential()
+
+2. keras.models.Model() -> multi input / multi output
