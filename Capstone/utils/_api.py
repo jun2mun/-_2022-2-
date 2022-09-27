@@ -30,7 +30,7 @@ def FinanceData_api(STOCK_CODE='005930'):
     stock = fdr.DataReader(STOCK_CODE)
     print(stock.head())
 
-def pandas_datareader_api():
+def pandas_datareader_api_v1():
     import pandas_datareader.data as web
     from datetime import datetime, date
     import numpy as np
@@ -55,3 +55,20 @@ def pandas_datareader_api():
     df = web.DataReader(stock, 'yahoo', one_year_ago, today)
 
     print(df.head())
+
+def pandas_datareader_api_v2():
+    import yfinance as yf
+    """
+    API 호출 시
+                    Open     High      Low    Close     Adj Close    Volume
+                    (시가) (고가)     (저가)  (종가)     (조정 종가)  (거래량)
+    Date
+    2020-01-02  55500.0  56000.0  55000.0  55200.0  51244.253906  12993228
+    2020-01-03  56000.0  56600.0  54900.0  55500.0  51522.757812  15422255
+    2020-01-06  54900.0  55600.0  54600.0  55500.0  51522.757812  10278951
+    2020-01-07  55700.0  56400.0  55600.0  55800.0  51801.257812  10009778
+    2020-01-08  56200.0  57400.0  55900.0  56800.0  52729.589844  23501171
+    """
+    STOCK = yf.Ticker('AAPL')
+    DF_calls, DF_puts = STOCK.option_chain(STOCK.options[0]) # returns 2 DataFrames
+    print(DF_calls,DF_puts)
