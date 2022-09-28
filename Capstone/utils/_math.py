@@ -106,7 +106,7 @@ class BsOption:
         else:
             raise ValueError('Unrecognized type')
 
-
+'''
 import math
 
 def combos(n, i):  # 조합
@@ -118,3 +118,48 @@ for k in range(n+1):
     fair_value += combos(n,k)*0.5**k*0.5**(n-k) * k
 
 print(fair_value)
+
+
+'''
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+r = 0.0
+sig = 0.2
+T = 30/365
+
+M = 100
+N = 30
+
+dt = T / N
+rdt = r * dt
+sigsdt = sig * np.sqrt(dt)
+
+
+S0 = 100
+np.random.seed(20220617)
+S = np.empty((M,N+1))
+rv = np.random.normal(r*dt,sigsdt,[M,N])
+
+for i in range(M):
+    S[i,0] = S0
+    for j in range(N):
+        S[i,j+1] = S[i,j] * (1 + rv[i,j])
+
+m = 0
+#for j in range(N+1):
+    #print(S[m,j])
+
+S_avg = []
+Asian_payoff = []
+
+K = 100
+
+for i in range(M):
+    S_avg.append(np.mean(S[i,:]))
+    Asian_payoff.append(np.maximum(S_avg[i] - K,0)) # 0보다 큰 애들만 남김
+    #print(Asian_payoff[i])
+
+
+print(np.mean(Asian_payoff) * np.exp(-r*T))
