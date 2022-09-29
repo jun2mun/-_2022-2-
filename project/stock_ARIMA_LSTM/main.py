@@ -139,6 +139,9 @@ def preprocessing_LSTM():
     samsung_scaled = rb.fit_transform(samsung_df[['price']])
     samsung_df['price'] = samsung_scaled
 
+    print(samsung_df)
+
+
     # train, test set 분리
     test_size = 100 # data split size
     train_data = samsung_df[:-test_size]

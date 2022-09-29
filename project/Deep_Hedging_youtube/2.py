@@ -28,7 +28,7 @@ def init():
         S[i,0] = S0
         for j in range(N):
             S[i,j+1] = S[i,j] * (1+rv[i,j])
-
+init()
 def first():
     a = []
     K = 100
