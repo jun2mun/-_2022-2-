@@ -1,4 +1,5 @@
 from ast import Mult
+from matplotlib.lines import lineStyles
 from sklearn.preprocessing import RobustScaler
 from utils.BlackScholes import BlackScholes
 from utils._api import yahoo_api, pandas_datareader_api_v1
@@ -198,7 +199,7 @@ if __name__ == '__main__':
     # 돈이 들어왔다 나갔다 반복해서 14일후 결과 값이 나온다.
     '''
     ######################################
-    '''
+
     import tensorflow as tf
     print("텐서플로우 버전 :",tf.__version__)
     #from tensorflow.keras.layers import Input,Dense,Add,Subtract,Multiply,Dropout
@@ -218,11 +219,11 @@ if __name__ == '__main__':
     for j in range(N):
         
         delta = tf.keras.layers.Dense(32, activation='tanh')(price)
-        delta = tf.keras.layers.BatchNormalization()(delta)
-        delta = tf.keras.layers.Dense(32, activation='tanh')(delta)
-        delta = tf.keras.layers.Dropout(0.5)(delta)
         #delta = tf.keras.layers.BatchNormalization()(delta)
-        delta = tf.keras.layers.Dense(32, activation='tanh')(delta)
+        #delta = tf.keras.layers.Dense(32, activation='tanh')(delta)
+        #delta = tf.keras.layers.Dropout(0.5)(delta)
+        #delta = tf.keras.layers.BatchNormalization()(delta)
+        #delta = tf.keras.layers.Dense(32, activation='tanh')(delta)
         delta = tf.keras.layers.Dense(1)(delta)
 
         new_price = tf.keras.layers.Input(shape=(1,), name='S'+str(j))
@@ -234,7 +235,9 @@ if __name__ == '__main__':
         hedge_cost = tf.keras.layers.Add(name='cost_'+str(j))([hedge_cost, cost])
         price = new_price
 
-    cum_cost = hedge_cost
+    payoff = tf.keras.layers.Lambda(lambda x : tf.math.maximum(x-K,0), name='payoff')(price)
+    cum_cost = tf.keras.layers.Add(name="hedge_cost_plus_payoff")([hedge_cost, payoff])
+    cum_cost = tf.keras.layers.Subtract(name="cum_cost-premium")([cum_cost, premium])
 
     #my_input = np.array(my_input)
     model = tf.keras.Model(inputs=my_input, outputs=cum_cost)
@@ -246,13 +249,13 @@ if __name__ == '__main__':
     y_list = []
     SS_list = []
     ## SS 변화하는 주식 가격
-    for index,value in y_test.iteritems():
+    for index,value in y_train.iteritems():
         #print(index,value) # index , 주식 값
         #print(BlackScholes.bscall(value,K,T,r,sig)) # (266,)
         p = BlackScholes.bscall(value,K,T,r,sig)
         p_list.append(p)
         y_list.append( - np.maximum(value - K, 0)+ p)
-    c = np.zeros([X_test.shape[0],1])
+    c = np.zeros([X_train.shape[0],1])
     p = np.array(p_list).reshape(266,1)    
     x = [p] + [c] 
     for i in range(1,15):
@@ -267,14 +270,16 @@ if __name__ == '__main__':
     model.compile(loss='mse',optimizer='adam')
     y = np.array(y_list).reshape(266,1)
 
-    hist = model.fit(x,y, batch_size=32, epochs=1000,  verbose=True)
+    hist = model.fit(x,y, batch_size=32, epochs=1000,  verbose=True, validation_split=0.2)
     model.save('LCID_name.h5')
-    '''
+    import matplotlib.pyplot as plt
+    plt.plot(hist.history['loss'])
+    plt.show()
     # 모델 예측
     
     ############################################
     
-    model = tf.keras.models.load_model("LCID_name.h5")
+    #model = tf.keras.models.load_model("LCID_name.h5")
     
     p_list = []
     y_list = []
@@ -287,25 +292,31 @@ if __name__ == '__main__':
         p_list.append(p)
         y_list.append( - np.maximum(value - K, 0)+ p)
     c = np.zeros([X_test.shape[0],1])
-    p = np.array(p_list).reshape(145,1)    
+    p = np.array(p_list).reshape(146,1)    
     x = [p] + [c] 
     for i in range(1,15):
         temp_list = []
-        for index,value in X_train['Price_'+str(i)].iteritems():
+        for index,value in X_test['Price_'+str(i)].iteritems():
             #print(index,value)
             temp_list.append(value)
-        temp_list = np.array(temp_list).reshape(145,1)
+        temp_list = np.array(temp_list).reshape(146,1)
         x.append(temp_list)
     
     
     
-    y_pred = model.predict(X_test)
-
-    from tensorflow.python.keras.models import load_model
+    y_pred = model.predict(x)
+    
     import pandas as pd
-    model = load_model("LCID_name.h5")
+    print(y_pred)
     # *-- 결과 시각화 --*
     # 예측 결과와 실제 값을 시각화
+    import matplotlib.pyplot as plt
+    plt.hist(y_pred,bins=30)
+    plt.show()
+
+    plt.plot(y_test,y_pred,marker=".",linestyle='none')
+    plt.show()
+    '''
     y_test_val = pd.DataFrame(y_test, index=LCID_test.index)
     y_pred_val = pd.DataFrame(y_pred, index=LCID_test.index)
 
@@ -314,3 +325,4 @@ if __name__ == '__main__':
     y_pred_val.plot(ax=ax1)
     plt.legend(['test','pred'])
     plt.show()
+    '''
