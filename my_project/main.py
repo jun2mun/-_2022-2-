@@ -4,6 +4,7 @@ from utils.BlackScholes import BlackScholes
 from utils._api import yahoo_api, pandas_datareader_api_v1
 from scipy import stats
 import numpy as np
+import tensorflow as tf
 
 from tensorflow.python.framework.ops import disable_eager_execution
 disable_eager_execution()
@@ -174,7 +175,8 @@ if __name__ == '__main__':
     y_test = LCID_test['Price'] # 실제 값
     #print(y_test) # (145,)
     #print(X_train) # (145,15)
-
+    #print(X_test.shape,y_test.shape) # (145,14) (145,)
+    print("hi")
     '''
     for i in range(rest_period):
         S0 = LCID['Price'][i]
@@ -195,8 +197,8 @@ if __name__ == '__main__':
     print(S0,cost,hedge)
     # 돈이 들어왔다 나갔다 반복해서 14일후 결과 값이 나온다.
     '''
-
-
+    ######################################
+    '''
     import tensorflow as tf
     print("텐서플로우 버전 :",tf.__version__)
     #from tensorflow.keras.layers import Input,Dense,Add,Subtract,Multiply,Dropout
@@ -244,13 +246,13 @@ if __name__ == '__main__':
     y_list = []
     SS_list = []
     ## SS 변화하는 주식 가격
-    for index,value in y_train.iteritems():
+    for index,value in y_test.iteritems():
         #print(index,value) # index , 주식 값
         #print(BlackScholes.bscall(value,K,T,r,sig)) # (266,)
         p = BlackScholes.bscall(value,K,T,r,sig)
         p_list.append(p)
         y_list.append( - np.maximum(value - K, 0)+ p)
-    c = np.zeros([X_train.shape[0],1])
+    c = np.zeros([X_test.shape[0],1])
     p = np.array(p_list).reshape(266,1)    
     x = [p] + [c] 
     for i in range(1,15):
@@ -266,11 +268,49 @@ if __name__ == '__main__':
     y = np.array(y_list).reshape(266,1)
 
     hist = model.fit(x,y, batch_size=32, epochs=1000,  verbose=True)
-
+    model.save('LCID_name.h5')
+    '''
     # 모델 예측
+    
+    ############################################
+    
+    model = tf.keras.models.load_model("LCID_name.h5")
+    
+    p_list = []
+    y_list = []
+    SS_list = []
+    ## SS 변화하는 주식 가격
+    for index,value in y_test.iteritems():
+        #print(index,value) # index , 주식 값
+        #print(BlackScholes.bscall(value,K,T,r,sig)) # (266,)
+        p = BlackScholes.bscall(value,K,T,r,sig)
+        p_list.append(p)
+        y_list.append( - np.maximum(value - K, 0)+ p)
+    c = np.zeros([X_test.shape[0],1])
+    p = np.array(p_list).reshape(145,1)    
+    x = [p] + [c] 
+    for i in range(1,15):
+        temp_list = []
+        for index,value in X_train['Price_'+str(i)].iteritems():
+            #print(index,value)
+            temp_list.append(value)
+        temp_list = np.array(temp_list).reshape(145,1)
+        x.append(temp_list)
+    
+    
+    
     y_pred = model.predict(X_test)
 
-    model.save('LCID_name.h5')
-    #from tensorflow.python.keras.models import load_model
-    #model = load_model("model_name.h5")
-    
+    from tensorflow.python.keras.models import load_model
+    import pandas as pd
+    model = load_model("LCID_name.h5")
+    # *-- 결과 시각화 --*
+    # 예측 결과와 실제 값을 시각화
+    y_test_val = pd.DataFrame(y_test, index=LCID_test.index)
+    y_pred_val = pd.DataFrame(y_pred, index=LCID_test.index)
+
+    import matplotlib.pyplot as plt
+    ax1 = y_test_val.plot()
+    y_pred_val.plot(ax=ax1)
+    plt.legend(['test','pred'])
+    plt.show()
