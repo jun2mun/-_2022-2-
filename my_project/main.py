@@ -1,8 +1,12 @@
+from ast import Mult
 from sklearn.preprocessing import RobustScaler
 from utils.BlackScholes import BlackScholes
 from utils._api import yahoo_api, pandas_datareader_api_v1
 from scipy import stats
 import numpy as np
+
+from tensorflow.python.framework.ops import disable_eager_execution
+disable_eager_execution()
 
 if False: #__name__ == '__main__':
     '''-----------  S =>  주식 가격 구하기 ------------'''
@@ -138,12 +142,43 @@ if __name__ == '__main__':
     # 칼럼 명 변경
     LCID = LCID.rename(columns = {'Close' : 'Price'})
     S0 = LCID['Price'][0]
-    print(S0)
+
+    #from sklearn.preprocessing import RobustScaler
+    #rb = RobustScaler()
+
+    #LCID_scaled = rb.fit_transform(LCID[['Price']])
+    #LCID['Price'] = LCID_scaled
+    # 데이터 분리
+    LCID_train = LCID[:280]
+    LCID_test = LCID[280:]
     rest_period  = 15
-    hedge = 0; cost = 0; K = 23
+    hedge = 0; cost = 0; K = 23; T = 30/365 ; r= 0.0; sig = 0.2
+    
+    
+    # 과거 데이터 반영 사이즈 설정 (RNN)
+    window_size = 15
+    for i in range(1, 15) :
+        LCID_train[f'Price_{i}'] = LCID_train['Price'].shift(i)
+        LCID_test[f'Price_{i}'] = LCID_test['Price'].shift(i)
+    #sprint(LCID_train.tail())
+    #print(LCID_train.shape) # (280,16)
+
+    LCID_train.dropna(inplace=True) # NAN 이 있는 열 날림(초기 14일치)
+    X_train = LCID_train.drop('Price',axis=1) # 이전 14일치 값
+    y_train = LCID_train['Price'] # 실제 값
+    #print(y_train.shape) # (266,)
+    #print(X_train) # (266,15) column (Date, Price_i 1~i~14)
+
+    LCID_test.dropna(inplace=True) # NAN 이 있는 열 날림(초기 14일치)
+    X_test = LCID_test.drop('Price',axis=1) # 이전 14일치 값
+    y_test = LCID_test['Price'] # 실제 값
+    #print(y_test) # (145,)
+    #print(X_train) # (145,15)
+
+    '''
     for i in range(rest_period):
         S0 = LCID['Price'][i]
-        #print(S0,end="|")
+        print(S0,end="|")
         d1 = BlackScholes._d1(S0,K,30/365 - i * 1/365,0.0,0.2)
         d2 = BlackScholes._d2(S0,K,30/365 - i * 1/365,0.0,0.2)
         
@@ -152,52 +187,90 @@ if __name__ == '__main__':
         cost += (hedge - delta) * S0
         # hedge - delta 만큼 주식을 사라
         hedge = delta
-    #print("\n ----------")
+    print("\n ----------")
     if S0 > 11:
         cost += (hedge -1) * S0 + K # 돈이 들어옴 (+)
     else :
         cost += (hedge -0) * S0 
-    #print(S0,cost,hedge)
+    print(S0,cost,hedge)
     # 돈이 들어왔다 나갔다 반복해서 14일후 결과 값이 나온다.
+    '''
 
 
     import tensorflow as tf
-    from tensorflow.python.keras.layers import Input,Dense,Add
-
+    print("텐서플로우 버전 :",tf.__version__)
+    #from tensorflow.keras.layers import Input,Dense,Add,Subtract,Multiply,Dropout
+    #from tensorflow.python.keras import Model
     my_input = []
 
-    #premium = tf.keras.layers.Input(shape=(1,), name="premium")
-    
-    hedge_cost = Input(shape=(1,), name='hedge_cost')
-    my_input = my_input + [hedge_cost]
-    price = Input(shape=(1,), name="price")
-    #my_input = my_input + [premium] + [hedge_cost] + [price]
-    N = 30
+    premium = tf.keras.layers.Input(shape=(1,), name="premium")
+    hedge_cost = tf.keras.layers.Input(shape=(1,), name='hedge_cost')
+    price = tf.keras.layers.Input(shape=(1,), name="price")
+
+    my_input = [premium] + [hedge_cost] + [price]
+
+    # premium = tf.keras.layers.Dense(1, activation='linear', trainable=True,
+    #                 kernel_initializer=tf.keras.initializers.RandomNormal(0,1),#kernel_initializer='random_normal',
+    #                 bias_initializer=tf.keras.initializers.RandomNormal(0,1))(premium)
+    N=13
     for j in range(N):
         
-        delta = Dense(32, activation='tanh')(price)
-        hedge_cost = Add()
-        
-        '''
-        # delta = tf.keras.layers.BatchNormalization()(delta)
-        # delta = tf.keras.layers.Dense(32, activation='leaky_relu')(delta)
-        # delta = tf.keras.layers.BatchNormalization()(delta)
-        # delta = tf.keras.layers.Dense(32, activation='leaky_relu')(delta)
+        delta = tf.keras.layers.Dense(32, activation='tanh')(price)
+        delta = tf.keras.layers.BatchNormalization()(delta)
+        delta = tf.keras.layers.Dense(32, activation='tanh')(delta)
+        delta = tf.keras.layers.Dropout(0.5)(delta)
+        #delta = tf.keras.layers.BatchNormalization()(delta)
+        delta = tf.keras.layers.Dense(32, activation='tanh')(delta)
         delta = tf.keras.layers.Dense(1)(delta)
 
-        new_price = tf.keras.layers.Input(shape=(1,), name='S'+str(j+1))
+        new_price = tf.keras.layers.Input(shape=(1,), name='S'+str(j))
         my_input = my_input + [new_price]
 
+
         price_inc = tf.keras.layers.Subtract(name='price_inc_'+str(j))([price, new_price])
-        cost = tf.keras.layers.Multiply(name="stock_"+str(j))([delta, price_inc])
+        cost = tf.keras.layers.Multiply(name="multiply_"+str(j))([delta, price_inc])
         hedge_cost = tf.keras.layers.Add(name='cost_'+str(j))([hedge_cost, cost])
-        #info_set = tf.keras.layers.Concatenate()([price, new_price])
         price = new_price
 
+    cum_cost = hedge_cost
 
-        payoff = tf.keras.layers.Lambda(lambda x : tf.math.maximum(x-K,0), name='payoff')(price)
-        cum_cost = tf.keras.layers.Add(name="hedge_cost_plus_payoff")([hedge_cost, payoff])
-        cum_cost = tf.keras.layers.Subtract(name="cum_cost-premium")([cum_cost, premium])
+    #my_input = np.array(my_input)
+    model = tf.keras.Model(inputs=my_input, outputs=cum_cost)
 
-        model = tf.keras.Model(inputs=my_input, outputs=cum_cost)
-        '''
+    #tf.keras.utils.plot_model(model)
+    print(y_train) # (266,14)
+
+    p_list = []
+    y_list = []
+    SS_list = []
+    ## SS 변화하는 주식 가격
+    for index,value in y_train.iteritems():
+        #print(index,value) # index , 주식 값
+        #print(BlackScholes.bscall(value,K,T,r,sig)) # (266,)
+        p = BlackScholes.bscall(value,K,T,r,sig)
+        p_list.append(p)
+        y_list.append( - np.maximum(value - K, 0)+ p)
+    c = np.zeros([X_train.shape[0],1])
+    p = np.array(p_list).reshape(266,1)    
+    x = [p] + [c] 
+    for i in range(1,15):
+        temp_list = []
+        for index,value in X_train['Price_'+str(i)].iteritems():
+            #print(index,value)
+            temp_list.append(value)
+        temp_list = np.array(temp_list).reshape(266,1)
+        x.append(temp_list)
+    
+
+    model.compile(loss='mse',optimizer='adam')
+    y = np.array(y_list).reshape(266,1)
+
+    hist = model.fit(x,y, batch_size=32, epochs=1000,  verbose=True)
+
+    # 모델 예측
+    y_pred = model.predict(X_test)
+
+    model.save('LCID_name.h5')
+    #from tensorflow.python.keras.models import load_model
+    #model = load_model("model_name.h5")
+    

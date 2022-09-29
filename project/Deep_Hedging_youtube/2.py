@@ -3,6 +3,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 
+def bscall(S, K, T, r, sig):
+    d1 = (np.log(S/K)+(r+0.5*sig**2)*T)/(sig*np.sqrt(T))
+    d2 = (np.log(S/K)+(r-0.5*sig**2)*T)/(sig*np.sqrt(T))
+    return S*norm.cdf(d1)-K*np.exp(-r*T)*norm.cdf(d2)
+    
+def bsput(S, K, T, r, sig):
+    d1 = (np.log(S/K)+(r+0.5*sig**2)*T)/(sig*np.sqrt(T))
+    d2 = (np.log(S/K)+(r-0.5*sig**2)*T)/(sig*np.sqrt(T))
+    return K*np.exp(-r*T)*norm.cdf(-d2)-S*norm.cdf(-d1)
+
 def init():
     global r,sig,T,M,N,dt,rdt,sigsdt,S0,S,rv
     S0 = 1
@@ -71,7 +81,7 @@ first()
 init()
 second()
 '''
-
+print("S 는? :",S)
 import tensorflow as tf
 
 my_input = []
@@ -95,5 +105,14 @@ for j in range(3):
     price = new_price
 
 model = tf.keras.Model(inputs=my_input,outputs=hedge_cost)
-print(my_input)
-tf.keras.utils.plot_model(model, to_file='model.png',show_shapes=False)
+K =100
+p = bscall(S0,K,T,r,sig) * np.ones([M,1])
+c = np.zeros([M,1])
+SS = [S[:,i].reshape(M,1) for i in range(N+1)]
+x = [p]+[c]+[SS]
+y = - np.maximum(S[:,N]-K, 0).reshape(M,1) + p
+
+print(SS)
+model.compile(loss='mse',optimizer='adam')
+hist = model.fit(x,y, batch_size=32, epochs=100,  verbose=True)
+#tf.keras.utils.plot_model(model, to_file='model.png',show_shapes=False)
