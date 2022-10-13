@@ -1,4 +1,6 @@
 import tensorflow as tf
+import numpy as np
+import pandas as pd
 print("텐서플로우 버전 :",tf.__version__)
 
 def BlackScholes_model(hedge = 0, cost = 0, K = 23, T = 30/365, r= 0.0, sig = 0.2, N=13): #
@@ -32,3 +34,7 @@ def BlackScholes_model(hedge = 0, cost = 0, K = 23, T = 30/365, r= 0.0, sig = 0.
     model = tf.keras.Model(inputs=my_input, outputs=cum_cost)
 
     return model
+
+def _execute(paths,strikes,riskaversion):
+    pass    
+

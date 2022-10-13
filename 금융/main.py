@@ -91,7 +91,7 @@ if __name__ == '__main__':
     '''---------------------모델 학습 & 예측 & 로드--------------------------'''
 
     model.compile(loss='mse',optimizer='adam')
-    hist = model.fit(x_train_list,y, batch_size=32, epochs=1000,  verbose=True, validation_split=0.2)
+    hist = model.fit(x_train_list,y, batch_size=32, epochs=50,  verbose=True, validation_split=0.2)
     model.save('LCID_name.h5')
     #model = tf.keras.models.load_model("LCID_name.h5")
 
@@ -127,8 +127,8 @@ if __name__ == '__main__':
     plt.xlabel('iter')
     plt.show()
 
-    plt.plot(p,y_pred,marker=".",linestyle='none')
-    plt.plot(p,marker=".",linestyle='none')
+    plt.plot(y_pred-p,marker=".",linestyle='none')
+    #plt.plot(p,marker=".",linestyle='none')
     plt.xlabel('strike stock price')
     plt.ylabel('cost')
     plt.show()
