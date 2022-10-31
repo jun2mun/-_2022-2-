@@ -32,7 +32,6 @@ def BlackScholes_model(hedge = 0, cost = 0, K = 23, T = 30/365, r= 0.0, sig = 0.
     cum_cost = tf.keras.layers.Subtract(name="cum_cost-premium")([cum_cost, premium])
 
     model = tf.keras.Model(inputs=my_input, outputs=cum_cost)
-
     return model
 
 def _execute(paths,strikes,riskaversion):

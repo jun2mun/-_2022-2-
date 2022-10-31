@@ -126,7 +126,7 @@ def deep_lstm_model(STOCK_T,STOCK_K):
     #model.summary()
     print('stop')
     opt = tf.keras.optimizers.Adam(learning_rate=0.1)
-    opt.minimize()  
+    opt.minimize()
     return model
 graph,K,result = preproc()
 model = deep_lstm_model(result,K)
