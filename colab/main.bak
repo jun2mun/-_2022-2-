@@ -1,0 +1,94 @@
+# TFUniformReplayBuffer 객체의 as_dataset() 메서드는 버퍼로부터
+# 주어진 형식으로 만들어진 데이터셋을 반환하도록 합니다.
+dataset = replay_buffer.as_dataset(
+    num_parallel_calls=3,
+    sample_batch_size = batch_size,
+    num_steps=2
+).prefetch(3)
+
+#print(dataset)
+'''
+ 'observation': TensorSpec(shape=(64, 2, 1), dtype=tf.int32, name=None),
+ 'policy_info': (),
+ 'reward': TensorSpec(shape=(64, 2), dtype=tf.float32, name=None),
+ 'step_type': TensorSpec(shape=(64, 2), dtype=tf.int32, name=None)}), BufferInfo(ids=TensorSpec(shape=(64, 2), dtype=tf.int64, name=None), probabilities=TensorSpec(shape=(64,), dtype=tf.float32, name=None)))>
+'''
+
+iterator = iter(dataset) # iter() 함수를 사용해서 데이터셋을 반복 가능한 객체로 변환하고,
+# .next() 를 사용해서 수집한 데이터를 확인할 수 있습니다.
+#print(iterator) # <tensorflow.python.data.ops.iterator_ops.OwnedIterator object at 0x0000023B59D3A580>
+"""================================================================"""
+
+# Reset the train step
+# agent.train = common.function(agent.train)
+# agent.train_step_counter.assign(0)
+
+tf_agent.train_step_counter.assign(0)
+
+# 주어진 에피소드 동안의 평균 리턴(보상의 총합의 평균)
+avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
+returns = [avg_return]
+#print(avg_return)
+print("h")
+
+
+for _ in range(num_iterations):
+
+    collect_data(train_env, tf_agent.collect_policy, replay_buffer, collect_steps_per_iteration)
+
+    experience, unused_info = next(iterator)
+    #print(experience) # 'step_type': <tf.Tensor: shape=(64, 2), dtype=int32, numpy=
+    #print(unused_info) # BufferInfo(ids=<tf.Tensor: shape=(64, 2), dtype=int64, numpy= .... dtype=int64)>, probabilities=<tf.Tensor: shape=(64,), dtype=float32, numpy= ......dtype=float32)>)
+
+    train_loss = tf_agent.train(experience).loss
+
+    step = tf_agent.train_step_counter.numpy() # 정수 step 1부터 계속 증가
+
+    if step % log_interval == 0:
+        print('step = {0}: loss = {1}'.format(step, train_loss))
+
+    if step % eval_interval == 0:
+        avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
+        print('step = {0}: Average Return = {1}'.format(step, avg_return))
+        returns.append(avg_return)
+
+print(returns)
+
+import matplotlib.pyplot as plt
+
+iterations = range(0, num_iterations + 1, eval_interval)
+plt.xlabel('Iterations')
+plt.ylabel('Average Return')
+plt.ylim(top=250)
+plt.plot(iterations, returns)
+plt.show()
+
+
+'''
+for i in range(num_iterations):
+  for _ in range(collect_steps_per_iteration): # ?
+    collect_step(train_env, tf_agent.collect_policy)
+
+  final_time_step, _ = driver.run(final_time_step, policy_state)
+  experience, _ = next(iterator)
+  train_loss = tf_agent.train(experience=experience)
+  step = tf_agent.train_step_counter.numpy()
+
+  if step % log_interval == 0:
+      print('step = {0}: loss = {1}'.format(step, train_loss.loss))
+      episode_len.append(train_metrics[3].result().numpy())
+      print('Average episode length: {}'.format(train_metrics[3].result().numpy()))
+
+  if step % eval_interval == 0:
+      avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
+      print('step = {0}: Average Return = {1}'.format(step, avg_return))
+      returns.append(avg_return)
+plt.plot(episode_len)
+plt.show()
+
+iterations = range(0, num_iterations + 1, eval_interval)
+plt.plot(iterations, returns)
+plt.ylabel('Average Return')
+plt.xlabel('Iterations')
+
+'''

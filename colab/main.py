@@ -17,7 +17,7 @@ from tf_agents.replay_buffers import tf_uniform_replay_buffer
 
 
 from utils import monte_carlo_paths,compute_avg_return
-from environment import HedgeENV, TradeEnv
+from environment import TradeEnv
 
 from tf_agents.agents.dqn import dqn_agent
 from tf_agents.environments import py_environment, utils
@@ -74,7 +74,7 @@ balance = 100000
 """================================================================"""
 #env = HedgeENV(S,T,balance)
 env = TradeEnv(S,T,balance)
-utils.validate_py_environment(env,episodes=10) 
+#utils.validate_py_environment(env,episodes=10) 
 
 # wrapper py_env -> tf_env
 tf_env = tf_py_environment.TFPyEnvironment(env)
@@ -147,15 +147,15 @@ def collect_step(environment,policy,buffer):
     # 주어진 환경에서 주어진 정책을 사용해서 데이터를 수집합니다.
     time_step = environment.current_time_step() #?
     action_step = policy.action(time_step) # PolicyStep(action=<tf.Tensor: shape=(1,), dtype=int32, numpy=array([1])>, state=(), info=())
+    #print(f'action : {action_step.action}') # 0,1,2 로 나옴
     next_time_step = environment.step(action_step.action)
     traj = trajectory.from_transition(time_step,action_step,next_time_step)
     replay_buffer.add_batch(traj)
-    
+    #print(f'collect_step : {time_step}')
     #print("collect_step 값 출력")
     #print(f'time_step {time_step}')
     #print(f'action_step {action_step}') #PolicyStep(action=<tf.Tensor: shape=(1,), dtype=int32, numpy=array([0])>, state=(), info=())
     #print(f'replay_buffer {replay_buffer}') # <tf_agents.replay_buffers.tf_uniform_replay_buffer.TFUniformReplayBuffer object at 0x0000015559F24CD0>
-
     '''
     time_step -> next_time_step 같은 타입 결과
     TimeStep(
@@ -181,6 +181,7 @@ def collect_data(env,policy,buffer,steps):
         collect_step(env,policy,buffer) #??
 
 #initial_collect_steps = 100
+######################### 임시 주석
 collect_data(train_env,random_policy,replay_buffer,steps=100) # ??? 뭔지 모름
 
 # TFUniformReplayBuffer 객체의 as_dataset() 메서드는 버퍼로부터
@@ -211,15 +212,19 @@ iterator = iter(dataset) # iter() 함수를 사용해서 데이터셋을 반복 
 tf_agent.train_step_counter.assign(0)
 
 # 주어진 에피소드 동안의 평균 리턴(보상의 총합의 평균)
-avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
+#avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes) # 원본
+
+
+avg_return = compute_avg_return(eval_env, random_policy, num_eval_episodes)
 returns = [avg_return]
-print(avg_return)
+print(f'avg_return : {avg_return}')
 print("h")
 
 
-for _ in range(num_iterations):
+for _ in range(num_iterations): # 전체 훈련 횟수
 
-    collect_data(train_env, tf_agent.collect_policy, replay_buffer, collect_steps_per_iteration)
+    #tf_agent.collect_policy
+    collect_data(train_env, random_policy, replay_buffer, collect_steps_per_iteration)
 
     experience, unused_info = next(iterator)
     #print(experience) # 'step_type': <tf.Tensor: shape=(64, 2), dtype=int32, numpy=
@@ -232,7 +237,8 @@ for _ in range(num_iterations):
     if step % log_interval == 0:
         print('step = {0}: loss = {1}'.format(step, train_loss))
 
-    if step % eval_interval == 0:
+    if step % eval_interval == 0: # 훈련 과정 중 검증을 수행할 간격
+        print("==================================================================")
         avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
         print('step = {0}: Average Return = {1}'.format(step, avg_return))
         returns.append(avg_return)
@@ -248,32 +254,3 @@ plt.ylim(top=250)
 plt.plot(iterations, returns)
 plt.show()
 
-
-'''
-for i in range(num_iterations):
-  for _ in range(collect_steps_per_iteration): # ?
-    collect_step(train_env, tf_agent.collect_policy)
-
-  final_time_step, _ = driver.run(final_time_step, policy_state)
-  experience, _ = next(iterator)
-  train_loss = tf_agent.train(experience=experience)
-  step = tf_agent.train_step_counter.numpy()
-
-  if step % log_interval == 0:
-      print('step = {0}: loss = {1}'.format(step, train_loss.loss))
-      episode_len.append(train_metrics[3].result().numpy())
-      print('Average episode length: {}'.format(train_metrics[3].result().numpy()))
-
-  if step % eval_interval == 0:
-      avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
-      print('step = {0}: Average Return = {1}'.format(step, avg_return))
-      returns.append(avg_return)
-plt.plot(episode_len)
-plt.show()
-
-iterations = range(0, num_iterations + 1, eval_interval)
-plt.plot(iterations, returns)
-plt.ylabel('Average Return')
-plt.xlabel('Iterations')
-
-'''
