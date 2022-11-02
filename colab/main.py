@@ -9,13 +9,15 @@ import numpy as np
 import base64
 import matplotlib.pyplot as plt
 from tensorflow.python.eager.monitoring import time
+
 from tf_agents.agents.dqn import dqn_agent
 from tf_agents.networks import q_network
 from tf_agents.policies import random_tf_policy
 from tf_agents.replay_buffers import tf_uniform_replay_buffer
 
+
 from utils import monte_carlo_paths,compute_avg_return
-from agent import HedgeENV
+from environment import HedgeENV, TradeEnv
 
 from tf_agents.agents.dqn import dqn_agent
 from tf_agents.environments import py_environment, utils
@@ -65,11 +67,13 @@ keep_stock = np.array(1, dtype=np.int32) # 1
 buy_new_stock = np.array(2, dtype=np.int32) # 2
 strategy = [sell_stock, keep_stock, buy_new_stock]
 
-S = np.swapaxes(paths_train,0,1)[0]
+S = np.swapaxes(paths_train,0,1)[0] 
 T = 30
-
+balance = 100000
+#print(S.shape) #(31,1)
 """================================================================"""
-env = HedgeENV(S,T)
+#env = HedgeENV(S,T,balance)
+env = TradeEnv(S,T,balance)
 utils.validate_py_environment(env,episodes=10) 
 
 # wrapper py_env -> tf_env
@@ -87,9 +91,9 @@ q_net = q_network.QNetwork(
     fc_layer_params=(100,) # 신경망의 레이어별 뉴런 유닛의 개수를 지정합니다.
 )
 # <tf_agents.networks.q_network.QNetwork object at 0x00000220199A4F40>
-print(q_net)
+#print(q_net)
 # BoundedTensorSpec(shape=(1,), dtype=tf.int32, name='observation', minimum=array(0), maximum=array(2147483647))
-print(q_net.input_tensor_spec) 
+#print(q_net.input_tensor_spec) 
 
 """=========================에이전트 구성하기============================"""
 
@@ -146,6 +150,11 @@ def collect_step(environment,policy,buffer):
     next_time_step = environment.step(action_step.action)
     traj = trajectory.from_transition(time_step,action_step,next_time_step)
     replay_buffer.add_batch(traj)
+    
+    #print("collect_step 값 출력")
+    #print(f'time_step {time_step}')
+    #print(f'action_step {action_step}') #PolicyStep(action=<tf.Tensor: shape=(1,), dtype=int32, numpy=array([0])>, state=(), info=())
+    #print(f'replay_buffer {replay_buffer}') # <tf_agents.replay_buffers.tf_uniform_replay_buffer.TFUniformReplayBuffer object at 0x0000015559F24CD0>
 
     '''
     time_step -> next_time_step 같은 타입 결과
@@ -207,15 +216,18 @@ returns = [avg_return]
 print(avg_return)
 print("h")
 
-'''
+
 for _ in range(num_iterations):
 
     collect_data(train_env, tf_agent.collect_policy, replay_buffer, collect_steps_per_iteration)
 
     experience, unused_info = next(iterator)
+    #print(experience) # 'step_type': <tf.Tensor: shape=(64, 2), dtype=int32, numpy=
+    #print(unused_info) # BufferInfo(ids=<tf.Tensor: shape=(64, 2), dtype=int64, numpy= .... dtype=int64)>, probabilities=<tf.Tensor: shape=(64,), dtype=float32, numpy= ......dtype=float32)>)
+
     train_loss = tf_agent.train(experience).loss
 
-    step = tf_agent.train_step_counter.numpy()
+    step = tf_agent.train_step_counter.numpy() # 정수 step 1부터 계속 증가
 
     if step % log_interval == 0:
         print('step = {0}: loss = {1}'.format(step, train_loss))
@@ -235,7 +247,6 @@ plt.ylabel('Average Return')
 plt.ylim(top=250)
 plt.plot(iterations, returns)
 plt.show()
-'''
 
 
 '''

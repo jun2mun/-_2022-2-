@@ -68,3 +68,6 @@ env.reset()
 # TimeStep 인스턴스는 is_first(), is_mid(), is_last() 메서드를 포함합니다.
 # TimeStep 인스턴스의 is_last() 메서드는 해당 
 # TimeStep이 에피소드의 마지막 TimeStep인지 여부를 반환합니다.
+
+
+print(int(2.8))
