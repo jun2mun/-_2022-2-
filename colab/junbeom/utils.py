@@ -44,7 +44,8 @@ def compute_avg_return(environment, policy, num_episodes):
       #print(time_step)
       #print(f'validate : {action_step.action}')
       #print(time_step) 
-      episode_return += time_step.reward
+      #episode_return += time_step.reward
+      episode_return = time_step.reward
       #print(time_step.reward)
       #print(episode_return)
     total_return += episode_return

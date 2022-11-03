@@ -168,11 +168,11 @@ def train(S, global_train_step):
     train_checkpointer.save(global_train_step) #model 저장
     print(returns)
 
-    # import matplotlib.pyplot as plt
-    #
-    # iterations = range(0, num_iterations + 1, eval_interval)
-    # plt.xlabel('Iterations')
-    # plt.ylabel('Average Return')
-    # plt.ylim(top=max(returns) * 1.1)
-    # plt.plot(iterations, returns)
-    # plt.show()
+    import matplotlib.pyplot as plt
+#
+    iterations = range(0, num_iterations + 1, eval_interval)
+    plt.xlabel('Iterations')
+    plt.ylabel('Average Return')
+    plt.ylim(top=max(returns) * 1.1)
+    plt.plot(iterations, returns)
+    plt.show()
