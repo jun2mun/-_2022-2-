@@ -64,7 +64,8 @@ class TradeEnv(py_environment.PyEnvironment):
         self.start_balance = balance #초기 잔고
         self.balance = balance # 100000
         self.df = df # ex : (31,1)
-        self.amount = 0 
+        self.amount = 0
+        self.penalty = 3
 
         # spaces
         # Actions : [buy,stay,sell]
@@ -96,6 +97,7 @@ class TradeEnv(py_environment.PyEnvironment):
         self.episode_step = 0
         self.reward = 0
         self._total_cost = 0
+        self.penalty = 3
         self.balance = self.start_balance
         self._state = [self.reward,self._total_cost,self.balance,self.amount,self.episode_step] # 변경 가능
         return ts.restart(np.array(self._state, dtype=np.int32)) #  초기화
@@ -122,18 +124,21 @@ class TradeEnv(py_environment.PyEnvironment):
         self._state = [self.reward,self._total_cost,self.balance,self.amount,self.episode_step]
         #print(self._state)
 
-        self.isLoss()
         #self._state = [self.reward,self._total_cost] # 변경 가능
         if self.episode_step >= 30:# self._episode_ended or  or self._current_step == self._T: #  or self.get_loss() >= 10: #or self._current_step == self._T:
+            if self.isLoss(): return ts.termination(np.array(self._state, dtype=np.int32), 0)
             self.reward = self.getTotalValue()
             print(f'step end : {self.episode_step}')
             #print(ts.termination(np.array(self._state, dtype=np.int32), self.reward))
             return ts.termination(np.array(self._state, dtype=np.int32), self.reward)
         elif self.isLoss() == True :
-            self.reward = 0
-            loss_rate = self._total_cost / self.start_balance
-            print(f'loss out : {loss_rate} , episode : {self.episode_step}')
-            return ts.termination(np.array(self._state, dtype=np.int32), self.reward)
+            self.penalty -= 1
+            if self.penalty < 0:
+                loss_rate = self._total_cost / self.start_balance
+                print(f'loss out : {loss_rate} , episode : {self.episode_step}')
+                return ts.termination(np.array(self._state, dtype=np.int32), 0)
+            else:
+                return ts.transition(np.array(self._state, dtype=np.int32), self.reward, discount=1.0)
         else:
             print(f'step continue : {self.episode_step}')
             self.reward = self.getTotalValue()
@@ -190,7 +195,7 @@ class TradeEnv(py_environment.PyEnvironment):
         loss_rate = (self._total_cost - cur_stock * self.amount) / self.start_balance # 현재일 주가
         #print(f'loss rate : {loss_rate}, epdisode : {self.episode_step}')
         #print(f'{self._total_cost} | {self.start_balance}')
-        if loss_rate > 0.1:
+        if loss_rate >= 0.02:
             return True
 
     def act(self,action):

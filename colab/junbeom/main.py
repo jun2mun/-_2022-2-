@@ -15,10 +15,10 @@ from tf_agents.utils import common
 from tf_agents.trajectories import trajectory
 from tf_agents.networks import q_network
 from tf_agents.replay_buffers import tf_uniform_replay_buffer
-
+import matplotlib.pyplot as plt
 
 #Define Hyperparameters
-num_iterations = 5 # @param {type:"integer"} 훈련 횟수
+num_iterations = 500 # @param {type:"integer"} 훈련 횟수
 collect_steps_per_iteration = 31  # @param {type:"integer"} 훈련 당 데이터 수집 횟수
 replay_buffer_max_length = 100000  # @param {type:"integer"} 버퍼 최대 크기
 
@@ -99,6 +99,7 @@ def train(S, global_train_step):
     )
     train_checkpointer.initialize_or_restore()
 
+
     # 정책 평가 함수
     def collect_step(environment,policy,buffer):
         # 주어진 환경에서 주어진 정책을 사용해서 데이터를 수집합니다.
@@ -168,11 +169,11 @@ def train(S, global_train_step):
     train_checkpointer.save(global_train_step) #model 저장
     print(returns)
 
-    import matplotlib.pyplot as plt
-#
+
+
     iterations = range(0, num_iterations + 1, eval_interval)
     plt.xlabel('Iterations')
     plt.ylabel('Average Return')
-    plt.ylim(top=max(returns) * 1.1)
+    plt.ylim([min(returns) * 0.99, max(returns) * 1.01])
     plt.plot(iterations, returns)
     plt.show()

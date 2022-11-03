@@ -36,7 +36,7 @@ def compute_avg_return(environment, policy, num_episodes):
 
     time_step = environment.reset() # timestamp 형식 반환
     episode_return = 0.0
-
+    print("-------------------iter start---------------")
     while not time_step.is_last():
       action_step = policy.action(time_step)
       #print(action_step) # PolicyStep(action=<tf.Tensor: shape=(1,), dtype=int32, numpy=array([1])>, state=(), info=())
@@ -46,9 +46,11 @@ def compute_avg_return(environment, policy, num_episodes):
       #print(time_step) 
       #episode_return += time_step.reward
       episode_return = time_step.reward
-      #print(time_step.reward)
-      #print(episode_return)
-    total_return += episode_return
 
+      #print(episode_return)
+    print("----------------------------")
+    total_return += episode_return
+    print(total_return)
   avg_return = total_return / num_episodes
+  if avg_return < 6000 : print("avg_return : {}".format(avg_return))
   return avg_return.numpy()[0]
