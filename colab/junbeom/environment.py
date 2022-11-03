@@ -121,14 +121,14 @@ class TradeEnv(py_environment.PyEnvironment):
 
         #self._state = [self.reward,self._total_cost] # 변경 가능
         if self._episode_ended or self.episode_step == 30:# or self._current_step == self._T: #  or self.get_loss() >= 10: #or self._current_step == self._T:
-            print(f'step end: {self.episode_step}')
+            print(f'step end : {self.episode_step}')
             #print(ts.termination(np.array(self._state, dtype=np.int32), self.reward))
             return ts.termination(np.array(self._state, dtype=np.int32), self.reward)
         elif self.isLoss() == True :
-            print(f'loss out {self.episode_step}')
+            print(f'loss out : {self.episode_step}')
             return ts.termination(np.array(self._state, dtype=np.int32), self.reward)
         else:
-            print(self.episode_step)
+            print(f'step : {self.episode_step}')
             self.reward += 1
             self.episode_step +=1
             self._state = [self.reward,self._total_cost,self.balance,self.amount,self.episode_step]

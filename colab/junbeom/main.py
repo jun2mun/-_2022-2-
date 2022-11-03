@@ -39,8 +39,7 @@ from tf_agents.specs import tensor_spec
 from tf_agents.drivers import py_driver
 from tf_agents.policies import py_tf_eager_policy
 
-#Define Hyperparameters
-
+#################Define Hyperparameters#######################################################################
 num_iterations = 100 # @param {type:"integer"}
 
 initial_collect_steps = 1000  # @param {type:"integer"} 
@@ -53,8 +52,7 @@ log_interval = 200  # @param {type:"integer"}
 
 num_eval_episodes = 30  # @param {type:"integer"}
 eval_interval = 10  # @param {type:"integer"}
-####
-
+##############################################################################################################
 S_0 = 100
 K = 100
 r = 0
@@ -72,22 +70,29 @@ keep_stock = np.array(1, dtype=np.int32) # 1
 buy_new_stock = np.array(2, dtype=np.int32) # 2
 strategy = [sell_stock, keep_stock, buy_new_stock]
 
-S = np.swapaxes(paths_train,0,1)[0] 
+S = np.swapaxes(paths_train,0,1)[0]  # S.shape = (31,1)
 T = 30
 balance = 100000
-#print(S.shape) #(31,1)
-"""================================================================"""
-#env = HedgeENV(S,T,balance)
+##################################################################################################################
+###################################################환경###########################################################
+
 env = TradeEnv(S,T,balance)
 #utils.validate_py_environment(env,episodes=10) 
 
 # wrapper py_env -> tf_env
 tf_env = tf_py_environment.TFPyEnvironment(env)
-train_env = tf_py_environment.TFPyEnvironment(env)
-eval_env = tf_py_environment.TFPyEnvironment(env)
+#train_env = tf_py_environment.TFPyEnvironment(env)
+#eval_env = tf_py_environment.TFPyEnvironment(env)
+
+
+##################################################################################################################
+################################################에이전트##########################################################
+
 
 # tf_agents.networks.q_network 모듈의 QNetwork 클래스는 
 # Q-Learning에 사용되는 인공신경망 (Neural Network)입니다.
+#print(q_net) # <tf_agents.networks.q_network.QNetwork object at 0x00000220199A4F40>
+#print(q_net.input_tensor_spec) # BoundedTensorSpec(shape=(1,), dtype=tf.int32, name='observation', minimum=array(0), maximum=array(2147483647))
 q_net = q_network.QNetwork(
     train_env.observation_spec(), # 모름
     train_env.action_spec(),
@@ -95,12 +100,6 @@ q_net = q_network.QNetwork(
     # creating a network single hidden layer of 100 nodes
     fc_layer_params=(100,) # 신경망의 레이어별 뉴런 유닛의 개수를 지정합니다.
 )
-# <tf_agents.networks.q_network.QNetwork object at 0x00000220199A4F40>
-#print(q_net)
-# BoundedTensorSpec(shape=(1,), dtype=tf.int32, name='observation', minimum=array(0), maximum=array(2147483647))
-#print(q_net.input_tensor_spec) 
-
-"""=========================에이전트 구성하기============================"""
 
 optimizer = tf.keras.optimizers.Adam(learning_rate=0.1)
 train_step_counter = tf.Variable(0)
@@ -120,7 +119,9 @@ tf_agent = dqn_agent.DqnAgent(
 
 tf_agent.initialize() # 에이전트를 초기화
 
-"""=======================에이전트의 정책============================="""
+
+##################################################################################################################
+##################################################정책############################################################
 
 
 """ Define Policies """
@@ -130,6 +131,10 @@ collect_policy = tf_agent.collect_policy #에이전트가 환경으로부터 데
 # 에이전트와 독립적이며, train_env의 특정 TimeStep에 대해 임의이ㅡ 행동을 반환하는 정책입니다.
 random_policy = random_tf_policy.RandomTFPolicy(train_env.time_step_spec(),
     train_env.action_spec())
+
+
+##################################################################################################################
+################################################재생 버퍼############################################################
 
 """ 수정해봐야 할 메소드"""
 
@@ -199,8 +204,9 @@ dataset = replay_buffer.as_dataset(
 iterator = iter(dataset) # iter() 함수를 사용해서 데이터셋을 반복 가능한 객체로 변환하고,
 # .next() 를 사용해서 수집한 데이터를 확인할 수 있습니다.
 #print(iterator) # <tensorflow.python.data.ops.iterator_ops.OwnedIterator object at 0x0000023B59D3A580>
-"""================================================================"""
 
+##################################################################################################################
+##############################################에이전트 교육########################################################
 
 tf_agent.train_step_counter.assign(0)
 
