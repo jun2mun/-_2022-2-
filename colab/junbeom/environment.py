@@ -60,11 +60,10 @@ class TradeEnv(py_environment.PyEnvironment):
     
     
     """
-    def __init__(self,df,window_size,balance):
+    def __init__(self,df,balance):
         self.start_balance = balance #초기 잔고
         self.balance = balance # 100000
         self.df = df # ex : (31,1)
-        self.window_size = window_size # ex: 30
         self.amount = 0 
 
         # spaces
@@ -101,6 +100,9 @@ class TradeEnv(py_environment.PyEnvironment):
         self._state = [self.reward,self._total_cost,self.balance,self.amount,self.episode_step] # 변경 가능
         return ts.restart(np.array(self._state, dtype=np.int32)) #  초기화
     
+    def getTotalValue(self):
+        return float(self.balance + self.amount * self.df[self.episode_step])
+
     def _step(self, action): # 필수 return 타입 : ts.TimeStep
         """
             ### _state(observation)
@@ -123,16 +125,18 @@ class TradeEnv(py_environment.PyEnvironment):
         self.isLoss()
         #self._state = [self.reward,self._total_cost] # 변경 가능
         if self.episode_step >= 30:# self._episode_ended or  or self._current_step == self._T: #  or self.get_loss() >= 10: #or self._current_step == self._T:
+            self.reward = self.getTotalValue()
             print(f'step end : {self.episode_step}')
             #print(ts.termination(np.array(self._state, dtype=np.int32), self.reward))
             return ts.termination(np.array(self._state, dtype=np.int32), self.reward)
         elif self.isLoss() == True :
+            self.reward = 0
             loss_rate = self._total_cost / self.start_balance
             print(f'loss out : {loss_rate} , episode : {self.episode_step}')
             return ts.termination(np.array(self._state, dtype=np.int32), self.reward)
         else:
             print(f'step continue : {self.episode_step}')
-            self.reward += 1
+            self.reward = self.getTotalValue()
             self.episode_step +=1
             self._state = [self.reward,self._total_cost,self.balance,self.amount,self.episode_step]
             #print(self._state)
@@ -143,6 +147,32 @@ class TradeEnv(py_environment.PyEnvironment):
             return ts.transition(np.array(self._state, dtype=np.int32), self.reward,discount=1.0)
 
 
+    # action 3개 백업(실제 실행되는 메소드 아님!!ㄴ)
+    def _step_v2(self, action):
+        cur_stock =  self.df[self.episode_step] # 현재 주가
+        possible_buy_amount = int(self.balance/cur_stock) # 최대 구매 가능 수량
+        possible_sell_amount = self.amount
+
+        if action == 0: # 주식 사기
+            random_percent = 0
+            if possible_buy_amount != 0: random_percent = np.random.randint(0,possible_buy_amount) # 랜덤으로 (0~ 최대 구입가능 퍼센트에서 선택)
+            self.amount += random_percent
+            self.balance -= cur_stock * random_percent
+            return
+
+        elif action == 1: #주식 유지
+            return
+
+        elif action == 2: #주식 팔기
+            if possible_sell_amount == 0:
+                self.balance -= 1
+            else:
+                random_percent = np.random.randint(0,possible_sell_amount)
+                self.amount -= random_percent
+                self.balance += cur_stock * random_percent
+            return
+        else:
+            raise  ValueError('`action` should be 0 or 1 or 2')
 
     # _state 를 파라미터에 적용 #
     def ts_state(self):

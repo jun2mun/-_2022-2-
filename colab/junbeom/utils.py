@@ -29,7 +29,7 @@ def monte_carlo_paths(S_0, time_to_expiry, sigma, drift, seed, n_sims, n_timeste
 
 
 
-def compute_avg_return(environment, policy, num_episodes=10):
+def compute_avg_return(environment, policy, num_episodes):
 
   total_return = 0.0
   for _ in range(num_episodes):
