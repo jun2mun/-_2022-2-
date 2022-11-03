@@ -38,12 +38,13 @@ from tf_agents.replay_buffers import reverb_utils
 from tf_agents.specs import tensor_spec
 from tf_agents.drivers import py_driver
 from tf_agents.policies import py_tf_eager_policy
+from tf_agents.policies import policy_saver
 
 #################Define Hyperparameters#######################################################################
-num_iterations = 100 # @param {type:"integer"}
+num_iterations = 10 # @param {type:"integer"}
 
 initial_collect_steps = 1000  # @param {type:"integer"} 
-collect_steps_per_iteration = 1  # @param {type:"integer"}
+collect_steps_per_iteration = 31  # @param {type:"integer"}
 replay_buffer_max_length = 100000  # @param {type:"integer"}
 
 batch_size = 64  # @param {type:"integer"}
@@ -81,8 +82,8 @@ env = TradeEnv(S,T,balance)
 
 # wrapper py_env -> tf_env
 tf_env = tf_py_environment.TFPyEnvironment(env)
-#train_env = tf_py_environment.TFPyEnvironment(env)
-#eval_env = tf_py_environment.TFPyEnvironment(env)
+train_env = tf_py_environment.TFPyEnvironment(env)
+eval_env = tf_py_environment.TFPyEnvironment(env)
 
 
 ##################################################################################################################
@@ -218,10 +219,30 @@ print(f'avg_return : {avg_return}')
 print("h")
 
 
+import os
+tempdir = './colab/junbeom/'
+#checkpoint_dir = './'
+
+global_step = train_step_counter = tf.Variable(5)
+checkpoint_dir = os.path.join(tempdir, 'checkpoint')
+'''
+train_checkpointer = common.Checkpointer(
+    ckpt_dir=checkpoint_dir,
+    max_to_keep=1,
+    agent=tf_agent,
+    policy=tf_agent.policy,
+    replay_buffer=replay_buffer,
+    global_step=global_step
+)
+'''
+policy_dir = os.path.join(tempdir, 'policy')
+tf_policy_saver = policy_saver.PolicySaver(tf_agent.policy)
+
+print(iterator)
+
 for _ in range(num_iterations): # 전체 훈련 횟수
 
     collect_data(train_env, random_policy, replay_buffer, collect_steps_per_iteration)
-
     experience, unused_info = next(iterator)
     #print(experience) # 'step_type': <tf.Tensor: shape=(64, 2), dtype=int32, numpy=
     #print(unused_info) # BufferInfo(ids=<tf.Tensor: shape=(64, 2), dtype=int64, numpy= .... dtype=int64)>, probabilities=<tf.Tensor: shape=(64,), dtype=float32, numpy= ......dtype=float32)>)
@@ -230,14 +251,19 @@ for _ in range(num_iterations): # 전체 훈련 횟수
 
     step = tf_agent.train_step_counter.numpy() # 정수 step 1부터 계속 증가
 
+tf_policy_saver.save(policy_dir)
+saved_policy = tf.saved_model.load(policy_dir)
+
+for _ in range(num_iterations): # 전체 훈련 횟수
     if step % log_interval == 0:
         print('step = {0}: loss = {1}'.format(step, train_loss))
 
     if step % eval_interval == 0: # 훈련 과정 중 검증을 수행할 간격
         print("==================================================================")
-        avg_return = compute_avg_return(eval_env, random_policy, num_eval_episodes) # ??
+        avg_return = compute_avg_return(eval_env, saved_policy, num_eval_episodes) # ??
         print('step = {0}: Average Return = {1}'.format(step, avg_return))
         returns.append(avg_return)
+        #train_checkpointer.save(global_step)
 
 print(returns)
 
@@ -251,4 +277,5 @@ plt.plot(iterations, returns)
 plt.show()
 
 print("end")
+
 

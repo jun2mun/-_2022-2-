@@ -41,15 +41,9 @@ def compute_avg_return(environment, policy, num_episodes=10):
       action_step = policy.action(time_step)
       #print(action_step) # PolicyStep(action=<tf.Tensor: shape=(1,), dtype=int32, numpy=array([1])>, state=(), info=())
       time_step = environment.step(action_step.action)
+      #print(time_step)
       #print(f'validate : {action_step.action}')
       #print(time_step) 
-      '''
-      TimeStep(
-        {'discount': <tf.Tensor: shape=(1,), dtype=float32, numpy=array([1.], dtype=float32)>,
-        'observation': <tf.Tensor: shape=(1, 5), dtype=int32, numpy=array([[     1,      0, 100000,      0,      1]])>,
-        'reward': <tf.Tensor: shape=(1,), dtype=float32, numpy=array([1.], dtype=float32)>,
-        'step_type': <tf.Tensor: shape=(1,), dtype=int32, numpy=array([1])>})
-      '''
       episode_return += time_step.reward
       #print(time_step.reward)
       #print(episode_return)

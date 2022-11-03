@@ -1,3 +1,7 @@
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 
 """ 1번 과제 """
 #import tf_agents
@@ -70,6 +74,89 @@ env.reset()
 # TimeStep이 에피소드의 마지막 TimeStep인지 여부를 반환합니다.
 
 
-print(int(2.8))
 
+import os
+import tensorflow as tf
+import abc
+import tensorflow as tf
+import numpy as np
+
+import base64
+import matplotlib.pyplot as plt
+from tensorflow.python.eager.monitoring import time
+
+from tf_agents.agents.dqn import dqn_agent
+from tf_agents.networks import q_network
+from tf_agents.policies import random_tf_policy
+from tf_agents.replay_buffers import tf_uniform_replay_buffer
+
+
+from utils import monte_carlo_paths,compute_avg_return
+from environment import TradeEnv
+
+from tf_agents.agents.dqn import dqn_agent
+from tf_agents.environments import py_environment, utils
+from tf_agents.environments import tf_py_environment,tf_environment
+from tf_agents.utils import common
+from tf_agents.specs import array_spec
+from tf_agents.trajectories import trajectory
+from tf_agents.trajectories import time_step as ts
+from tf_agents.drivers import dynamic_step_driver
+from tf_agents.environments import utils
+from tf_agents.specs import array_spec
+from tf_agents.metrics import tf_metrics
+from tf_agents.networks import q_network
+from tf_agents.replay_buffers import tf_uniform_replay_buffer
+from tf_agents.policies import random_tf_policy
+from tf_agents.replay_buffers import reverb_replay_buffer
+from tf_agents.replay_buffers import reverb_utils
+from tf_agents.specs import tensor_spec
+from tf_agents.drivers import py_driver
+from tf_agents.policies import py_tf_eager_policy
+from tf_agents.policies import policy_saver
+
+
+
+S_0 = 100
+K = 100
+r = 0
+vol = 0.2
+T = 1 / 12
+timesteps = 30
+seed = 42
+n_sims = 10
+
+# Train the model on the path of the risk neutral measure
+paths_train = monte_carlo_paths(S_0, T, vol, r, seed, n_sims, timesteps)
+
+sell_stock = np.array(0, dtype=np.int32) # 0
+keep_stock = np.array(1, dtype=np.int32) # 1
+buy_new_stock = np.array(2, dtype=np.int32) # 2
+strategy = [sell_stock, keep_stock, buy_new_stock]
+
+S = np.swapaxes(paths_train,0,1)[0]  # S.shape = (31,1)
+T = 30
+balance = 100000
+##################################################################################################################
+###################################################환경###########################################################
+
+env = TradeEnv(S,T,balance)
+
+
+tempdir = './colab/junbeom/'
+policy_dir = os.path.join(tempdir, 'policy')
+saved_policy = tf.saved_model.load(policy_dir)
+time_step = env.reset() # timestamp 형식 반환
+episode_return = 0.0
+
+tf_env = tf_py_environment.TFPyEnvironment(env)
+train_env = tf_py_environment.TFPyEnvironment(env)
+eval_env = tf_py_environment.TFPyEnvironment(env)
+
+time_step = eval_env.reset()
+action_step = saved_policy.action(time_step)
+next_time_step = eval_env.step(action_step.action)
+
+traj = trajectory.from_transition(time_step,action_step,next_time_step)
+print(traj)
 
