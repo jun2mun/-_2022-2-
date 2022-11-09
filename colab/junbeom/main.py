@@ -10,7 +10,7 @@ from environment import TradeEnv
 from utils import monte_carlo_paths, compute_avg_return
 
 from tf_agents.agents.dqn import dqn_agent
-from tf_agents.environments import tf_py_environment,tf_environment
+from tf_agents.environments import tf_py_environment
 from tf_agents.utils import common
 from tf_agents.trajectories import trajectory
 from tf_agents.networks import q_network
@@ -18,7 +18,7 @@ from tf_agents.replay_buffers import tf_uniform_replay_buffer
 import matplotlib.pyplot as plt
 
 #Define Hyperparameters
-num_iterations = 500 # @param {type:"integer"} 훈련 횟수
+num_iterations = 10 # @param {type:"integer"} 훈련 횟수
 collect_steps_per_iteration = 31  # @param {type:"integer"} 훈련 당 데이터 수집 횟수
 replay_buffer_max_length = 100000  # @param {type:"integer"} 버퍼 최대 크기
 
@@ -27,7 +27,7 @@ learning_rate = 1e-3  # @param {type:"number"}
 log_interval = 10  # @param {type:"integer"} 훈련 로그 출력 간격
 
 num_eval_episodes = 10  # @param {type:"integer"} 검증 데이터 수집 횟수
-eval_interval = 5  # @param {type:"integer"} 검증 간격
+eval_interval = 10  # @param {type:"integer"} 검증 간격
 
 T = 31 # @param {type:"integer"} 만기일
 balance = 10000 # @param {type:"integer"} 초기 자본금
@@ -88,7 +88,7 @@ def train(S, global_train_step):
     )
     replay_observer = [replay_buffer.add_batch]
 
-    checkpoint_dir = os.path.join("./colab/checkpoint", "checkpoint{}".format(global_train_step.numpy()))
+    checkpoint_dir = os.path.join("./colab/checkpoint", "checkpoint".format(global_train_step.numpy()))
     train_checkpointer = common.Checkpointer(
         ckpt_dir=checkpoint_dir,
         max_to_keep=1,
@@ -97,6 +97,7 @@ def train(S, global_train_step):
         replay_buffer=replay_buffer,
         global_step=tf.Variable(0)
     )
+    # train_checkpointer.manager.latest_checkpoint.restore()
     train_checkpointer.initialize_or_restore()
 
 
@@ -161,7 +162,7 @@ def train(S, global_train_step):
 
         if step % eval_interval == 0: # 훈련 과정 중 검증을 수행할 간격
             print("=========================== 검증 시작 =================================")
-            avg_return = compute_avg_return(eval_env, collect_policy, num_eval_episodes)
+            avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
             print('step = {0}: Average Return = {1}'.format(step, avg_return))
             returns.append(avg_return)
 

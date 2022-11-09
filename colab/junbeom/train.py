@@ -34,7 +34,8 @@ S = stockArray[:M*(T)].reshape(M,T)
 balance = 10000
 
 # train latest model file
-train(S[0], tf.Variable(get_global_train_step()))
+#get_global_train_step()
+train(S[0], tf.Variable(0))
 
 
 #

@@ -2,10 +2,6 @@ import collections
 import gym
 import numpy as np
 import tensorflow as tf
-import tqdm
-
-from matplotlib import pyplot as plt
-from tensorflow.keras import layers
 from typing import Any, List, Sequence, Tuple
 
 
@@ -32,9 +28,9 @@ class ActorCritic(tf.keras.Model):
     """Initialize."""
     super().__init__()
 
-    self.common = layers.Dense(num_hidden_units, activation="relu")
-    self.actor = layers.Dense(num_actions)
-    self.critic = layers.Dense(1)
+    self.common = tf.keras.layers.Dense(num_hidden_units, activation="relu")
+    self.actor = tf.keras.layers.Dense(num_actions)
+    self.critic = tf.keras.layers.Dense(1)
 
   def call(self, inputs: tf.Tensor) -> Tuple[tf.Tensor, tf.Tensor]:
     x = self.common(inputs)

@@ -2,18 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e4bed91-3b6b-47bd-bbf8-ad2b9e635216" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/junbeom/model_policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/junbeom/train_policy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/checkpoint/ckpt-5.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/checkpoint/ckpt-5.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/colab/checkpoint/checkpoint9/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/colab/checkpoint/checkpoint9/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/colab/checkpoint/checkpoint9/ckpt-9.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/colab/checkpoint/checkpoint9/ckpt-9.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/colab/checkpoint/checkpoint9/ckpt-9.index" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/colab/checkpoint/checkpoint9/ckpt-9.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/junbeom/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/environment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/junbeom/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/policy/policy_specs.pbtxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/policy/saved_model.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/policy/variables/variables.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/junbeom/policy/variables/variables.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/junbeom/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junbeom/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/junbeom/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model.ckpt.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model.ckpt.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model.ckpt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model_name.h5" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/yes/envs/colab/lib/python3.10/site-packages/tf_agents/agents/tf_agent.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -24,14 +51,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.train">
+}</component>
+  <component name="RunManager" selected="Python.train_policy">
+    <configuration name="model_policy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="colab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junbeom" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junbeom/model_policy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="colab" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,8 +126,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_policy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="colab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/junbeom" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/junbeom/train_policy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train_policy" />
+        <item itemvalue="Python.model_policy" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.test" />
       </list>
@@ -91,7 +165,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667451149089</updated>
-      <workItem from="1667451150551" duration="8266000" />
+      <workItem from="1667451150551" duration="10697000" />
+      <workItem from="1667519611389" duration="6000" />
+      <workItem from="1667806960921" duration="3104000" />
+      <workItem from="1667811146517" duration="168000" />
+      <workItem from="1667823563663" duration="1721000" />
+      <workItem from="1667978826967" duration="6131000" />
+      <workItem from="1667993954201" duration="4267000" />
     </task>
     <servers />
   </component>
@@ -121,7 +201,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/colab$model_policy.coverage" NAME="model_policy Coverage Results" MODIFIED="1667808607933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junbeom" />
+    <SUITE FILE_PATH="coverage/colab$train_policy.coverage" NAME="train_policy Coverage Results" MODIFIED="1667997620646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junbeom" />
     <SUITE FILE_PATH="coverage/colab$test.coverage" NAME="test Coverage Results" MODIFIED="1667452485848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junbeom" />
-    <SUITE FILE_PATH="coverage/colab$train.coverage" NAME="train Coverage Results" MODIFIED="1667458004061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junbeom" />
+    <SUITE FILE_PATH="coverage/colab$train.coverage" NAME="train Coverage Results" MODIFIED="1667807254163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/junbeom" />
   </component>
 </project>
