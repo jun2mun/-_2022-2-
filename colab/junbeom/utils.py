@@ -39,18 +39,13 @@ def compute_avg_return(environment, policy, num_episodes):
     print("-------------------iter start---------------")
     while not time_step.is_last():
       action_step = policy.action(time_step)
-      #print(action_step) # PolicyStep(action=<tf.Tensor: shape=(1,), dtype=int32, numpy=array([1])>, state=(), info=())
       time_step = environment.step(action_step.action)
-      #print(time_step)
-      #print(f'validate : {action_step.action}')
-      #print(time_step) 
-      #episode_return += time_step.reward
-      episode_return = time_step.reward
+      print(f'validate : {action_step.action}')
+      episode_return += time_step.reward
 
       #print(episode_return)
     print("----------------------------")
     total_return += episode_return
-    print(total_return)
   avg_return = total_return / num_episodes
-  if avg_return < 6000 : print("avg_return : {}".format(avg_return))
+  #if avg_return < 6000 : print("avg_return : {}".format(avg_return))
   return avg_return.numpy()[0]

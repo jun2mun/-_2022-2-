@@ -106,7 +106,7 @@ def train(S, global_train_step):
         # 주어진 환경에서 주어진 정책을 사용해서 데이터를 수집합니다.
         time_step = environment.current_time_step() #?
         action_step = policy.action(time_step) # PolicyStep(action=<tf.Tensor: shape=(1,), dtype=int32, numpy=array([1])>, state=(), info=())
-        #print(f'action : {action_step.action}') # 0,1,2 로 나옴
+        print(f'action : {action_step.action}') # 0,1,2 로 나옴
         next_time_step = environment.step(action_step.action)
         traj = trajectory.from_transition(time_step,action_step,next_time_step)
         replay_buffer.add_batch(traj)
@@ -146,7 +146,7 @@ def train(S, global_train_step):
     for idx in range(num_iterations): # 전체 훈련 횟수
 
         #tf_agent.collect_policy
-        collect_data(train_env, random_policy, replay_buffer, collect_steps_per_iteration)
+        collect_data(train_env, tf_agent.collect_policy, replay_buffer, collect_steps_per_iteration)
 
         experience, unused_info = next(iterator)
         #print(experience) # 'step_type': <tf.Tensor: shape=(64, 2), dtype=int32, numpy=
