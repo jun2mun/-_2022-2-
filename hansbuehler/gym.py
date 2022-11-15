@@ -6,9 +6,10 @@ Training environment for deep hedging.
 June 30, 2022
 @author: hansbuehler
 """
-from .base import Logger, Config, tf, tfp, dh_dtype, pdct, tf_back_flatten, tf_make_dim
-from .agents import AgentFactory
-from .objectives import MonetaryUtility
+from typing import Tuple
+from base import Logger, Config, tf, tfp, dh_dtype, pdct, tf_back_flatten, tf_make_dim
+from agents import AgentFactory
+from objectives import MonetaryUtility
 from collections.abc import Mapping
 _log = Logger(__file__)
 
@@ -202,7 +203,7 @@ class VanillaDeepHedgingGym(tf.keras.Model):
             rel  = self.softclip( rel )
             return tf.where( dbnd > 0., rel *  dbnd + lbnd_a, 0. )
 
-    def _features( self, data : dict, nSteps : int) -> (dict, dict):
+    def _features( self, data : dict, nSteps : int) -> Tuple[dict,dict]:#(dict, dict):
         """ 
         Collect requested features and convert them into common shapes.    
         

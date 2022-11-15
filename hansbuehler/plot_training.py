@@ -12,7 +12,7 @@ import numpy as np
 import time as time
 from cdxbasics.prettydict import PrettyDict as pdct
 from cdxbasics.dynaplot import colors_tableau, figure
-from .base import Logger, npCast, fmt_seconds, mean, err, tf, mean_bins, mean_cum_bins, perct_exp
+from base import Logger, npCast, fmt_seconds, mean, err, tf, mean_bins, mean_cum_bins, perct_exp
 
 _log = Logger(__file__)
 

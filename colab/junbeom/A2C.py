@@ -63,7 +63,7 @@ def train(S,S2):
         (observation_spec, action_spec),
           observation_fc_layer_params=None,
           action_fc_layer_params=None,
-          joint_fc_layer_params=critic_joint_fc_layer_params
+          joint_fc_layer_params=critic_joint_fc_layer_params)
 
     def normal_projection_net(action_spec,init_means_output_factor=0.1):
       return normal_projection_network.NormalProjectionNetwork(

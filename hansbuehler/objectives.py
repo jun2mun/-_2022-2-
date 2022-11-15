@@ -7,8 +7,8 @@ June 30, 2022
 @author: hansbuehler
 """
 
-from .base import Logger, Config, tf, dh_dtype, VariableModel
-from .agents import AgentFactory
+from base import Logger, Config, tf, dh_dtype, VariableModel
+from agents import AgentFactory
 from cdxbasics import PrettyDict as pdct
 from collections.abc import Mapping
 _log = Logger(__file__)

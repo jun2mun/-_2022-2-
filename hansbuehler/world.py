@@ -8,7 +8,7 @@ June 30, 2022
 @author: hansbuehler
 """
 
-from deephedging.base import Logger, Config, dh_dtype, tf, tfCast, pdct, tf_dict
+from base import Logger, Config, dh_dtype, tf, tfCast, pdct, tf_dict
 from cdxbasics.dynaplot import figure, colors_tableau
 import numpy as np
 import math as math
@@ -91,7 +91,6 @@ class SimpleWorld_Spot_ATM(object):
         """
         self.dtype   = dtype
         self.config  = config.copy()   # for cloning
-
         # read config
         # -----------
         
@@ -201,7 +200,6 @@ class SimpleWorld_Spot_ATM(object):
         # simulate
         # --------
         # Not the most efficient simulator, but easier to read this way
-        
         np.random.seed(seed)
         dW          = np.random.normal(size=(nSamples,nSteps+nIvSteps+ttm_steps-1,4)) * sqrtDt
         dW_s        = dW[:,:,0]
@@ -435,7 +433,8 @@ class SimpleWorld_Spot_ATM(object):
         print(self.config.usage_report())
         
         fig = figure(tight=True, col_size=col_size, row_size=row_size, col_nums=3 )
-        fig.suptitle(self.__class__.__name__, fontsize=16)
+        ### ERROR entry ##########!!!!!!!!!!!!!!!!
+        #fig.suptitle(self.__class__.__name__, fontsize=16)  이준범 에러 발생  *** LogException: Figure was closed.
         
         # spot
         ax  = fig.add_plot()

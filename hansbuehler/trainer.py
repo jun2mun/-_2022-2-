@@ -8,8 +8,8 @@ June 30, 2022
 @author: hansbuehler
 """
 
-from .base import Logger, Config, tf
-from .plot_training import NotebookMonitor
+from base import Logger, Config, tf
+from plot_training import NotebookMonitor
 _log = Logger(__file__)
 
 class NoMonitor(tf.keras.callbacks.Callback):

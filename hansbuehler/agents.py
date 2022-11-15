@@ -8,7 +8,7 @@ June 30, 2022
 @author: hansbuehler
 """
 
-from .base import Logger, Config, tf, dh_dtype, VariableModel
+from base import Logger, Config, tf, dh_dtype, VariableModel
 from collections.abc import Mapping
 _log = Logger(__file__)
 
