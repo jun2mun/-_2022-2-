@@ -42,9 +42,7 @@ class TradeEnv(Env):
     def __init__(self,df,balance=100000):
         super(TradeEnv,self).__init__()        
         # Actions : [buy,stay,sell]
-        self.action_space = spaces.Box(
-            low=0 , high= 2 , shape=(1,), dtype=np.int32
-        )
+        self.action_space = spaces.Discrete(3)
         # Observations : [stock 주가 30일치]
         self.observation_space = spaces.Box(
             low=-1.0 , high= 1.0 , shape=(4,), dtype=np.float32
@@ -105,13 +103,16 @@ class TradeEnv(Env):
 
         self.current_step +=1
 
+        if self.isLoss():
+            self.reward -= 0.6
+        else:
+            self.reward += 1
+
         if self.current_step >= 30:
             self.current_step = 0
             done = True
 
-        reward = 1
-
-        return self._get_obs(), reward, done, False
+        return self._get_obs(), self.reward, done, False
 
     def render(self):
         print(f'Step: {self.current_step}')

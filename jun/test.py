@@ -31,9 +31,10 @@ class A2CAgent:
         ep_rewards = [0.0]
         next_obs = env.reset()
         #env.render()
-        for update in range(updates):
+        for update in range(100):#updates):
             for step in range(batch_size):
-                observations[step]=[next_obs]#.copy()
+                observations[step]=next_obs.copy()
+                print(f'action[step] = {actions[step]}')
                 actions[step], values[step] = self.model.action_value(np.expand_dims(observations[step,:], axis=0))
                 next_obs, rewards[step], dones[step], _ = env.step(actions[step])
                 #env.render()
@@ -112,14 +113,14 @@ class A2CAgent:
         entropy_loss = cce(probs, probs)
         return policy_loss - self.entropy_c * entropy_loss
 
-from env import TradeEnv
+from env_cartpole import TradeEnv
 def custom_agent(S,balance):
   #env = gym.make('CartPole-v0')
   #env.render()
   env = TradeEnv(S,balance)
   eval_env = TradeEnv(S,balance)
 
-  model = a2c_Model(env.observation_space.shape[0],env.action_space.shape[0])
+  model = a2c_Model(env.observation_space.shape[0],env.action_space.n)
   agent = A2CAgent(model)
 
   rewards_history = agent.train(env, 64, 1000)
@@ -131,3 +132,4 @@ def custom_agent(S,balance):
   plt.xlabel('Episode')
   plt.ylabel('Total Reward')
   plt.show()
+  print("stop")

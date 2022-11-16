@@ -1,0 +1,65 @@
+2022-11-17 02:31:31,454 INFO    StreamThr :13440 [internal.py:wandb_internal():88] W&B internal server running at pid: 13440, started at: 2022-11-17 02:31:31.453583
+2022-11-17 02:31:31,463 DEBUG   HandlerThread:13440 [handler.py:handle_request():139] handle_request: status
+2022-11-17 02:31:31,469 DEBUG   SenderThread:13440 [sender.py:send_request():317] send_request: status
+2022-11-17 02:31:31,474 DEBUG   SenderThread:13440 [sender.py:send():303] send: header
+2022-11-17 02:31:31,475 INFO    WriterThread:13440 [datastore.py:open_for_write():75] open: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\run-yx3ohp0j.wandb
+2022-11-17 02:31:31,500 DEBUG   SenderThread:13440 [sender.py:send():303] send: run
+2022-11-17 02:31:32,062 DEBUG   HandlerThread:13440 [handler.py:handle_request():139] handle_request: check_version
+2022-11-17 02:31:32,081 INFO    SenderThread:13440 [dir_watcher.py:__init__():216] watching files in: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files
+2022-11-17 02:31:32,083 INFO    SenderThread:13440 [sender.py:_start_run_threads():928] run started: yx3ohp0j with start time 1668619891.445587
+2022-11-17 02:31:32,083 DEBUG   SenderThread:13440 [sender.py:send():303] send: summary
+2022-11-17 02:31:32,087 INFO    SenderThread:13440 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-17 02:31:32,087 DEBUG   SenderThread:13440 [sender.py:send_request():317] send_request: check_version
+2022-11-17 02:31:32,197 DEBUG   HandlerThread:13440 [handler.py:handle_request():139] handle_request: run_start
+2022-11-17 02:31:32,211 DEBUG   HandlerThread:13440 [system_info.py:__init__():31] System info init
+2022-11-17 02:31:32,212 DEBUG   HandlerThread:13440 [system_info.py:__init__():46] System info init done
+2022-11-17 02:31:32,212 INFO    HandlerThread:13440 [system_monitor.py:start():150] Starting system monitor
+2022-11-17 02:31:32,213 INFO    HandlerThread:13440 [system_monitor.py:probe():168] Collecting system info
+2022-11-17 02:31:32,214 INFO    SystemMonitor:13440 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-17 02:31:32,215 DEBUG   HandlerThread:13440 [system_info.py:probe():195] Probing system
+2022-11-17 02:31:32,217 INFO    SystemMonitor:13440 [interfaces.py:start():168] Started cpu
+2022-11-17 02:31:32,225 INFO    SystemMonitor:13440 [interfaces.py:start():168] Started disk
+2022-11-17 02:31:32,228 INFO    SystemMonitor:13440 [interfaces.py:start():168] Started memory
+2022-11-17 02:31:32,231 DEBUG   HandlerThread:13440 [system_info.py:_probe_git():180] Probing git
+2022-11-17 02:31:32,231 INFO    SystemMonitor:13440 [interfaces.py:start():168] Started network
+2022-11-17 02:31:32,342 DEBUG   HandlerThread:13440 [system_info.py:_probe_git():188] Probing git done
+2022-11-17 02:31:32,343 DEBUG   HandlerThread:13440 [system_info.py:probe():241] Probing system done
+2022-11-17 02:31:32,343 DEBUG   HandlerThread:13440 [system_monitor.py:probe():177] {'os': 'Windows-10-10.0.19044-SP0', 'python': '3.8.13', 'heartbeatAt': '2022-11-16T17:31:32.215805', 'startedAt': '2022-11-16T17:31:31.421588', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\Users\\owner\\Desktop\\경희대학교\\2022-2학기\\데캡톤\\프로젝트\\jun\\main.py', 'codePath': 'jun\\main.py', 'git': {'remote': 'https://github.com/jun2mun/-_2022-2-.git', 'commit': 'da94f8b98ebb3cef558c18eef697e137d7d00d34'}, 'email': 'jun2mun@naver,com', 'root': 'C:/Users/owner/Desktop/경희대학교/2022-2학기/데캡톤/프로젝트', 'host': 'DESKTOP-BBI5692', 'username': 'owner', 'executable': 'C:\\ML\\tensorflow_v2\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 2100.0, 'min': 0.0, 'max': 2100.0}, 'cpu_freq_per_core': [{'current': 2100.0, 'min': 0.0, 'max': 2100.0}], 'disk': {'total': 231.95452499389648, 'used': 156.6807975769043}, 'memory': {'total': 7.329071044921875}}
+2022-11-17 02:31:32,343 INFO    HandlerThread:13440 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-17 02:31:32,343 INFO    HandlerThread:13440 [system_monitor.py:probe():181] Publishing system info
+2022-11-17 02:31:32,344 DEBUG   HandlerThread:13440 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-11-17 02:31:32,346 DEBUG   HandlerThread:13440 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-17 02:31:32,346 DEBUG   HandlerThread:13440 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-11-17 02:31:32,351 ERROR   HandlerThread:13440 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] 지정된 파일을 찾을 수 없습니다
+Traceback (most recent call last):
+  File "C:\ML\tensorflow_v2\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\ML\tensorflow_v2\lib\subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\ML\tensorflow_v2\lib\subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\ML\tensorflow_v2\lib\subprocess.py", line 1311, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+  File "c:\Users\owner\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydev_bundle\pydev_monkey.py", line 853, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, cmd_line, *args)
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
+2022-11-17 02:31:32,353 DEBUG   HandlerThread:13440 [system_info.py:_save_conda():86] Saving conda packages done
+2022-11-17 02:31:32,356 INFO    HandlerThread:13440 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-17 02:31:32,502 DEBUG   SenderThread:13440 [sender.py:send():303] send: files
+2022-11-17 02:31:32,502 INFO    SenderThread:13440 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-17 02:31:32,533 DEBUG   HandlerThread:13440 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-17 02:31:32,533 DEBUG   SenderThread:13440 [sender.py:send_request():317] send_request: stop_status
+2022-11-17 02:31:32,793 DEBUG   SenderThread:13440 [sender.py:send():303] send: telemetry
+2022-11-17 02:31:33,096 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\wandb-metadata.json
+2022-11-17 02:31:33,097 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\wandb-summary.json
+2022-11-17 02:31:33,098 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\requirements.txt
+2022-11-17 02:31:33,099 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\conda-environment.yaml
+2022-11-17 02:31:33,279 INFO    Thread-28 :13440 [upload_job.py:push():143] Uploaded file C:\Users\owner\AppData\Local\Temp\tmp4u42wxxlwandb\3i4ls7a8-wandb-metadata.json
+2022-11-17 02:31:38,139 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\output.log
+2022-11-17 02:31:40,151 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\output.log
+2022-11-17 02:31:42,180 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\output.log
+2022-11-17 02:31:47,811 DEBUG   HandlerThread:13440 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-17 02:31:47,811 DEBUG   SenderThread:13440 [sender.py:send_request():317] send_request: stop_status
+2022-11-17 02:32:03,067 DEBUG   HandlerThread:13440 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-17 02:32:03,068 DEBUG   SenderThread:13440 [sender.py:send_request():317] send_request: stop_status
+2022-11-17 02:32:03,364 INFO    Thread-23 :13440 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221117_023131-yx3ohp0j\files\config.yaml

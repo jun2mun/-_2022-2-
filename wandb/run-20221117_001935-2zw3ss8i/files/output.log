@@ -1,0 +1,6728 @@
+C:\ML\tensorflow_v2\lib\site-packages\keras\optimizers\optimizer_v2\rmsprop.py:140: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Backend TkAgg is interactive backend. Turning interactive mode on.
+Episode: 001 || Reward: 030
+Episode: 002 || Reward: 030
+[1/0] Losses: [34510521.6904013, 0.0, 34510521.6904013]
+Episode: 003 || Reward: 030
+Episode: 004 || Reward: 030
+[2/1] Losses: [64464035.897053674, 0.0, 64464035.897053674]
+Episode: 005 || Reward: 030
+Episode: 006 || Reward: 030
+[3/2] Losses: [10088813.670803454, 0.0, 10088813.670803454]
+Episode: 007 || Reward: 030
+Episode: 008 || Reward: 030
+[4/3] Losses: [1022874.4040597375, 0.0, 1022874.4040597375]
+Episode: 009 || Reward: 030
+Episode: 010 || Reward: 030
+[5/4] Losses: [143554.33003700135, 0.0, 143554.33003700135]
+Episode: 011 || Reward: 030
+Episode: 012 || Reward: 030
+[6/5] Losses: [28318.060370592564, 0.0, 28318.060370592564]
+Episode: 013 || Reward: 030
+Episode: 014 || Reward: 030
+[7/6] Losses: [7999.366345472135, 0.0, 7999.366345472135]
+Episode: 015 || Reward: 030
+Episode: 016 || Reward: 030
+Episode: 017 || Reward: 030
+[8/7] Losses: [3000.458012035987, 0.0, 3000.458012035987]
+Episode: 018 || Reward: 030
+Episode: 019 || Reward: 030
+[9/8] Losses: [1375.1327611311895, 0.0, 1375.1327611311895]
+Episode: 020 || Reward: 030
+Episode: 021 || Reward: 030
+[10/9] Losses: [969.3920646536402, 0.0, 969.3920646536402]
+Episode: 022 || Reward: 030
+Episode: 023 || Reward: 030
+[11/10] Losses: [794.1604801788151, 0.0, 794.1604801788151]
+Episode: 024 || Reward: 030
+Episode: 025 || Reward: 030
+[12/11] Losses: [716.6837104643582, 0.0, 716.6837104643582]
+Episode: 026 || Reward: 030
+Episode: 027 || Reward: 030
+[13/12] Losses: [842.2067051534909, 0.0, 842.2067051534909]
+Episode: 028 || Reward: 030
+Episode: 029 || Reward: 030
+[14/13] Losses: [1118.0240625030538, 0.0, 1118.0240625030538]
+Episode: 030 || Reward: 030
+Episode: 031 || Reward: 030
+Episode: 032 || Reward: 030
+[15/14] Losses: [1990.6974278611997, 0.0, 1990.6974278611997]
+Episode: 033 || Reward: 030
+Episode: 034 || Reward: 030
+[16/15] Losses: [4178.475143944003, 0.0, 4178.475143944003]
+Episode: 035 || Reward: 030
+Episode: 036 || Reward: 030
+[17/16] Losses: [9966.463400201166, 0.0, 9966.463400201166]
+Episode: 037 || Reward: 030
+Episode: 038 || Reward: 030
+[18/17] Losses: [29099.921970872878, 0.0, 29099.921970872878]
+Episode: 039 || Reward: 030
+Episode: 040 || Reward: 030
+[19/18] Losses: [100428.11414722545, 0.0, 100428.11414722545]
+Episode: 041 || Reward: 030
+Episode: 042 || Reward: 030
+[20/19] Losses: [402524.2474025116, 0.0, 402524.2474025116]
+Episode: 043 || Reward: 030
+Episode: 044 || Reward: 030
+[21/20] Losses: [1828849.8791084122, 0.0, 1828849.8791084122]
+Episode: 045 || Reward: 030
+Episode: 046 || Reward: 030
+[22/21] Losses: [8193123.2604459785, 0.0, 8193123.2604459785]
+Episode: 047 || Reward: 030
+Episode: 048 || Reward: 030
+Episode: 049 || Reward: 030
+[23/22] Losses: [22520993.651124828, 0.0, 22520993.651124828]
+Episode: 050 || Reward: 030
+Episode: 051 || Reward: 030
+[24/23] Losses: [19416998.17224369, 0.0, 19416998.17224369]
+Episode: 052 || Reward: 030
+Episode: 053 || Reward: 030
+[25/24] Losses: [8454935.546635836, 0.0, 8454935.546635836]
+Episode: 054 || Reward: 030
+Episode: 055 || Reward: 030
+[26/25] Losses: [2703849.872054554, 0.0, 2703849.872054554]
+Episode: 056 || Reward: 030
+Episode: 057 || Reward: 030
+[27/26] Losses: [1026654.8884903362, 0.0, 1026654.8884903362]
+Episode: 058 || Reward: 030
+Episode: 059 || Reward: 030
+[28/27] Losses: [459100.9060633762, 0.0, 459100.9060633762]
+Episode: 060 || Reward: 030
+Episode: 061 || Reward: 030
+[29/28] Losses: [263316.6733007778, 0.0, 263316.6733007778]
+Episode: 062 || Reward: 030
+Episode: 063 || Reward: 030
+Episode: 064 || Reward: 030
+[30/29] Losses: [184433.1833862529, 0.0, 184433.1833862529]
+Episode: 065 || Reward: 030
+Episode: 066 || Reward: 030
+[31/30] Losses: [160965.03063122949, 0.0, 160965.03063122949]
+Episode: 067 || Reward: 030
+Episode: 068 || Reward: 030
+[32/31] Losses: [173176.7106488553, 0.0, 173176.7106488553]
+Episode: 069 || Reward: 030
+Episode: 070 || Reward: 030
+[33/32] Losses: [225756.16342312266, 0.0, 225756.16342312266]
+Episode: 071 || Reward: 030
+Episode: 072 || Reward: 030
+[34/33] Losses: [349694.63920011045, 0.0, 349694.63920011045]
+Episode: 073 || Reward: 030
+Episode: 074 || Reward: 030
+[35/34] Losses: [644240.2341783731, 0.0, 644240.2341783731]
+Episode: 075 || Reward: 030
+Episode: 076 || Reward: 030
+[36/35] Losses: [1343272.040868618, 0.0, 1343272.040868618]
+Episode: 077 || Reward: 030
+Episode: 078 || Reward: 030
+[37/36] Losses: [3066709.5313104647, 0.0, 3066709.5313104647]
+Episode: 079 || Reward: 030
+Episode: 080 || Reward: 030
+Episode: 081 || Reward: 030
+[38/37] Losses: [6547223.7190496195, 0.0, 6547223.7190496195]
+Episode: 082 || Reward: 030
+Episode: 083 || Reward: 030
+[39/38] Losses: [10856224.296583429, 0.0, 10856224.296583429]
+Episode: 084 || Reward: 030
+Episode: 085 || Reward: 030
+[40/39] Losses: [10606606.28397265, 0.0, 10606606.28397265]
+Episode: 086 || Reward: 030
+Episode: 087 || Reward: 030
+[41/40] Losses: [7249332.57465114, 0.0, 7249332.57465114]
+Episode: 088 || Reward: 030
+Episode: 089 || Reward: 030
+[42/41] Losses: [3742277.8482622663, 0.0, 3742277.8482622663]
+Episode: 090 || Reward: 030
+Episode: 091 || Reward: 030
+[43/42] Losses: [2064998.0504469038, 0.0, 2064998.0504469038]
+Episode: 092 || Reward: 030
+Episode: 093 || Reward: 030
+[44/43] Losses: [1209562.2383153676, 0.0, 1209562.2383153676]
+Episode: 094 || Reward: 030
+Episode: 095 || Reward: 030
+Episode: 096 || Reward: 030
+[45/44] Losses: [858756.1330255937, 0.0, 858756.1330255937]
+Episode: 097 || Reward: 030
+Episode: 098 || Reward: 030
+[46/45] Losses: [704668.87315863, 0.0, 704668.87315863]
+Episode: 099 || Reward: 030
+Episode: 100 || Reward: 030
+[47/46] Losses: [693700.7354392447, 0.0, 693700.7354392447]
+Episode: 101 || Reward: 030
+Episode: 102 || Reward: 030
+[48/47] Losses: [789774.5308573559, 0.0, 789774.5308573559]
+Episode: 103 || Reward: 030
+Episode: 104 || Reward: 030
+[49/48] Losses: [1055905.9910728666, 0.0, 1055905.9910728666]
+Episode: 105 || Reward: 030
+Episode: 106 || Reward: 030
+[50/49] Losses: [1557719.322724226, 0.0, 1557719.322724226]
+Episode: 107 || Reward: 030
+Episode: 108 || Reward: 030
+[51/50] Losses: [2526715.420604516, 0.0, 2526715.420604516]
+Episode: 109 || Reward: 030
+Episode: 110 || Reward: 030
+[52/51] Losses: [3996989.418444541, 0.0, 3996989.418444541]
+Episode: 111 || Reward: 030
+Episode: 112 || Reward: 030
+Episode: 113 || Reward: 030
+[53/52] Losses: [5861091.406139631, 0.0, 5861091.406139631]
+Episode: 114 || Reward: 030
+Episode: 115 || Reward: 030
+[54/53] Losses: [6628815.380558944, 0.0, 6628815.380558944]
+Episode: 116 || Reward: 030
+Episode: 117 || Reward: 030
+[55/54] Losses: [6110556.544039358, 0.0, 6110556.544039358]
+Episode: 118 || Reward: 030
+Episode: 119 || Reward: 030
+[56/55] Losses: [4351135.108592802, 0.0, 4351135.108592802]
+Episode: 120 || Reward: 030
+Episode: 121 || Reward: 030
+[57/56] Losses: [3033881.263387895, 0.0, 3033881.263387895]
+Episode: 122 || Reward: 030
+Episode: 123 || Reward: 030
+[58/57] Losses: [2031825.210760898, 0.0, 2031825.210760898]
+Episode: 124 || Reward: 030
+Episode: 125 || Reward: 030
+[59/58] Losses: [1536805.5926258133, 0.0, 1536805.5926258133]
+Episode: 126 || Reward: 030
+Episode: 127 || Reward: 030
+Episode: 128 || Reward: 030
+[60/59] Losses: [1249635.3597204457, 0.0, 1249635.3597204457]
+Episode: 129 || Reward: 030
+Episode: 130 || Reward: 030
+[61/60] Losses: [1181096.6650964438, 0.0, 1181096.6650964438]
+Episode: 131 || Reward: 030
+Episode: 132 || Reward: 030
+[62/61] Losses: [1234438.2024577407, 0.0, 1234438.2024577407]
+Episode: 133 || Reward: 030
+Episode: 134 || Reward: 030
+[63/62] Losses: [1469048.1440912834, 0.0, 1469048.1440912834]
+Episode: 135 || Reward: 030
+Episode: 136 || Reward: 030
+[64/63] Losses: [1857157.0215324457, 0.0, 1857157.0215324457]
+Episode: 137 || Reward: 030
+Episode: 138 || Reward: 030
+[65/64] Losses: [2527755.740637563, 0.0, 2527755.740637563]
+Episode: 139 || Reward: 030
+Episode: 140 || Reward: 030
+[66/65] Losses: [3312865.5335541232, 0.0, 3312865.5335541232]
+Episode: 141 || Reward: 030
+Episode: 142 || Reward: 030
+[67/66] Losses: [4186387.191353514, 0.0, 4186387.191353514]
+Episode: 143 || Reward: 030
+Episode: 144 || Reward: 030
+Episode: 145 || Reward: 030
+[68/67] Losses: [4456432.7035188135, 0.0, 4456432.7035188135]
+Episode: 146 || Reward: 030
+Episode: 147 || Reward: 030
+[69/68] Losses: [4287436.567169011, 0.0, 4287436.567169011]
+Episode: 148 || Reward: 030
+Episode: 149 || Reward: 030
+[70/69] Losses: [3481360.5629394734, 0.0, 3481360.5629394734]
+Episode: 150 || Reward: 030
+Episode: 151 || Reward: 030
+[71/70] Losses: [2792172.7121891845, 0.0, 2792172.7121891845]
+Episode: 152 || Reward: 030
+Episode: 153 || Reward: 030
+[72/71] Losses: [2127506.166827499, 0.0, 2127506.166827499]
+Episode: 154 || Reward: 030
+Episode: 155 || Reward: 030
+[73/72] Losses: [1766992.1491124379, 0.0, 1766992.1491124379]
+Episode: 156 || Reward: 030
+Episode: 157 || Reward: 030
+[74/73] Losses: [1518264.832748558, 0.0, 1518264.832748558]
+Episode: 158 || Reward: 030
+Episode: 159 || Reward: 030
+Episode: 160 || Reward: 030
+[75/74] Losses: [1468476.1595225243, 0.0, 1468476.1595225243]
+Episode: 161 || Reward: 030
+Episode: 162 || Reward: 030
+[76/75] Losses: [1501311.3481134926, 0.0, 1501311.3481134926]
+Episode: 163 || Reward: 030
+Episode: 164 || Reward: 030
+[77/76] Losses: [1691124.1512222318, 0.0, 1691124.1512222318]
+Episode: 165 || Reward: 030
+Episode: 166 || Reward: 030
+[78/77] Losses: [1958179.2616798477, 0.0, 1958179.2616798477]
+Episode: 167 || Reward: 030
+Episode: 168 || Reward: 030
+[79/78] Losses: [2389554.3368860176, 0.0, 2389554.3368860176]
+Episode: 169 || Reward: 030
+Episode: 170 || Reward: 030
+[80/79] Losses: [2781261.809780617, 0.0, 2781261.809780617]
+Episode: 171 || Reward: 030
+Episode: 172 || Reward: 030
+[81/80] Losses: [3117312.78617424, 0.0, 3117312.78617424]
+Episode: 173 || Reward: 030
+Episode: 174 || Reward: 030
+[82/81] Losses: [1839378.2089109584, 0.0, 1839378.2089109584]
+Episode: 175 || Reward: 030
+Episode: 176 || Reward: 030
+Episode: 177 || Reward: 030
+[83/82] Losses: [1105786.7519638275, 0.0, 1105786.7519638275]
+Episode: 178 || Reward: 030
+Episode: 179 || Reward: 030
+[84/83] Losses: [739946.6290520446, 0.0, 739946.6290520446]
+Episode: 180 || Reward: 030
+Episode: 181 || Reward: 030
+[85/84] Losses: [565404.2727815441, 0.0, 565404.2727815441]
+Episode: 182 || Reward: 030
+Episode: 183 || Reward: 030
+[86/85] Losses: [503732.4218898793, 0.0, 503732.4218898793]
+Episode: 184 || Reward: 030
+Episode: 185 || Reward: 030
+[87/86] Losses: [522014.55665764527, 0.0, 522014.55665764527]
+Episode: 186 || Reward: 030
+Episode: 187 || Reward: 030
+[88/87] Losses: [619376.3556066233, 0.0, 619376.3556066233]
+Episode: 188 || Reward: 030
+Episode: 189 || Reward: 030
+[89/88] Losses: [829017.2942562802, 0.0, 829017.2942562802]
+Episode: 190 || Reward: 030
+Episode: 191 || Reward: 030
+Episode: 192 || Reward: 030
+[90/89] Losses: [1203840.545882115, 0.0, 1203840.545882115]
+Episode: 193 || Reward: 030
+Episode: 194 || Reward: 030
+[91/90] Losses: [1802382.5399480495, 0.0, 1802382.5399480495]
+Episode: 195 || Reward: 030
+Episode: 196 || Reward: 030
+[92/91] Losses: [2578391.654373903, 0.0, 2578391.654373903]
+Episode: 197 || Reward: 030
+Episode: 198 || Reward: 030
+[93/92] Losses: [3197893.60026496, 0.0, 3197893.60026496]
+Episode: 199 || Reward: 030
+Episode: 200 || Reward: 030
+[94/93] Losses: [3139663.6191798346, 0.0, 3139663.6191798346]
+Episode: 201 || Reward: 030
+Episode: 202 || Reward: 030
+[95/94] Losses: [2465541.0273453323, 0.0, 2465541.0273453323]
+Episode: 203 || Reward: 030
+Episode: 204 || Reward: 030
+[96/95] Losses: [1571985.0443711237, 0.0, 1571985.0443711237]
+Episode: 205 || Reward: 030
+Episode: 206 || Reward: 030
+[97/96] Losses: [1067971.8673673254, 0.0, 1067971.8673673254]
+Episode: 207 || Reward: 030
+Episode: 208 || Reward: 030
+Episode: 209 || Reward: 030
+[98/97] Losses: [714145.5450700275, 0.0, 714145.5450700275]
+Episode: 210 || Reward: 030
+Episode: 211 || Reward: 030
+[99/98] Losses: [561095.5444672059, 0.0, 561095.5444672059]
+Episode: 212 || Reward: 030
+Episode: 213 || Reward: 030
+[100/99] Losses: [486830.260131298, 0.0, 486830.260131298]
+Episode: 214 || Reward: 030
+Episode: 215 || Reward: 030
+[101/100] Losses: [498606.9836311976, 0.0, 498606.9836311976]
+Episode: 216 || Reward: 030
+Episode: 217 || Reward: 030
+[102/101] Losses: [562261.0326776733, 0.0, 562261.0326776733]
+Episode: 218 || Reward: 030
+Episode: 219 || Reward: 030
+[103/102] Losses: [727754.101471881, 0.0, 727754.101471881]
+Episode: 220 || Reward: 030
+Episode: 221 || Reward: 030
+[104/103] Losses: [983425.9094984656, 0.0, 983425.9094984656]
+Episode: 222 || Reward: 030
+Episode: 223 || Reward: 030
+Episode: 224 || Reward: 030
+[105/104] Losses: [1414487.6864612112, 0.0, 1414487.6864612112]
+Episode: 225 || Reward: 030
+Episode: 226 || Reward: 030
+[106/105] Losses: [1869989.9824280199, 0.0, 1869989.9824280199]
+Episode: 227 || Reward: 030
+Episode: 228 || Reward: 030
+[107/106] Losses: [2313411.732440868, 0.0, 2313411.732440868]
+Episode: 229 || Reward: 030
+Episode: 230 || Reward: 030
+[108/107] Losses: [2279559.161311308, 0.0, 2279559.161311308]
+Episode: 231 || Reward: 030
+Episode: 232 || Reward: 030
+[109/108] Losses: [2066216.6577459206, 0.0, 2066216.6577459206]
+Episode: 233 || Reward: 030
+Episode: 234 || Reward: 030
+[110/109] Losses: [1557389.1932979675, 0.0, 1557389.1932979675]
+Episode: 235 || Reward: 030
+Episode: 236 || Reward: 030
+[111/110] Losses: [1225914.9067313035, 0.0, 1225914.9067313035]
+Episode: 237 || Reward: 030
+Episode: 238 || Reward: 030
+[112/111] Losses: [924064.7367121379, 0.0, 924064.7367121379]
+Episode: 239 || Reward: 030
+Episode: 240 || Reward: 030
+Episode: 241 || Reward: 030
+[113/112] Losses: [790139.5815429657, 0.0, 790139.5815429657]
+Episode: 242 || Reward: 030
+Episode: 243 || Reward: 030
+[114/113] Losses: [700559.4570496676, 0.0, 700559.4570496676]
+Episode: 244 || Reward: 030
+Episode: 245 || Reward: 030
+[115/114] Losses: [709727.6918740305, 0.0, 709727.6918740305]
+Episode: 246 || Reward: 030
+Episode: 247 || Reward: 030
+[116/115] Losses: [751961.691658214, 0.0, 751961.691658214]
+Episode: 248 || Reward: 030
+Episode: 249 || Reward: 030
+[117/116] Losses: [891246.9821732808, 0.0, 891246.9821732808]
+Episode: 250 || Reward: 030
+Episode: 251 || Reward: 030
+[118/117] Losses: [1056431.2301652208, 0.0, 1056431.2301652208]
+Episode: 252 || Reward: 030
+Episode: 253 || Reward: 030
+[119/118] Losses: [1321146.3079908565, 0.0, 1321146.3079908565]
+Episode: 254 || Reward: 030
+Episode: 255 || Reward: 030
+Episode: 256 || Reward: 030
+[120/119] Losses: [1509252.5282352264, 0.0, 1509252.5282352264]
+Episode: 257 || Reward: 030
+Episode: 258 || Reward: 030
+[121/120] Losses: [1698637.522168064, 0.0, 1698637.522168064]
+Episode: 259 || Reward: 030
+Episode: 260 || Reward: 030
+[122/121] Losses: [1628707.9080130015, 0.0, 1628707.9080130015]
+Episode: 261 || Reward: 030
+Episode: 262 || Reward: 030
+[123/122] Losses: [1532671.670300879, 0.0, 1532671.670300879]
+Episode: 263 || Reward: 030
+Episode: 264 || Reward: 030
+[124/123] Losses: [1260976.259008021, 0.0, 1260976.259008021]
+Episode: 265 || Reward: 030
+Episode: 266 || Reward: 030
+[125/124] Losses: [1092446.6385117471, 0.0, 1092446.6385117471]
+Episode: 267 || Reward: 030
+Episode: 268 || Reward: 030
+[126/125] Losses: [897691.8885398433, 0.0, 897691.8885398433]
+Episode: 269 || Reward: 030
+Episode: 270 || Reward: 030
+[127/126] Losses: [819106.7723653996, 0.0, 819106.7723653996]
+Episode: 271 || Reward: 030
+Episode: 272 || Reward: 030
+Episode: 273 || Reward: 030
+[128/127] Losses: [746619.1776944172, 0.0, 746619.1776944172]
+Episode: 274 || Reward: 030
+Episode: 275 || Reward: 030
+[129/128] Losses: [761623.8014794033, 0.0, 761623.8014794033]
+Episode: 276 || Reward: 030
+Episode: 277 || Reward: 030
+[130/129] Losses: [785981.3695073761, 0.0, 785981.3695073761]
+Episode: 278 || Reward: 030
+Episode: 279 || Reward: 030
+[131/130] Losses: [889235.8145831792, 0.0, 889235.8145831792]
+Episode: 280 || Reward: 030
+Episode: 281 || Reward: 030
+[132/131] Losses: [997122.9363824571, 0.0, 997122.9363824571]
+Episode: 282 || Reward: 030
+Episode: 283 || Reward: 030
+[133/132] Losses: [1264462.5964273626, 0.0, 1264462.5964273626]
+Episode: 284 || Reward: 030
+Episode: 285 || Reward: 030
+[134/133] Losses: [1355108.1859732126, 0.0, 1355108.1859732126]
+Episode: 286 || Reward: 030
+Episode: 287 || Reward: 030
+Episode: 288 || Reward: 030
+[135/134] Losses: [1437093.515892243, 0.0, 1437093.515892243]
+Episode: 289 || Reward: 030
+Episode: 290 || Reward: 030
+[136/135] Losses: [1315588.755898838, 0.0, 1315588.755898838]
+Episode: 291 || Reward: 030
+Episode: 292 || Reward: 030
+[137/136] Losses: [1210798.7372987175, 0.0, 1210798.7372987175]
+Episode: 293 || Reward: 030
+Episode: 294 || Reward: 030
+[138/137] Losses: [1006894.418367194, 0.0, 1006894.418367194]
+Episode: 295 || Reward: 030
+Episode: 296 || Reward: 030
+[139/138] Losses: [895022.4729085271, 0.0, 895022.4729085271]
+Episode: 297 || Reward: 030
+Episode: 298 || Reward: 030
+[140/139] Losses: [766055.3438014, 0.0, 766055.3438014]
+Episode: 299 || Reward: 030
+Episode: 300 || Reward: 030
+[141/140] Losses: [727838.7252275277, 0.0, 727838.7252275277]
+Episode: 301 || Reward: 030
+Episode: 302 || Reward: 030
+[142/141] Losses: [688868.4469998591, 0.0, 688868.4469998591]
+Episode: 303 || Reward: 030
+Episode: 304 || Reward: 030
+Episode: 305 || Reward: 030
+[143/142] Losses: [725770.5016549663, 0.0, 725770.5016549663]
+Episode: 306 || Reward: 030
+Episode: 307 || Reward: 030
+[144/143] Losses: [759934.2019345806, 0.0, 759934.2019345806]
+Episode: 308 || Reward: 030
+Episode: 309 || Reward: 030
+[145/144] Losses: [858320.4741424129, 0.0, 858320.4741424129]
+Episode: 310 || Reward: 030
+Episode: 311 || Reward: 030
+[146/145] Losses: [926715.858078277, 0.0, 926715.858078277]
+Episode: 312 || Reward: 030
+Episode: 313 || Reward: 030
+[147/146] Losses: [1041697.1052269043, 0.0, 1041697.1052269043]
+Episode: 314 || Reward: 030
+Episode: 315 || Reward: 030
+[148/147] Losses: [1057040.5884943958, 0.0, 1057040.5884943958]
+Episode: 316 || Reward: 030
+Episode: 317 || Reward: 030
+[149/148] Losses: [1090543.7182259215, 0.0, 1090543.7182259215]
+Episode: 318 || Reward: 030
+Episode: 319 || Reward: 030
+Episode: 320 || Reward: 030
+[150/149] Losses: [994804.5657254679, 0.0, 994804.5657254679]
+Episode: 321 || Reward: 030
+Episode: 322 || Reward: 030
+[151/150] Losses: [938258.4169392283, 0.0, 938258.4169392283]
+Episode: 323 || Reward: 030
+Episode: 324 || Reward: 030
+[152/151] Losses: [812707.7364042619, 0.0, 812707.7364042619]
+Episode: 325 || Reward: 030
+Episode: 326 || Reward: 030
+[153/152] Losses: [753702.7665866585, 0.0, 753702.7665866585]
+Episode: 327 || Reward: 030
+Episode: 328 || Reward: 030
+[154/153] Losses: [669180.1020050453, 0.0, 669180.1020050453]
+Episode: 329 || Reward: 030
+Episode: 330 || Reward: 030
+[155/154] Losses: [653588.2094759033, 0.0, 653588.2094759033]
+Episode: 331 || Reward: 030
+Episode: 332 || Reward: 030
+[156/155] Losses: [624068.5768059572, 0.0, 624068.5768059572]
+Episode: 333 || Reward: 030
+Episode: 334 || Reward: 030
+[157/156] Losses: [655507.2745475435, 0.0, 655507.2745475435]
+Episode: 335 || Reward: 030
+Episode: 336 || Reward: 030
+Episode: 337 || Reward: 030
+[158/157] Losses: [667599.0936753475, 0.0, 667599.0936753475]
+Episode: 338 || Reward: 030
+Episode: 339 || Reward: 030
+[159/158] Losses: [730452.2554544163, 0.0, 730452.2554544163]
+Episode: 340 || Reward: 030
+Episode: 341 || Reward: 030
+[160/159] Losses: [756894.1616565015, 0.0, 756894.1616565015]
+Episode: 342 || Reward: 030
+Episode: 343 || Reward: 030
+[161/160] Losses: [819674.5797755967, 0.0, 819674.5797755967]
+Episode: 344 || Reward: 030
+Episode: 345 || Reward: 030
+[162/161] Losses: [807788.0191240971, 0.0, 807788.0191240971]
+Episode: 346 || Reward: 030
+Episode: 347 || Reward: 030
+[163/162] Losses: [822982.1331603325, 0.0, 822982.1331603325]
+Episode: 348 || Reward: 030
+Episode: 349 || Reward: 030
+[164/163] Losses: [754993.6283177966, 0.0, 754993.6283177966]
+Episode: 350 || Reward: 030
+Episode: 351 || Reward: 030
+Episode: 352 || Reward: 030
+[165/164] Losses: [726005.8668405473, 0.0, 726005.8668405473]
+Episode: 353 || Reward: 030
+Episode: 354 || Reward: 030
+[166/165] Losses: [644454.5203703266, 0.0, 644454.5203703266]
+Episode: 355 || Reward: 030
+Episode: 356 || Reward: 030
+[167/166] Losses: [610357.9307055804, 0.0, 610357.9307055804]
+Episode: 357 || Reward: 030
+Episode: 358 || Reward: 030
+[168/167] Losses: [553208.5388078063, 0.0, 553208.5388078063]
+Episode: 359 || Reward: 030
+Episode: 360 || Reward: 030
+[169/168] Losses: [545476.1224310888, 0.0, 545476.1224310888]
+Episode: 361 || Reward: 030
+Episode: 362 || Reward: 030
+[170/169] Losses: [521785.2115692146, 0.0, 521785.2115692146]
+Episode: 363 || Reward: 030
+Episode: 364 || Reward: 030
+[171/170] Losses: [540145.2195122893, 0.0, 540145.2195122893]
+Episode: 365 || Reward: 030
+Episode: 366 || Reward: 030
+[172/171] Losses: [627953.2754516792, 0.0, 627953.2754516792]
+Episode: 367 || Reward: 030
+Episode: 368 || Reward: 030
+Episode: 369 || Reward: 030
+[173/172] Losses: [712415.4084062008, 0.0, 712415.4084062008]
+Episode: 370 || Reward: 030
+Episode: 371 || Reward: 030
+[174/173] Losses: [1019111.0104408441, 0.0, 1019111.0104408441]
+Episode: 372 || Reward: 030
+Episode: 373 || Reward: 030
+[175/174] Losses: [1045016.7100860979, 0.0, 1045016.7100860979]
+Episode: 374 || Reward: 030
+Episode: 375 || Reward: 030
+[176/175] Losses: [794718.9966475714, 0.0, 794718.9966475714]
+Episode: 376 || Reward: 030
+Episode: 377 || Reward: 030
+[177/176] Losses: [560852.8615298426, 0.0, 560852.8615298426]
+Episode: 378 || Reward: 030
+Episode: 379 || Reward: 030
+[178/177] Losses: [383260.62778601574, 0.0, 383260.62778601574]
+Episode: 380 || Reward: 030
+Episode: 381 || Reward: 030
+[179/178] Losses: [287094.7302167203, 0.0, 287094.7302167203]
+Episode: 382 || Reward: 030
+Episode: 383 || Reward: 030
+Episode: 384 || Reward: 030
+[180/179] Losses: [233480.29775713244, 0.0, 233480.29775713244]
+Episode: 385 || Reward: 030
+Episode: 386 || Reward: 030
+[181/180] Losses: [216241.13301205967, 0.0, 216241.13301205967]
+Episode: 387 || Reward: 030
+Episode: 388 || Reward: 030
+[182/181] Losses: [226523.1873974903, 0.0, 226523.1873974903]
+Episode: 389 || Reward: 030
+Episode: 390 || Reward: 030
+[183/182] Losses: [265721.0571245485, 0.0, 265721.0571245485]
+Episode: 391 || Reward: 030
+Episode: 392 || Reward: 030
+[184/183] Losses: [336304.39937950426, 0.0, 336304.39937950426]
+Episode: 393 || Reward: 030
+Episode: 394 || Reward: 030
+[185/184] Losses: [454340.9460800168, 0.0, 454340.9460800168]
+Episode: 395 || Reward: 030
+Episode: 396 || Reward: 030
+[186/185] Losses: [603361.4983939971, 0.0, 603361.4983939971]
+Episode: 397 || Reward: 030
+Episode: 398 || Reward: 030
+[187/186] Losses: [764178.0613835279, 0.0, 764178.0613835279]
+Episode: 399 || Reward: 030
+Episode: 400 || Reward: 030
+Episode: 401 || Reward: 030
+[188/187] Losses: [839131.7498334893, 0.0, 839131.7498334893]
+Episode: 402 || Reward: 030
+Episode: 403 || Reward: 030
+[189/188] Losses: [808890.5254515777, 0.0, 808890.5254515777]
+Episode: 404 || Reward: 030
+Episode: 405 || Reward: 030
+[190/189] Losses: [679199.7121467816, 0.0, 679199.7121467816]
+Episode: 406 || Reward: 030
+Episode: 407 || Reward: 030
+[191/190] Losses: [541887.8941302738, 0.0, 541887.8941302738]
+Episode: 408 || Reward: 030
+Episode: 409 || Reward: 030
+[192/191] Losses: [418760.3675235164, 0.0, 418760.3675235164]
+Episode: 410 || Reward: 030
+Episode: 411 || Reward: 030
+[193/192] Losses: [342993.68372495496, 0.0, 342993.68372495496]
+Episode: 412 || Reward: 030
+Episode: 413 || Reward: 030
+[194/193] Losses: [295383.06812696194, 0.0, 295383.06812696194]
+Episode: 414 || Reward: 030
+Episode: 415 || Reward: 030
+Episode: 416 || Reward: 030
+[195/194] Losses: [281164.7056772184, 0.0, 281164.7056772184]
+Episode: 417 || Reward: 030
+Episode: 418 || Reward: 030
+[196/195] Losses: [287957.01359013485, 0.0, 287957.01359013485]
+Episode: 419 || Reward: 030
+Episode: 420 || Reward: 030
+[197/196] Losses: [317117.1956389672, 0.0, 317117.1956389672]
+Episode: 421 || Reward: 030
+Episode: 422 || Reward: 030
+[198/197] Losses: [366984.33745502564, 0.0, 366984.33745502564]
+Episode: 423 || Reward: 030
+Episode: 424 || Reward: 030
+[199/198] Losses: [440728.97250920325, 0.0, 440728.97250920325]
+Episode: 425 || Reward: 030
+Episode: 426 || Reward: 030
+[200/199] Losses: [516725.63311802933, 0.0, 516725.63311802933]
+Episode: 427 || Reward: 030
+Episode: 428 || Reward: 030
+[201/200] Losses: [587162.1413925316, 0.0, 587162.1413925316]
+Episode: 429 || Reward: 030
+Episode: 430 || Reward: 030
+[202/201] Losses: [607908.8148414977, 0.0, 607908.8148414977]
+Episode: 431 || Reward: 030
+Episode: 432 || Reward: 030
+Episode: 433 || Reward: 030
+[203/202] Losses: [588215.7481360469, 0.0, 588215.7481360469]
+Episode: 434 || Reward: 030
+Episode: 435 || Reward: 030
+[204/203] Losses: [523907.54997822305, 0.0, 523907.54997822305]
+Episode: 436 || Reward: 030
+Episode: 437 || Reward: 030
+[205/204] Losses: [449369.5917274764, 0.0, 449369.5917274764]
+Episode: 438 || Reward: 030
+Episode: 439 || Reward: 030
+[206/205] Losses: [378497.98611503106, 0.0, 378497.98611503106]
+Episode: 440 || Reward: 030
+Episode: 441 || Reward: 030
+[207/206] Losses: [330547.22451618616, 0.0, 330547.22451618616]
+Episode: 442 || Reward: 030
+Episode: 443 || Reward: 030
+[208/207] Losses: [297359.13216185296, 0.0, 297359.13216185296]
+Episode: 444 || Reward: 030
+Episode: 445 || Reward: 030
+[209/208] Losses: [286199.3733934955, 0.0, 286199.3733934955]
+Episode: 446 || Reward: 030
+Episode: 447 || Reward: 030
+Episode: 448 || Reward: 030
+[210/209] Losses: [287817.350940468, 0.0, 287817.350940468]
+Episode: 449 || Reward: 030
+Episode: 450 || Reward: 030
+[211/210] Losses: [306627.73394935124, 0.0, 306627.73394935124]
+Episode: 451 || Reward: 030
+Episode: 452 || Reward: 030
+[212/211] Losses: [340418.9467596598, 0.0, 340418.9467596598]
+Episode: 453 || Reward: 030
+Episode: 454 || Reward: 030
+[213/212] Losses: [384639.58199998364, 0.0, 384639.58199998364]
+Episode: 455 || Reward: 030
+Episode: 456 || Reward: 030
+[214/213] Losses: [427082.859646354, 0.0, 427082.859646354]
+Episode: 457 || Reward: 030
+Episode: 458 || Reward: 030
+[215/214] Losses: [462149.50694613456, 0.0, 462149.50694613456]
+Episode: 459 || Reward: 030
+Episode: 460 || Reward: 030
+[216/215] Losses: [468709.9935649176, 0.0, 468709.9935649176]
+Episode: 461 || Reward: 030
+Episode: 462 || Reward: 030
+[217/216] Losses: [452491.7151127773, 0.0, 452491.7151127773]
+Episode: 463 || Reward: 030
+Episode: 464 || Reward: 030
+Episode: 465 || Reward: 030
+[218/217] Losses: [411562.3827670533, 0.0, 411562.3827670533]
+Episode: 466 || Reward: 030
+Episode: 467 || Reward: 030
+[219/218] Losses: [365023.37992077845, 0.0, 365023.37992077845]
+Episode: 468 || Reward: 030
+Episode: 469 || Reward: 030
+[220/219] Losses: [324188.86540868925, 0.0, 324188.86540868925]
+Episode: 470 || Reward: 030
+Episode: 471 || Reward: 030
+[221/220] Losses: [292634.72230975644, 0.0, 292634.72230975644]
+Episode: 472 || Reward: 030
+Episode: 473 || Reward: 030
+[222/221] Losses: [271998.0234878863, 0.0, 271998.0234878863]
+Episode: 474 || Reward: 030
+Episode: 475 || Reward: 030
+[223/222] Losses: [265358.6411983293, 0.0, 265358.6411983293]
+Episode: 476 || Reward: 030
+Episode: 477 || Reward: 030
+[224/223] Losses: [268916.88645874534, 0.0, 268916.88645874534]
+Episode: 478 || Reward: 030
+Episode: 479 || Reward: 030
+Episode: 480 || Reward: 030
+[225/224] Losses: [284288.0552010376, 0.0, 284288.0552010376]
+Episode: 481 || Reward: 030
+Episode: 482 || Reward: 030
+Episode: 485 || Reward: 030
+Episode: 486 || Reward: 030
+[228/227] Losses: [352926.7291727253, 0.0, 352926.7291727253]
+Episode: 487 || Reward: 030
+Episode: 488 || Reward: 030
+[229/228] Losses: [365385.61473488394, 0.0, 365385.61473488394]
+Episode: 489 || Reward: 030
+Episode: 490 || Reward: 030
+[230/229] Losses: [363233.47862710175, 0.0, 363233.47862710175]
+Episode: 491 || Reward: 030
+Episode: 492 || Reward: 030
+[231/230] Losses: [348253.0121708693, 0.0, 348253.0121708693]
+Episode: 493 || Reward: 030
+Episode: 494 || Reward: 030
+[232/231] Losses: [323645.1567214093, 0.0, 323645.1567214093]
+Episode: 495 || Reward: 030
+Episode: 496 || Reward: 030
+Episode: 497 || Reward: 030
+[233/232] Losses: [297224.8464181281, 0.0, 297224.8464181281]
+Episode: 498 || Reward: 030
+Episode: 499 || Reward: 030
+[234/233] Losses: [275281.72973694326, 0.0, 275281.72973694326]
+Episode: 500 || Reward: 030
+Episode: 501 || Reward: 030
+[235/234] Losses: [255642.339883215, 0.0, 255642.339883215]
+Episode: 502 || Reward: 030
+Episode: 503 || Reward: 030
+[236/235] Losses: [244333.95023715112, 0.0, 244333.95023715112]
+Episode: 504 || Reward: 030
+Episode: 505 || Reward: 030
+[237/236] Losses: [240187.7235729044, 0.0, 240187.7235729044]
+Episode: 506 || Reward: 030
+Episode: 507 || Reward: 030
+[238/237] Losses: [316298.12311883597, 0.0, 316298.12311883597]
+Episode: 508 || Reward: 030
+Episode: 509 || Reward: 030
+[239/238] Losses: [256560.1171550519, 0.0, 256560.1171550519]
+Episode: 510 || Reward: 030
+Episode: 511 || Reward: 030
+Episode: 512 || Reward: 030
+[240/239] Losses: [255305.0099210054, 0.0, 255305.0099210054]
+Episode: 513 || Reward: 030
+Episode: 514 || Reward: 030
+[241/240] Losses: [256190.91132327224, 0.0, 256190.91132327224]
+Episode: 515 || Reward: 030
+Episode: 516 || Reward: 030
+[242/241] Losses: [263889.8052423536, 0.0, 263889.8052423536]
+Episode: 517 || Reward: 030
+Episode: 518 || Reward: 030
+[243/242] Losses: [269594.8111164906, 0.0, 269594.8111164906]
+Episode: 519 || Reward: 030
+Episode: 520 || Reward: 030
+[244/243] Losses: [276058.06449860195, 0.0, 276058.06449860195]
+Episode: 521 || Reward: 030
+Episode: 522 || Reward: 030
+[245/244] Losses: [278535.2386931146, 0.0, 278535.2386931146]
+Episode: 523 || Reward: 030
+Episode: 524 || Reward: 030
+[246/245] Losses: [277847.0328224652, 0.0, 277847.0328224652]
+Episode: 525 || Reward: 030
+Episode: 526 || Reward: 030
+[247/246] Losses: [271238.5897852513, 0.0, 271238.5897852513]
+Episode: 527 || Reward: 030
+Episode: 528 || Reward: 030
+Episode: 529 || Reward: 030
+[248/247] Losses: [262253.5658687122, 0.0, 262253.5658687122]
+Episode: 530 || Reward: 030
+Episode: 531 || Reward: 030
+[249/248] Losses: [247923.64390210394, 0.0, 247923.64390210394]
+Episode: 532 || Reward: 030
+Episode: 533 || Reward: 030
+[250/249] Losses: [238906.7167828901, 0.0, 238906.7167828901]
+Episode: 534 || Reward: 030
+Episode: 535 || Reward: 030
+[251/250] Losses: [228357.3867498408, 0.0, 228357.3867498408]
+Episode: 536 || Reward: 030
+Episode: 537 || Reward: 030
+[252/251] Losses: [222417.15840544726, 0.0, 222417.15840544726]
+Episode: 538 || Reward: 030
+Episode: 539 || Reward: 030
+[253/252] Losses: [218163.21339725758, 0.0, 218163.21339725758]
+Episode: 540 || Reward: 030
+Episode: 541 || Reward: 030
+[254/253] Losses: [218411.12142519627, 0.0, 218411.12142519627]
+Episode: 542 || Reward: 030
+Episode: 543 || Reward: 030
+Episode: 544 || Reward: 030
+[255/254] Losses: [219700.64398889564, 0.0, 219700.64398889564]
+Episode: 545 || Reward: 030
+Episode: 546 || Reward: 030
+[256/255] Losses: [224757.07881291467, 0.0, 224757.07881291467]
+Episode: 547 || Reward: 030
+Episode: 548 || Reward: 030
+[257/256] Losses: [224417.31050160332, 0.0, 224417.31050160332]
+Episode: 549 || Reward: 030
+Episode: 550 || Reward: 030
+[258/257] Losses: [226810.02885378455, 0.0, 226810.02885378455]
+Episode: 551 || Reward: 030
+Episode: 552 || Reward: 030
+[259/258] Losses: [223778.22146498162, 0.0, 223778.22146498162]
+Episode: 553 || Reward: 030
+Episode: 554 || Reward: 030
+[260/259] Losses: [220689.70321481198, 0.0, 220689.70321481198]
+Episode: 555 || Reward: 030
+Episode: 556 || Reward: 030
+[261/260] Losses: [213176.45771555055, 0.0, 213176.45771555055]
+Episode: 557 || Reward: 030
+Episode: 558 || Reward: 030
+[262/261] Losses: [206873.3469425265, 0.0, 206873.3469425265]
+Episode: 559 || Reward: 030
+Episode: 560 || Reward: 030
+Episode: 561 || Reward: 030
+[263/262] Losses: [198328.27433338348, 0.0, 198328.27433338348]
+Episode: 562 || Reward: 030
+Episode: 563 || Reward: 030
+[264/263] Losses: [194658.03463596263, 0.0, 194658.03463596263]
+Episode: 564 || Reward: 030
+Episode: 565 || Reward: 030
+[265/264] Losses: [186940.95134576416, 0.0, 186940.95134576416]
+Episode: 566 || Reward: 030
+Episode: 567 || Reward: 030
+[266/265] Losses: [184487.60957451645, 0.0, 184487.60957451645]
+Episode: 568 || Reward: 030
+Episode: 569 || Reward: 030
+[267/266] Losses: [180800.53184081608, 0.0, 180800.53184081608]
+Episode: 570 || Reward: 030
+Episode: 571 || Reward: 030
+[268/267] Losses: [177346.99280930104, 0.0, 177346.99280930104]
+Episode: 572 || Reward: 030
+Episode: 573 || Reward: 030
+[269/268] Losses: [172264.04492138728, 0.0, 172264.04492138728]
+Episode: 574 || Reward: 030
+Episode: 575 || Reward: 030
+Episode: 576 || Reward: 030
+[270/269] Losses: [216713.8662561378, 0.0, 216713.8662561378]
+Episode: 577 || Reward: 030
+Episode: 578 || Reward: 030
+[271/270] Losses: [219438.65162966534, 0.0, 219438.65162966534]
+Episode: 579 || Reward: 030
+Episode: 580 || Reward: 030
+[272/271] Losses: [194266.69435500316, 0.0, 194266.69435500316]
+Episode: 581 || Reward: 030
+Episode: 582 || Reward: 030
+[273/272] Losses: [148223.50655458667, 0.0, 148223.50655458667]
+Episode: 583 || Reward: 030
+Episode: 584 || Reward: 030
+[274/273] Losses: [145184.43811920355, 0.0, 145184.43811920355]
+Episode: 585 || Reward: 030
+Episode: 586 || Reward: 030
+[275/274] Losses: [134641.85732902295, 0.0, 134641.85732902295]
+Episode: 587 || Reward: 030
+Episode: 588 || Reward: 030
+[276/275] Losses: [124671.69304822237, 0.0, 124671.69304822237]
+Episode: 589 || Reward: 030
+Episode: 590 || Reward: 030
+[277/276] Losses: [115445.54738116547, 0.0, 115445.54738116547]
+Episode: 591 || Reward: 030
+Episode: 592 || Reward: 030
+Episode: 593 || Reward: 030
+[278/277] Losses: [110324.60529851678, 0.0, 110324.60529851678]
+Episode: 594 || Reward: 030
+Episode: 595 || Reward: 030
+[279/278] Losses: [107343.4043387258, 0.0, 107343.4043387258]
+Episode: 596 || Reward: 030
+Episode: 597 || Reward: 030
+[280/279] Losses: [110545.4043540114, 0.0, 110545.4043540114]
+Episode: 598 || Reward: 030
+Episode: 599 || Reward: 030
+[281/280] Losses: [115649.82744503705, 0.0, 115649.82744503705]
+Episode: 600 || Reward: 030
+Episode: 601 || Reward: 030
+[282/281] Losses: [124436.95583777557, 0.0, 124436.95583777557]
+Episode: 602 || Reward: 030
+Episode: 603 || Reward: 030
+[283/282] Losses: [133869.36988534848, 0.0, 133869.36988534848]
+Episode: 604 || Reward: 030
+Episode: 605 || Reward: 030
+[284/283] Losses: [143240.01471693482, 0.0, 143240.01471693482]
+Episode: 606 || Reward: 030
+Episode: 607 || Reward: 030
+Episode: 608 || Reward: 030
+[285/284] Losses: [149184.27347595274, 0.0, 149184.27347595274]
+Episode: 609 || Reward: 030
+Episode: 610 || Reward: 030
+[286/285] Losses: [151081.89461347455, 0.0, 151081.89461347455]
+Episode: 611 || Reward: 030
+Episode: 612 || Reward: 030
+[287/286] Losses: [145580.5280270147, 0.0, 145580.5280270147]
+Episode: 613 || Reward: 030
+Episode: 614 || Reward: 030
+[288/287] Losses: [137870.1265044397, 0.0, 137870.1265044397]
+Episode: 615 || Reward: 030
+Episode: 616 || Reward: 030
+[289/288] Losses: [127850.88181305456, 0.0, 127850.88181305456]
+Episode: 617 || Reward: 030
+Episode: 618 || Reward: 030
+[290/289] Losses: [118344.62202302442, 0.0, 118344.62202302442]
+Episode: 619 || Reward: 030
+Episode: 620 || Reward: 030
+[291/290] Losses: [111136.18467031373, 0.0, 111136.18467031373]
+Episode: 621 || Reward: 030
+Episode: 622 || Reward: 030
+[292/291] Losses: [106059.04617455203, 0.0, 106059.04617455203]
+Episode: 623 || Reward: 030
+Episode: 624 || Reward: 030
+Episode: 625 || Reward: 030
+[293/292] Losses: [104746.68688111877, 0.0, 104746.68688111877]
+Episode: 626 || Reward: 030
+Episode: 627 || Reward: 030
+[294/293] Losses: [106237.56300182591, 0.0, 106237.56300182591]
+Episode: 628 || Reward: 030
+Episode: 629 || Reward: 030
+[295/294] Losses: [109209.58955254745, 0.0, 109209.58955254745]
+Episode: 630 || Reward: 030
+Episode: 631 || Reward: 030
+[296/295] Losses: [113526.48893060295, 0.0, 113526.48893060295]
+Episode: 632 || Reward: 030
+Episode: 633 || Reward: 030
+[297/296] Losses: [119157.63657011389, 0.0, 119157.63657011389]
+Episode: 634 || Reward: 030
+Episode: 635 || Reward: 030
+[298/297] Losses: [122193.02982473953, 0.0, 122193.02982473953]
+Episode: 636 || Reward: 030
+Episode: 637 || Reward: 030
+[299/298] Losses: [124428.85076420559, 0.0, 124428.85076420559]
+Episode: 638 || Reward: 030
+Episode: 639 || Reward: 030
+Episode: 640 || Reward: 030
+[300/299] Losses: [121659.46398078732, 0.0, 121659.46398078732]
+Episode: 641 || Reward: 030
+Episode: 642 || Reward: 030
+[301/300] Losses: [118054.83329556976, 0.0, 118054.83329556976]
+Episode: 643 || Reward: 030
+Episode: 644 || Reward: 030
+[302/301] Losses: [112214.81386066129, 0.0, 112214.81386066129]
+Episode: 645 || Reward: 030
+Episode: 646 || Reward: 030
+[303/302] Losses: [106874.70809525248, 0.0, 106874.70809525248]
+Episode: 647 || Reward: 030
+Episode: 648 || Reward: 030
+[304/303] Losses: [100466.90389686836, 0.0, 100466.90389686836]
+Episode: 649 || Reward: 030
+Episode: 650 || Reward: 030
+[305/304] Losses: [97306.5348618048, 0.0, 97306.5348618048]
+Episode: 651 || Reward: 030
+Episode: 652 || Reward: 030
+[306/305] Losses: [93578.81511071335, 0.0, 93578.81511071335]
+Episode: 653 || Reward: 030
+Episode: 654 || Reward: 030
+[307/306] Losses: [93751.96202210587, 0.0, 93751.96202210587]
+Episode: 655 || Reward: 030
+Episode: 656 || Reward: 030
+Episode: 657 || Reward: 030
+[308/307] Losses: [92889.84993346533, 0.0, 92889.84993346533]
+Episode: 658 || Reward: 030
+Episode: 659 || Reward: 030
+[309/308] Losses: [94731.08516357653, 0.0, 94731.08516357653]
+Episode: 660 || Reward: 030
+Episode: 661 || Reward: 030
+[310/309] Losses: [96167.78025297573, 0.0, 96167.78025297573]
+Episode: 662 || Reward: 030
+Episode: 663 || Reward: 030
+[311/310] Losses: [97819.47303915722, 0.0, 97819.47303915722]
+Episode: 664 || Reward: 030
+Episode: 665 || Reward: 030
+[312/311] Losses: [413275.69377962337, 0.0, 413275.69377962337]
+Episode: 666 || Reward: 030
+Episode: 667 || Reward: 030
+[313/312] Losses: [538762.7020961316, 0.0, 538762.7020961316]
+Episode: 668 || Reward: 030
+Episode: 669 || Reward: 030
+[314/313] Losses: [174517.0239195285, 0.0, 174517.0239195285]
+Episode: 670 || Reward: 030
+Episode: 671 || Reward: 030
+Episode: 672 || Reward: 030
+[315/314] Losses: [49919.18197605169, 0.0, 49919.18197605169]
+Episode: 673 || Reward: 030
+Episode: 674 || Reward: 030
+[316/315] Losses: [15433.839168147926, 0.0, 15433.839168147926]
+Episode: 675 || Reward: 030
+Episode: 676 || Reward: 030
+[317/316] Losses: [6052.654944654403, 0.0, 6052.654944654403]
+Episode: 677 || Reward: 030
+Episode: 678 || Reward: 030
+[318/317] Losses: [3085.31355224267, 0.0, 3085.31355224267]
+Episode: 679 || Reward: 030
+Episode: 680 || Reward: 030
+[319/318] Losses: [1989.6127352849644, 0.0, 1989.6127352849644]
+Episode: 681 || Reward: 030
+Episode: 682 || Reward: 030
+[320/319] Losses: [1557.8448135839467, 0.0, 1557.8448135839467]
+Episode: 683 || Reward: 030
+Episode: 684 || Reward: 030
+[321/320] Losses: [1554.525415642532, 0.0, 1554.525415642532]
+Episode: 685 || Reward: 030
+Episode: 686 || Reward: 030
+[322/321] Losses: [1822.2722696537417, 0.0, 1822.2722696537417]
+Episode: 687 || Reward: 030
+Episode: 688 || Reward: 030
+Episode: 689 || Reward: 030
+[323/322] Losses: [2722.18655239102, 0.0, 2722.18655239102]
+Episode: 690 || Reward: 030
+Episode: 691 || Reward: 030
+[324/323] Losses: [4902.689396960928, 0.0, 4902.689396960928]
+Episode: 692 || Reward: 030
+Episode: 693 || Reward: 030
+[325/324] Losses: [10092.809535543041, 0.0, 10092.809535543041]
+Episode: 694 || Reward: 030
+Episode: 695 || Reward: 030
+[326/325] Losses: [24220.906636599822, 0.0, 24220.906636599822]
+Episode: 696 || Reward: 030
+Episode: 697 || Reward: 030
+[327/326] Losses: [64643.985861399764, 0.0, 64643.985861399764]
+Episode: 698 || Reward: 030
+Episode: 699 || Reward: 030
+[328/327] Losses: [165351.59702684276, 0.0, 165351.59702684276]
+Episode: 700 || Reward: 030
+Episode: 701 || Reward: 030
+[329/328] Losses: [319217.5451446134, 0.0, 319217.5451446134]
+Episode: 702 || Reward: 030
+Episode: 703 || Reward: 030
+Episode: 704 || Reward: 030
+[330/329] Losses: [315865.70688147325, 0.0, 315865.70688147325]
+Episode: 705 || Reward: 030
+Episode: 706 || Reward: 030
+[331/330] Losses: [187700.5433704348, 0.0, 187700.5433704348]
+Episode: 707 || Reward: 030
+Episode: 708 || Reward: 030
+[332/331] Losses: [78296.83955622184, 0.0, 78296.83955622184]
+Episode: 709 || Reward: 030
+Episode: 710 || Reward: 030
+[333/332] Losses: [34771.43702049769, 0.0, 34771.43702049769]
+Episode: 711 || Reward: 030
+Episode: 712 || Reward: 030
+[334/333] Losses: [17101.447700720753, 0.0, 17101.447700720753]
+Episode: 713 || Reward: 030
+Episode: 714 || Reward: 030
+[335/334] Losses: [10445.152955077447, 0.0, 10445.152955077447]
+Episode: 717 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 718 || Reward: 030
+[337/336] Losses: [6897.211042732424, 0.0, 6897.211042732424]
+Episode: 719 || Reward: 030
+Episode: 720 || Reward: 030
+Episode: 721 || Reward: 030
+[338/337] Losses: [7339.2619950254975, 0.0, 7339.2619950254975]
+Episode: 722 || Reward: 030
+Episode: 723 || Reward: 030
+[339/338] Losses: [9354.294543385882, 0.0, 9354.294543385882]
+Episode: 724 || Reward: 030
+Episode: 725 || Reward: 030
+[340/339] Losses: [14306.573648223457, 0.0, 14306.573648223457]
+Episode: 726 || Reward: 030
+Episode: 730 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 731 || Reward: 030
+[343/342] Losses: [96007.99625726981, 0.0, 96007.99625726981]
+Episode: 732 || Reward: 030
+Episode: 733 || Reward: 030
+[344/343] Losses: [161245.20833418783, 0.0, 161245.20833418783]
+Episode: 734 || Reward: 030
+Episode: 735 || Reward: 030
+Episode: 736 || Reward: 030
+[345/344] Losses: [229842.81883941696, 0.0, 229842.81883941696]
+Episode: 737 || Reward: 030
+Episode: 738 || Reward: 030
+[346/345] Losses: [191521.2873336207, 0.0, 191521.2873336207]
+Episode: 743 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 744 || Reward: 030
+[349/348] Losses: [21909.597596711912, 0.0, 21909.597596711912]
+Episode: 745 || Reward: 030
+Episode: 746 || Reward: 030
+[350/349] Losses: [11934.582291433919, 0.0, 11934.582291433919]
+Episode: 747 || Reward: 030
+Episode: 748 || Reward: 030
+[351/350] Losses: [8138.59504862157, 0.0, 8138.59504862157]
+Episode: 749 || Reward: 030
+Episode: 750 || Reward: 030
+Episode: 756 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 757 || Reward: 030
+[355/354] Losses: [10923.491825713696, 0.0, 10923.491825713696]
+Episode: 758 || Reward: 030
+Episode: 759 || Reward: 030
+Episode: 769 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 770 || Reward: 030
+[361/360] Losses: [2660.4289430480817, 0.0, 2660.4289430480817]
+Episode: 771 || Reward: 030
+Episode: 782 || Reward: 0300688147325, 0.0, 315865.70688147325]
+[367/366] Losses: [108.26300076070449, 0.0, 108.26300076070449]
+Episode: 783 || Reward: 030
+Episode: 795 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 795 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 808 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 821 || Reward: 0300688147325, 0.0, 315865.70688147325]
+Episode: 834 || Reward: 0300688147325, 0.0, 315865.70688147325]
+[397/396] Losses: [537.6585068070638, 0.0, 537.6585068070638]5]
+[403/402] Losses: [254.58156009737232, 0.0, 254.58156009737232]
+[409/408] Losses: [142.85900159635293, 0.0, 142.85900159635293]
+[415/414] Losses: [98.04231917887742, 0.0, 98.04231917887742]3]
+[421/420] Losses: [83.37902957803266, 0.0, 83.37902957803266]3]
+Episode: 911 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 924 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 937 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 937 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 950 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 963 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 976 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 989 || Reward: 030957803266, 0.0, 83.37902957803266]3]
+Episode: 1002 || Reward: 03057803266, 0.0, 83.37902957803266]3]
+Episode: 1015 || Reward: 03057803266, 0.0, 83.37902957803266]3]
+Episode: 1028 || Reward: 03057803266, 0.0, 83.37902957803266]3]
+Episode: 1041 || Reward: 03057803266, 0.0, 83.37902957803266]3]
+[494/493] Losses: [43.74348258892813, 0.0, 43.74348258892813]3]
+[494/493] Losses: [43.74348258892813, 0.0, 43.74348258892813]3]
+[500/499] Losses: [39.039254476652346, 0.0, 39.039254476652346]
+[506/505] Losses: [39.710220522700915, 0.0, 39.710220522700915]
+[512/511] Losses: [45.588050884560445, 0.0, 45.588050884560445]
+[518/517] Losses: [51.83475831534861, 0.0, 51.83475831534861]5]
+Episode: 1118 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1118 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1131 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1144 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1157 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1170 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1183 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1196 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1196 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1209 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+Episode: 1222 || Reward: 03031534861, 0.0, 51.83475831534861]5]
+[578/577] Losses: [49.2003940855579, 0.0, 49.2003940855579]1]5]
+[584/583] Losses: [40.201879324540045, 0.0, 40.201879324540045]
+Episode: 1256 || Reward: 030324540045, 0.0, 40.201879324540045]
+Episode: 1266 || Reward: 030324540045, 0.0, 40.201879324540045]
+Episode: 1278 || Reward: 030324540045, 0.0, 40.201879324540045]
+Episode: 1290 || Reward: 030324540045, 0.0, 40.201879324540045]
+Episode: 1302 || Reward: 030324540045, 0.0, 40.201879324540045]
+Episode: 1314 || Reward: 030324540045, 0.0, 40.201879324540045]
+Episode: 1326 || Reward: 030324540045, 0.0, 40.201879324540045]
+[627/626] Losses: [34.094540781698335, 0.0, 34.094540781698335]
+Episode: 1350 || Reward: 030781698335, 0.0, 34.094540781698335]
+[638/637] Losses: [46.65547836522248, 0.0, 46.65547836522248]5]
+Episode: 1373 || Reward: 03036522248, 0.0, 46.65547836522248]5]
+Episode: 1384 || Reward: 03036522248, 0.0, 46.65547836522248]5]
+Episode: 1395 || Reward: 03036522248, 0.0, 46.65547836522248]5]
+[659/658] Losses: [37.4031551323112, 0.0, 37.4031551323112]8]5]
+Episode: 1417 || Reward: 0301323112, 0.0, 37.4031551323112]8]5]
+Episode: 1425 || Reward: 0301323112, 0.0, 37.4031551323112]8]5]
+Episode: 1436 || Reward: 0301323112, 0.0, 37.4031551323112]8]5]
+Episode: 1447 || Reward: 0301323112, 0.0, 37.4031551323112]8]5]
+Episode: 1459 || Reward: 0301323112, 0.0, 37.4031551323112]8]5]
+[689/688] Losses: [36.32279647389025, 0.0, 36.32279647389025]5]
+[694/693] Losses: [32.083175350241305, 0.0, 32.083175350241305]
+[698/697] Losses: [44.20012243822372, 0.0, 44.20012243822372]5]
+[703/702] Losses: [32.608616073320555, 0.0, 32.608616073320555]
+[708/707] Losses: [33.7865840155434, 0.0, 33.7865840155434]555]
+[713/712] Losses: [43.60027575636141, 0.0, 43.60027575636141]5]
+Episode: 1533 || Reward: 03075636141, 0.0, 43.60027575636141]5]
+Episode: 1544 || Reward: 03075636141, 0.0, 43.60027575636141]5]
+[729/728] Losses: [39.91804050130814, 0.0, 39.91804050130814]5]
+Episode: 1564 || Reward: 03050130814, 0.0, 39.91804050130814]5]
+Episode: 1576 || Reward: 03050130814, 0.0, 39.91804050130814]5]
+Episode: 1587 || Reward: 03050130814, 0.0, 39.91804050130814]5]
+[749/748] Losses: [34.229144338148146, 0.0, 34.229144338148146]
+Episode: 1610 || Reward: 030338148146, 0.0, 34.229144338148146]
+[760/759] Losses: [33.84804648149856, 0.0, 33.84804648149856]6]
+Episode: 1634 || Reward: 03048149856, 0.0, 33.84804648149856]6]
+[771/770] Losses: [31.687753642264745, 0.0, 31.687753642264745]
+[776/775] Losses: [30.215691035170714, 0.0, 30.215691035170714]
+Episode: 1668 || Reward: 030035170714, 0.0, 30.215691035170714]
+Episode: 1678 || Reward: 030035170714, 0.0, 30.215691035170714]
+Episode: 1691 || Reward: 030035170714, 0.0, 30.215691035170714]
+[798/797] Losses: [30.809871259184526, 0.0, 30.809871259184526]
+[803/802] Losses: [40.11871556315675, 0.0, 40.11871556315675]6]
+[809/808] Losses: [32.224890538457686, 0.0, 32.224890538457686]
+[813/812] Losses: [30.33329975422305, 0.0, 30.33329975422305]6]
+Episode: 1747 || Reward: 03075422305, 0.0, 30.33329975422305]6]
+Episode: 1758 || Reward: 03075422305, 0.0, 30.33329975422305]6]
+[830/829] Losses: [27.767229298511758, 0.0, 27.767229298511758]
+Episode: 1783 || Reward: 030298511758, 0.0, 27.767229298511758]
+[841/840] Losses: [38.70734399578869, 0.0, 38.70734399578869]8]
+Episode: 1806 || Reward: 03099578869, 0.0, 38.70734399578869]8]
+Episode: 1818 || Reward: 03099578869, 0.0, 38.70734399578869]8]
+[858/857] Losses: [28.937084799197763, 0.0, 28.937084799197763]
+Episode: 1842 || Reward: 030799197763, 0.0, 28.937084799197763]
+Episode: 1854 || Reward: 030799197763, 0.0, 28.937084799197763]
+Episode: 1866 || Reward: 030799197763, 0.0, 28.937084799197763]
+Episode: 1878 || Reward: 030799197763, 0.0, 28.937084799197763]
+Episode: 1887 || Reward: 030799197763, 0.0, 28.937084799197763]
+Episode: 1899 || Reward: 030799197763, 0.0, 28.937084799197763]
+Episode: 1911 || Reward: 030799197763, 0.0, 28.937084799197763]
+Episode: 1923 || Reward: 030799197763, 0.0, 28.937084799197763]
+[907/906] Losses: [31.21625034303587, 0.0, 31.21625034303587]3]
+Episode: 1946 || Reward: 03034303587, 0.0, 31.21625034303587]3]
+[918/917] Losses: [27.153609924769952, 0.0, 27.153609924769952]
+Episode: 1971 || Reward: 030924769952, 0.0, 27.153609924769952]
+[929/928] Losses: [28.484461037346627, 0.0, 28.484461037346627]
+Episode: 1994 || Reward: 030037346627, 0.0, 28.484461037346627]
+[940/939] Losses: [28.152531200343535, 0.0, 28.152531200343535]
+Episode: 2017 || Reward: 030200343535, 0.0, 28.152531200343535]
+Episode: 2029 || Reward: 030200343535, 0.0, 28.152531200343535]
+Episode: 2039 || Reward: 030200343535, 0.0, 28.152531200343535]
+[961/960] Losses: [34.49194660053523, 0.0, 34.49194660053523]5]
+Episode: 2062 || Reward: 03060053523, 0.0, 34.49194660053523]5]
+Episode: 2074 || Reward: 03060053523, 0.0, 34.49194660053523]5]
+Episode: 2086 || Reward: 03060053523, 0.0, 34.49194660053523]5]
+[983/982] Losses: [33.7598402634994, 0.0, 33.7598402634994]3]5]
+[989/988] Losses: [26.74821919072135, 0.0, 26.74821919072135]5]
+Episode: 2122 || Reward: 03019072135, 0.0, 26.74821919072135]5]
+Balance: 100000es: [26.432667875759247, 0.0, 26.432667875759247]
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000es: [26.432667875759247, 0.0, 26.432667875759247]
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Balance: 100000
+Step: 23
+Balance: 100000
+Step: 24
+Balance: 100000
+Step: 25
+Balance: 100000
+Step: 26
+Balance: 100000
+Step: 27
+Balance: 100000
+Step: 28
+Balance: 100000
+Step: 29
+Balance: 100000
+Step: 0
+Balance: 100000
+Episode Rewards: 30.0
+Step: 0
+Balance: 100000
+Step: 1
+Balance: 100000
+Step: 2
+Balance: 100000
+Step: 3
+Balance: 100000
+Step: 4
+Balance: 100000
+Step: 5
+Balance: 100000
+Step: 6
+Balance: 100000
+Step: 7
+Balance: 100000
+Step: 8
+Balance: 100000
+Step: 9
+Balance: 100000
+Step: 10
+Balance: 100000
+Step: 11
+Balance: 100000
+Step: 12
+Balance: 100000
+Step: 13
+Balance: 100000
+Step: 14
+Balance: 100000
+Step: 15
+Balance: 100000
+Step: 16
+Balance: 100000
+Step: 17
+Balance: 100000
+Step: 18
+Balance: 100000
+Step: 19
+Balance: 100000
+Step: 20
+Balance: 100000
+Step: 21
+Balance: 100000
+Step: 22
+Step: 22
