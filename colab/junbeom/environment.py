@@ -2,36 +2,10 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import abc
-#from cv2 import dft
-import tensorflow as tf
 import numpy as np
-
-import base64
-import matplotlib.pyplot as plt
-from tensorflow.python.eager.monitoring import time
-from tf_agents.agents.dqn import dqn_agent
-from tf_agents.networks import q_network
-from tf_agents.policies import random_tf_policy
-from tf_agents.replay_buffers import tf_uniform_replay_buffer
-
-from utils import monte_carlo_paths
-
-from tf_agents.agents.dqn import dqn_agent
 from tf_agents.environments import py_environment, utils
-from tf_agents.environments import tf_py_environment,tf_environment
-from tf_agents.utils import common
-from tf_agents.specs import array_spec
-from tf_agents.trajectories import trajectory
 from tf_agents.trajectories import time_step as ts
-from tf_agents.drivers import dynamic_step_driver
-from tf_agents.environments import utils
 from tf_agents.specs import array_spec
-from tf_agents.metrics import tf_metrics
-from tf_agents.networks import q_network
-from tf_agents.replay_buffers import tf_uniform_replay_buffer
-
-
 
 
 class TradeEnv(py_environment.PyEnvironment):
@@ -71,7 +45,7 @@ class TradeEnv(py_environment.PyEnvironment):
         # spaces
         # Actions : [buy x %]
         self._action_spec = array_spec.BoundedArraySpec(
-          shape=(), dtype=np.int32, minimum=0, maximum=0, name='action')
+          shape=(), dtype=np.int32, minimum=0, maximum=2, name='action')
         
         # Observations 
         self._observation_spec = array_spec.BoundedArraySpec(shape=(4,), dtype=np.float64, minimum=0, name='observation')
@@ -96,7 +70,7 @@ class TradeEnv(py_environment.PyEnvironment):
         self.reward = 0
         self._total_cost = 0
         self.balance = self.start_balance
-        return ts.restart(np.array([self._total_cost,self.balance,self.amount,self.episode_step], dtype=np.float64)) #  초기화
+        return ts.restart(np.array([self._total_cost, self.balance, self.amount, self.episode_step], dtype=np.float64)) #  초기화
     
     # 타입스텝 진행
     def _step(self, action): # 필수 return 타입 : ts.TimeStep
@@ -110,14 +84,13 @@ class TradeEnv(py_environment.PyEnvironment):
             | 2   | balance                |
             | 3   | amount                 |
             | 4   | episode_step           |
-
         """
         
         # action 실행
         self.act(action) # action 진행 (action은 정수 0,1,2 중 하나)
         
-        # Loss 확인
-        self.isLoss()
+        # # Loss 확인
+        # self.isLoss()
         
         # 에피소드 step 증가
         self.episode_step +=1
