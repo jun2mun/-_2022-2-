@@ -6,19 +6,20 @@ import os
 import tensorflow as tf
 from tf_agents.policies import random_tf_policy, PolicySaver
 
+import agent
+import q_network
 from environment import TradeEnv
-from utils import monte_carlo_paths, compute_avg_return
+from utils import compute_avg_return
 
-from tf_agents.agents.dqn import dqn_agent
+
 from tf_agents.environments import tf_py_environment
 from tf_agents.utils import common
 from tf_agents.trajectories import trajectory
-from tf_agents.networks import q_network
 from tf_agents.replay_buffers import tf_uniform_replay_buffer
 import matplotlib.pyplot as plt
 
 #Define Hyperparameters
-num_iterations = 200 # @param {type:"integer"} 훈련 횟수
+num_iterations = 100 # @param {type:"integer"} 훈련 횟수
 collect_steps_per_iteration = 30  # @param {type:"integer"} 훈련 당 데이터 수집 횟수
 replay_buffer_max_length = 100000  # @param {type:"integer"} 버퍼 최대 크기
 
@@ -35,7 +36,6 @@ balance = 10000 # @param {type:"integer"} 초기 자본금
 
 def train(S,S2):
 
-
     """=========================Environment 구성============================"""
 
     env = TradeEnv(S,balance)
@@ -46,59 +46,11 @@ def train(S,S2):
     eval_env = tf_py_environment.TFPyEnvironment(eval_env)
 
     """=========================Q network 구성============================"""
+    q_net = q_network.get_q_network(train_env)
 
-    # tf_agents.networks.q_network 모듈의 QNetwork 클래스는
-    # Q-Learning에 사용되는 인공신경망 (Neural Network)입니다.
-    #q_net = q_network.QNetwork(
-    #    train_env.observation_spec(),
-    #    train_env.action_spec(),
-    #    fc_layer_params=(100,) # 신경망의 레이어별 뉴런 유닛의 개수를 지정합니다.
-    #)
-    from tf_agents.specs import tensor_spec
-    fc_layer_params = (100, 50)
-    action_tensor_spec = tensor_spec.from_spec(env.action_spec())
-    num_actions = action_tensor_spec.maximum - action_tensor_spec.minimum + 1
-
-    # Define a helper function to create Dense layers configured with the right
-    # activation and kernel initializer.
-    def dense_layer(num_units):
-        return tf.keras.layers.Dense(
-        num_units,
-        activation=tf.keras.activations.relu,
-        kernel_initializer=tf.keras.initializers.VarianceScaling(
-            scale=2.0, mode='fan_in', distribution='truncated_normal'))
-
-    # QNetwork consists of a sequence of Dense layers followed by a dense layer
-    # with `num_actions` units to generate one q_value per available action as
-    # its output.
-    from tf_agents.networks import sequential
-    dense_layers = [dense_layer(num_units) for num_units in fc_layer_params]
-    q_values_layer = tf.keras.layers.Dense(
-        num_actions,
-        activation=None,
-        kernel_initializer=tf.keras.initializers.RandomUniform(
-            minval=-0.03, maxval=0.03),
-        bias_initializer=tf.keras.initializers.Constant(-0.2))
-    q_net = sequential.Sequential(dense_layers + [q_values_layer])
 
     """=========================에이전트 구성하기============================"""
-
-    optimizer = tf.keras.optimizers.Adam(learning_rate=0.1)
-    global_step = tf.compat.v1.train.get_or_create_global_step()
-    train_step_counter = tf.Variable(0)
-
-    tf_agent = dqn_agent.DqnAgent(
-        train_env.time_step_spec(),
-        train_env.action_spec(),
-        q_network = q_net, # custom 수정 필요
-        optimizer = optimizer, # custom 해도 됨
-        # 타겟과 출력값의 오차를 계산하기 위한 함수를 지정합니다.
-        td_errors_loss_fn=common.element_wise_squared_loss, #mse 함수
-        # 지정한 tf.varable 은 훈련이 한번 이루어질때마다 값이 1씩 증가
-        #train_step_counter = global_step #tf.compat.v2.Variable(0)
-        train_step_counter=train_step_counter
-    )
-
+    tf_agent = agent.getAgent(train_env, q_net)
     tf_agent.initialize() # 에이전트를 초기화
 
     """=======================에이전트의 정책============================="""
@@ -163,7 +115,7 @@ def train(S,S2):
     tf_agent.train_step_counter.assign(0)
     """=======================train 시작============================="""
     # 주어진 에피소드 동안의 평균 리턴(보상의 총합의 평균)
-    avg_return = compute_avg_return(eval_env, tf_agent.policy, num_eval_episodes)
+    avg_return = compute_avg_return(eval_env, collect_policy, num_eval_episodes)
     returns = [avg_return]
     print(f'avg_return : {avg_return}')
 

@@ -1,13 +1,8 @@
-import shutil
-
-import tensorflow as tf
 import yfinance as yf
 from pandas_datareader import data as pdr
 import math
-from environment import TradeEnv
-import os
-from model_policy import train
-from agent import custom_agent
+#from agent import custom_agent
+from test import custom_agent
 
 yf.pdr_override()
 
@@ -33,17 +28,4 @@ M2 = math.floor(len(stockArray)/(T2))
 S2 = stockArray[:M2*(T2)].reshape(M2,T2)
 balance = 10000
 
-# train latest model file
-#get_global_train_step()
-train(S[0],S2[0])
-#custom_agent(S[0],S2[0])
-
-#
-# for i in range(M):
-#     global_train_step = tf.Variable(get_global_train_step())
-#     train(S[global_train_step - offset], global_train_step)
-#
-#     if(i != M-1):
-#         idx = global_train_step.numpy()
-#         shutil.copytree("./colab/checkpoint/{}".format("checkpoint" + str(idx)),
-#                         "./colab/checkpoint/{}".format("checkpoint" + str(idx + 1)))
+custom_agent(S[0],S2[0])
