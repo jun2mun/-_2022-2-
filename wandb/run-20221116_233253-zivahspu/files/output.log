@@ -1,0 +1,3 @@
+
+Backend TkAgg is interactive backend. Turning interactive mode on.
+C:\ML\tensorflow_v2\lib\site-packages\numpy\core\fromnumeric.py:43: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.

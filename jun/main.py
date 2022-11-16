@@ -28,4 +28,6 @@ M2 = math.floor(len(stockArray)/(T2))
 S2 = stockArray[:M2*(T2)].reshape(M2,T2)
 balance = 10000
 
-custom_agent(S[0],S2[0])
+from A3C_Continuous import main
+main(S[0],S2[0])
+#custom_agent(S[0],S2[0])
