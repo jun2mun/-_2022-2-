@@ -7,6 +7,9 @@ from keras import backend as K
 from collections import deque
 import random
 
+from tensorflow.python.framework.ops import disable_eager_execution
+disable_eager_execution()
+
 
 class A2CAgent:
     def __init__(self, state_size, state_seq_length, action_size):
@@ -80,7 +83,7 @@ class A2CAgent:
         optimizer = Adam(lr=self.actor_lr)
         updates = optimizer.get_updates(actor_loss, self.actor.trainable_weights)
 
-        train = K.function([self.actor.input, action, advantages], [], updates=updates)
+        train = K.function([self.actor.input, action, advantages], [self.actor.output], updates=updates)
         return train
 
     # make loss function for Value approximation
@@ -93,7 +96,7 @@ class A2CAgent:
 
         optimizer = Adam(lr=self.critic_lr)
         updates = optimizer.get_updates(loss, self.critic.trainable_weights)
-        train = K.function([self.critic.input, discounted_reward], [], updates=updates)
+        train = K.function([self.critic.input, discounted_reward], [self.actor.output], updates=updates)
         return train
 
     # using the output of policy network, pick action stochastically

@@ -1,0 +1,167 @@
+2022-11-17 00:47:04,148 INFO    StreamThr :38627 [internal.py:wandb_internal():88] W&B internal server running at pid: 38627, started at: 2022-11-17 00:47:04.146961
+2022-11-17 00:47:04,149 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: status
+2022-11-17 00:47:04,151 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: status
+2022-11-17 00:47:04,151 DEBUG   SenderThread:38627 [sender.py:send():303] send: header
+2022-11-17 00:47:04,151 INFO    WriterThread:38627 [datastore.py:open_for_write():75] open: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/run-34yjcvfo.wandb
+2022-11-17 00:47:04,154 DEBUG   SenderThread:38627 [sender.py:send():303] send: run
+2022-11-17 00:47:04,905 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: check_version
+2022-11-17 00:47:04,907 INFO    SenderThread:38627 [dir_watcher.py:__init__():216] watching files in: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files
+2022-11-17 00:47:04,907 INFO    SenderThread:38627 [sender.py:_start_run_threads():928] run started: 34yjcvfo with start time 1668613624.139879
+2022-11-17 00:47:04,908 DEBUG   SenderThread:38627 [sender.py:send():303] send: summary
+2022-11-17 00:47:04,908 INFO    SenderThread:38627 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-17 00:47:04,908 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: check_version
+2022-11-17 00:47:05,003 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: run_start
+2022-11-17 00:47:05,009 DEBUG   HandlerThread:38627 [system_info.py:__init__():31] System info init
+2022-11-17 00:47:05,009 DEBUG   HandlerThread:38627 [system_info.py:__init__():46] System info init done
+2022-11-17 00:47:05,009 INFO    HandlerThread:38627 [system_monitor.py:start():150] Starting system monitor
+2022-11-17 00:47:05,010 INFO    SystemMonitor:38627 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-17 00:47:05,010 INFO    HandlerThread:38627 [system_monitor.py:probe():168] Collecting system info
+2022-11-17 00:47:05,010 INFO    SystemMonitor:38627 [interfaces.py:start():168] Started cpu
+2022-11-17 00:47:05,010 INFO    SystemMonitor:38627 [interfaces.py:start():168] Started disk
+2022-11-17 00:47:05,012 INFO    SystemMonitor:38627 [interfaces.py:start():168] Started gpuapple
+2022-11-17 00:47:05,013 DEBUG   HandlerThread:38627 [system_info.py:probe():195] Probing system
+2022-11-17 00:47:05,013 INFO    SystemMonitor:38627 [interfaces.py:start():168] Started memory
+2022-11-17 00:47:05,014 INFO    SystemMonitor:38627 [interfaces.py:start():168] Started network
+2022-11-17 00:47:05,019 DEBUG   HandlerThread:38627 [system_info.py:_probe_git():180] Probing git
+2022-11-17 00:47:05,035 DEBUG   HandlerThread:38627 [system_info.py:_probe_git():188] Probing git done
+2022-11-17 00:47:05,035 DEBUG   HandlerThread:38627 [system_info.py:probe():241] Probing system done
+2022-11-17 00:47:05,035 DEBUG   HandlerThread:38627 [system_monitor.py:probe():177] {'os': 'macOS-13.0.1-arm64-arm-64bit', 'python': '3.10.6', 'heartbeatAt': '2022-11-16T15:47:05.013277', 'startedAt': '2022-11-16T15:47:04.133580', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/daehungo/Desktop/DataCapstone/github/jun/main.py', 'codePath': 'jun/main.py', 'git': {'remote': 'https://github.com/jun2mun/-_2022-2-.git', 'commit': '9aba05ab3b8b59d5edb73e08ca4a91f4d96bd284'}, 'email': 'eogns0321@gmail.com', 'root': '/Users/daehungo/Desktop/DataCapstone/github', 'host': 'DAEHUNs-MacBook-Pro.local', 'username': 'daehungo', 'executable': '/Users/daehungo/yes/envs/colab/bin/python', 'cpu_count': 10, 'cpu_count_logical': 10, 'disk': {'total': 460.4317207336426, 'used': 8.226261138916016}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2022-11-17 00:47:05,035 INFO    HandlerThread:38627 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-17 00:47:05,035 INFO    HandlerThread:38627 [system_monitor.py:probe():181] Publishing system info
+2022-11-17 00:47:05,035 DEBUG   HandlerThread:38627 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-11-17 00:47:05,035 DEBUG   HandlerThread:38627 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-17 00:47:05,035 DEBUG   HandlerThread:38627 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-11-17 00:47:05,912 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/requirements.txt
+2022-11-17 00:47:05,913 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/wandb-summary.json
+2022-11-17 00:47:05,913 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/conda-environment.yaml
+2022-11-17 00:47:06,641 DEBUG   HandlerThread:38627 [system_info.py:_save_conda():86] Saving conda packages done
+2022-11-17 00:47:06,642 INFO    HandlerThread:38627 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-17 00:47:06,658 DEBUG   SenderThread:38627 [sender.py:send():303] send: files
+2022-11-17 00:47:06,659 INFO    SenderThread:38627 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-17 00:47:06,661 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-17 00:47:06,661 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: stop_status
+2022-11-17 00:47:06,915 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/conda-environment.yaml
+2022-11-17 00:47:06,915 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/wandb-metadata.json
+2022-11-17 00:47:07,118 DEBUG   SenderThread:38627 [sender.py:send():303] send: telemetry
+2022-11-17 00:47:07,119 DEBUG   SenderThread:38627 [sender.py:send():303] send: exit
+2022-11-17 00:47:07,119 INFO    SenderThread:38627 [sender.py:send_exit():442] handling exit code: 1
+2022-11-17 00:47:07,119 INFO    SenderThread:38627 [sender.py:send_exit():444] handling runtime: 1
+2022-11-17 00:47:07,120 INFO    SenderThread:38627 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-17 00:47:07,120 INFO    SenderThread:38627 [sender.py:send_exit():450] send defer
+2022-11-17 00:47:07,120 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:07,120 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 0
+2022-11-17 00:47:07,120 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:07,120 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-11-17 00:47:07,120 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 1
+2022-11-17 00:47:07,120 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:07,120 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 1
+2022-11-17 00:47:07,120 INFO    HandlerThread:38627 [system_monitor.py:finish():160] Stopping system monitor
+2022-11-17 00:47:07,144 DEBUG   SystemMonitor:38627 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-17 00:47:07,144 DEBUG   SystemMonitor:38627 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-11-17 00:47:07,144 DEBUG   SystemMonitor:38627 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-11-17 00:47:07,144 INFO    HandlerThread:38627 [interfaces.py:finish():173] Joined cpu
+2022-11-17 00:47:07,145 INFO    HandlerThread:38627 [interfaces.py:finish():173] Joined disk
+2022-11-17 00:47:07,145 INFO    HandlerThread:38627 [interfaces.py:finish():173] Joined gpuapple
+2022-11-17 00:47:07,145 INFO    HandlerThread:38627 [interfaces.py:finish():173] Joined memory
+2022-11-17 00:47:07,145 INFO    HandlerThread:38627 [interfaces.py:finish():173] Joined network
+2022-11-17 00:47:07,145 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:07,145 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-11-17 00:47:07,145 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 2
+2022-11-17 00:47:07,145 DEBUG   SenderThread:38627 [sender.py:send():303] send: telemetry
+2022-11-17 00:47:07,145 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:07,145 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 2
+2022-11-17 00:47:07,145 DEBUG   SenderThread:38627 [sender.py:send():303] send: stats
+2022-11-17 00:47:07,145 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:07,145 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-11-17 00:47:07,145 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 3
+2022-11-17 00:47:07,146 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:07,146 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 3
+2022-11-17 00:47:07,146 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:07,146 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-11-17 00:47:07,146 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 4
+2022-11-17 00:47:07,146 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:07,146 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 4
+2022-11-17 00:47:07,146 DEBUG   SenderThread:38627 [sender.py:send():303] send: summary
+2022-11-17 00:47:07,146 INFO    SenderThread:38627 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-17 00:47:07,146 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:07,146 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-11-17 00:47:07,146 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 5
+2022-11-17 00:47:07,147 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:07,147 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 5
+2022-11-17 00:47:07,147 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:07,147 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-11-17 00:47:07,531 INFO    Thread-16 :38627 [upload_job.py:push():143] Uploaded file /var/folders/f0/3bzps_xn38s3vw7rxzzcjt5h0000gn/T/tmp1ry0gd0dwandb/1zr0bb5u-wandb-metadata.json
+2022-11-17 00:47:07,532 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 6
+2022-11-17 00:47:07,532 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:07,532 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 6
+2022-11-17 00:47:07,532 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:07,532 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-11-17 00:47:07,808 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-17 00:47:07,922 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/wandb-summary.json
+2022-11-17 00:47:07,922 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/config.yaml
+2022-11-17 00:47:07,923 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/output.log
+2022-11-17 00:47:09,130 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 7
+2022-11-17 00:47:09,131 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: poll_exit
+2022-11-17 00:47:09,132 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:09,133 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 7
+2022-11-17 00:47:09,133 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:09,134 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-11-17 00:47:09,134 INFO    SenderThread:38627 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-17 00:47:09,933 INFO    Thread-13 :38627 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/output.log
+2022-11-17 00:47:09,935 INFO    SenderThread:38627 [dir_watcher.py:finish():392] scan: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files
+2022-11-17 00:47:09,936 INFO    SenderThread:38627 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/requirements.txt requirements.txt
+2022-11-17 00:47:09,937 INFO    SenderThread:38627 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/output.log output.log
+2022-11-17 00:47:09,940 INFO    SenderThread:38627 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/config.yaml config.yaml
+2022-11-17 00:47:09,943 INFO    SenderThread:38627 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/wandb-summary.json wandb-summary.json
+2022-11-17 00:47:09,947 INFO    SenderThread:38627 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/conda-environment.yaml conda-environment.yaml
+2022-11-17 00:47:09,949 INFO    SenderThread:38627 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/wandb-metadata.json wandb-metadata.json
+2022-11-17 00:47:09,949 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 8
+2022-11-17 00:47:09,950 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:09,952 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 8
+2022-11-17 00:47:09,952 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:09,952 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-11-17 00:47:09,952 INFO    SenderThread:38627 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-17 00:47:11,200 INFO    Thread-19 :38627 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/config.yaml
+2022-11-17 00:47:11,202 INFO    Thread-20 :38627 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/wandb-summary.json
+2022-11-17 00:47:11,203 INFO    Thread-18 :38627 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/output.log
+2022-11-17 00:47:11,204 INFO    Thread-17 :38627 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/requirements.txt
+2022-11-17 00:47:11,205 INFO    Thread-21 :38627 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/files/conda-environment.yaml
+2022-11-17 00:47:11,411 INFO    Thread-12 (_thread_body):38627 [sender.py:transition_state():463] send defer: 9
+2022-11-17 00:47:11,412 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:11,413 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 9
+2022-11-17 00:47:11,413 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:11,413 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-11-17 00:47:11,413 INFO    SenderThread:38627 [file_pusher.py:join():173] waiting for file pusher
+2022-11-17 00:47:11,413 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 10
+2022-11-17 00:47:11,413 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:11,413 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 10
+2022-11-17 00:47:11,414 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:11,414 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-11-17 00:47:11,725 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 11
+2022-11-17 00:47:11,727 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:11,727 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 11
+2022-11-17 00:47:11,727 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:11,727 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-11-17 00:47:11,728 INFO    SenderThread:38627 [sender.py:transition_state():463] send defer: 12
+2022-11-17 00:47:11,728 DEBUG   SenderThread:38627 [sender.py:send():303] send: final
+2022-11-17 00:47:11,728 DEBUG   SenderThread:38627 [sender.py:send():303] send: footer
+2022-11-17 00:47:11,729 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: defer
+2022-11-17 00:47:11,729 INFO    HandlerThread:38627 [handler.py:handle_request_defer():162] handle defer: 12
+2022-11-17 00:47:11,729 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: defer
+2022-11-17 00:47:11,729 INFO    SenderThread:38627 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-11-17 00:47:11,730 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-17 00:47:11,730 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: poll_exit
+2022-11-17 00:47:11,731 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: server_info
+2022-11-17 00:47:11,731 DEBUG   SenderThread:38627 [sender.py:send_request():317] send_request: server_info
+2022-11-17 00:47:11,733 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: get_summary
+2022-11-17 00:47:11,734 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: sampled_history
+2022-11-17 00:47:12,249 INFO    MainThread:38627 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-11-17 00:47:12,249 INFO    MainThread:38627 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-11-17 00:47:12,249 INFO    MainThread:38627 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-11-17 00:47:12,250 DEBUG   HandlerThread:38627 [handler.py:handle_request():139] handle_request: shutdown
+2022-11-17 00:47:12,250 INFO    HandlerThread:38627 [handler.py:finish():814] shutting down handler
+2022-11-17 00:47:12,733 INFO    WriterThread:38627 [datastore.py:close():279] close: /Users/daehungo/Desktop/DataCapstone/github/jun/wandb/run-20221117_004704-34yjcvfo/run-34yjcvfo.wandb
+2022-11-17 00:47:13,249 INFO    SenderThread:38627 [sender.py:finish():1331] shutting down sender
+2022-11-17 00:47:13,250 INFO    SenderThread:38627 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-17 00:47:13,250 INFO    SenderThread:38627 [file_pusher.py:join():173] waiting for file pusher
+2022-11-17 00:47:14,129 INFO    MainThread:38627 [internal.py:handle_exit():78] Internal process exited

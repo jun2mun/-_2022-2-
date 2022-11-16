@@ -41,7 +41,11 @@ class TradeEnv(Env):
         # Actions : [buy,stay,sell]
         self.action_space = spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32)
         # Observations : [stock 주가 30일치]
+<<<<<<< Updated upstream
         self.observation_space = spaces.Box(low=-1.0, high=1.0, shape=(4,), dtype=np.float32)
+=======
+        self.observation_space = spaces.Box(low=-1.0, high=1.0, shape=(3,), dtype=np.float32)
+>>>>>>> Stashed changes
 
         self.df = df  # 주가 데이터
         self.start_balance = balance
@@ -58,7 +62,11 @@ class TradeEnv(Env):
         return self._get_obs()
 
     def _get_obs(self):
+<<<<<<< Updated upstream
         return np.array([self.df[self.current_step], self.balance, self.amount, self.reward], dtype=np.float32)
+=======
+        return np.array([self.df[self.current_step], self.balance, self.amount], dtype=np.float32)
+>>>>>>> Stashed changes
 
     def action_method(self, action):
 
@@ -81,16 +89,24 @@ class TradeEnv(Env):
     def step(self, action):
         done = False
         self.action_method(action)
+<<<<<<< Updated upstream
+=======
+        self.current_step += 1
+>>>>>>> Stashed changes
 
         if self.isLoss():
             done = True
         else:
             self.reward += 1
 
+<<<<<<< Updated upstream
         self.current_step += 1
         if self.current_step >= 30:
             self.current_step =0
             print("================================================self.curre")
+=======
+        if self.current_step >= 30:
+>>>>>>> Stashed changes
             done = True
 
         return self._get_obs(), self.reward, done, False
@@ -105,7 +121,12 @@ class TradeEnv(Env):
     def isLoss(self):
         # 손실율 = (비용 - 현재주가 * (전량 매도)) / 현재 주가
         # if 손실율 > 0.1:
+<<<<<<< Updated upstream
         loss_rate = (self.getTotalValue() - self.start_balance[self.current_step]) / self.start_balance[self.current_step]  # 현재일 주가
         if loss_rate <= -0.02:
+=======
+        loss_rate = (self.getTotalValue() - self.start_balance) / self.start_balance  # 현재일 주가
+        if loss_rate <= -0.2:
+>>>>>>> Stashed changes
             return True
         else: return False

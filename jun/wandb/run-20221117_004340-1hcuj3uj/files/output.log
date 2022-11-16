@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/jun/main.py", line 33, in <module>
+    custom_agent(S[0],S2[0])
+  File "/Users/daehungo/Desktop/DataCapstone/github/jun/test.py", line 118, in custom_agent
+    env = TradeEnv(S,balance)
+NameError: name 'TradeEnv' is not defined

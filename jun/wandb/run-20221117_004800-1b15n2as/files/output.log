@@ -1,0 +1,10 @@
+[*********************100%***********************]  1 of 1 completed
+[*********************100%***********************]  1 of 1 completed
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/jun/main.py", line 37, in <module>
+    A3C_Continuous.main(S[0], 10000)
+  File "/Users/daehungo/Desktop/DataCapstone/github/jun/A3C_Continuous.py", line 238, in main
+    agent = Agent(env)
+  File "/Users/daehungo/Desktop/DataCapstone/github/jun/A3C_Continuous.py", line 106, in __init__
+    self.state_dim = env.observation_space.shape[0]
+AttributeError: type object 'TradeEnv' has no attribute 'observation_space'

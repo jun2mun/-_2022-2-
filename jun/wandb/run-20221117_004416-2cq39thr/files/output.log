@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/jun/main.py", line 31, in <module>
+    custom_agent(S[0],S2[0])
+NameError: name 'custom_agent' is not defined

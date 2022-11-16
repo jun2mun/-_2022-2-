@@ -235,11 +235,6 @@ class WorkerAgent(Thread):
 
 from env_continuous import TradeEnv
 def main(S,balance):
-    env_name = 'Pendulum-v1'
-    env_name = TradeEnv(S,balance)
-    agent = Agent(env_name)
+    env = TradeEnv
+    agent = Agent(env)
     agent.train()
-
-
-if __name__ == "__main__":
-    main()

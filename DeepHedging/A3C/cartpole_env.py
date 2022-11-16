@@ -10,7 +10,7 @@ import numpy as np
 
 import gym
 from gym import logger, spaces
-import utils
+from DDQN import utils
 from gym.error import DependencyNotInstalled
 
 

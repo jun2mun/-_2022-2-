@@ -113,6 +113,7 @@ class A2CAgent:
         entropy_loss = cce(probs, probs)
         return policy_loss - self.entropy_c * entropy_loss
 
+<<<<<<< Updated upstream
 from env_cartpole import TradeEnv
 def custom_agent(S,balance):
   #env = gym.make('CartPole-v0')
@@ -133,3 +134,23 @@ def custom_agent(S,balance):
   plt.ylabel('Total Reward')
   plt.show()
   print("stop")
+=======
+# def custom_agent(S,balance):
+#   #env = gym.make('CartPole-v0')
+#   #env.render()
+#   env = TradeEnv(S,balance)
+#   eval_env = TradeEnv(S,balance)
+#
+#   model = a2c_Model(env.observation_space.shape[0],env.action_space.shape[0])
+#   agent = A2CAgent(model)
+#
+#   rewards_history = agent.train(env, 64, 1000)
+#   print("Finished training. Testing...")
+#   agent.test_model(env, 'models/model999.h5', 100)
+#
+#   plt.style.use('seaborn')
+#   plt.plot(np.arange(0, len(rewards_history), 10), rewards_history[::10])
+#   plt.xlabel('Episode')
+#   plt.ylabel('Total Reward')
+#   plt.show()
+>>>>>>> Stashed changes

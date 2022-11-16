@@ -27,16 +27,3 @@ M2 = math.floor(len(stockArray)/(T2))
 S2 = stockArray[:M2*(T2)].reshape(M2,T2)
 balance = 10000
 
-#get_global_train_step()
-train(S[0],S2[0])
-
-
-#
-# for i in range(M):
-#     global_train_step = tf.Variable(get_global_train_step())
-#     train(S[global_train_step - offset], global_train_step)
-#
-#     if(i != M-1):
-#         idx = global_train_step.numpy()
-#         shutil.copytree("./colab/checkpoint/{}".format("checkpoint" + str(idx)),
-#                         "./colab/checkpoint/{}".format("checkpoint" + str(idx + 1)))

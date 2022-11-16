@@ -7,7 +7,7 @@ import numpy as np
 
 import gym
 from gym import spaces
-import utils
+from DDQN import utils
 from gym.error import DependencyNotInstalled
 
 DEFAULT_X = np.pi

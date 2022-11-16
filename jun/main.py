@@ -1,8 +1,10 @@
 import yfinance as yf
 from pandas_datareader import data as pdr
 import math
+
+import A3C_Continuous
 #from agent import custom_agent
-from test import custom_agent
+# from test import custom_agent
 
 yf.pdr_override()
 
@@ -29,5 +31,12 @@ S2 = stockArray[:M2*(T2)].reshape(M2,T2)
 balance = 10000
 
 from A3C_Continuous import main
+<<<<<<< Updated upstream
 main(S[0],S2[0])
 #custom_agent(S[0],S2[0])
+=======
+#main(S[0],S2[0])
+# custom_agent(S[0],S2[0])
+if __name__ == '__main__':
+    A3C_Continuous.main(S[0], 10000)
+>>>>>>> Stashed changes

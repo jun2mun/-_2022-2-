@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/jun/main.py", line 7, in <module>
+    from test import custom_agent
+ImportError: cannot import name 'custom_agent' from 'test' (/Users/daehungo/Desktop/DataCapstone/github/jun/test.py)
