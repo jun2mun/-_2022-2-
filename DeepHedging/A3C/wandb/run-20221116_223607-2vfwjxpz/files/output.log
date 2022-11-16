@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/A3C/main.py", line 7, in <module>
+    agent.train()
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/A3C/agent.py", line 24, in train
+    env = gym.make(self.env_name)
+AttributeError: 'Agent' object has no attribute 'env_name'

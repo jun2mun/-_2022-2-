@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/A3C/main.py", line 5, in <module>
+    agent = Agent(env_name)
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/A3C/agent.py", line 9, in __init__
+    env = gym.make(env_name)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 676, in make
+    return registry.make(id, **kwargs)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 490, in make
+    versions = self.env_specs.versions(namespace, name)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 220, in versions
+    self._assert_name_exists(namespace, name)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 297, in _assert_name_exists
+    raise error.NameNotFound(message)
+gym.error.NameNotFound: Environment `CartpPole` doesn't exist. Did you mean: `CartPole`?
