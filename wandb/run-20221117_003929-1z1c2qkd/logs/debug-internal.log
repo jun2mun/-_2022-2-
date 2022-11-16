@@ -1,0 +1,6 @@
+2022-11-17 00:39:29,944 INFO    StreamThr :1820 [internal.py:wandb_internal():88] W&B internal server running at pid: 1820, started at: 2022-11-17 00:39:29.934596
+2022-11-17 00:39:29,953 DEBUG   HandlerThread:1820 [handler.py:handle_request():139] handle_request: status
+2022-11-17 00:39:29,960 DEBUG   SenderThread:1820 [sender.py:send_request():317] send_request: status
+2022-11-17 00:39:29,965 DEBUG   SenderThread:1820 [sender.py:send():303] send: header
+2022-11-17 00:39:29,965 INFO    WriterThread:1820 [datastore.py:open_for_write():75] open: C:\Users\owner\Desktop\°æÈñ´ëÇĞ±³\2022-2ÇĞ±â\µ¥Ä¸Åæ\ÇÁ·ÎÁ§Æ®\wandb\run-20221117_003929-1z1c2qkd\run-1z1c2qkd.wandb
+2022-11-17 00:39:29,982 DEBUG   SenderThread:1820 [sender.py:send():303] send: run

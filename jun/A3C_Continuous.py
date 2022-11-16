@@ -232,7 +232,7 @@ class WorkerAgent(Thread):
     def run(self):
         self.train()
 
-from env_pend import TradeEnv
+from env_continuous import TradeEnv
 def main(S,balance):
     env_name = 'Pendulum-v1'
     env_name = TradeEnv(S,balance)
