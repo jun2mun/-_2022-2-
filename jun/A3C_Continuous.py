@@ -182,7 +182,7 @@ class WorkerAgent(Thread):
             while not done:
                 # self.env.render()
                 action = self.actor.get_action(state)
-                print(self.env._get())
+                #print(self.env._get())
                 action = np.clip(action, -self.action_bound, self.action_bound)
 
                 next_state, reward, done, _ = self.env.step(action)
@@ -232,7 +232,7 @@ class WorkerAgent(Thread):
     def run(self):
         self.train()
 
-from env import TradeEnv
+from env_pend import TradeEnv
 def main(S,balance):
     env_name = 'Pendulum-v1'
     env_name = TradeEnv(S,balance)

@@ -55,3 +55,44 @@ FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다
 2022-11-16 23:51:42,100 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\wandb-summary.json
 2022-11-16 23:51:42,100 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\requirements.txt
 2022-11-16 23:51:42,415 INFO    Thread-28 :15604 [upload_job.py:push():143] Uploaded file C:\Users\owner\AppData\Local\Temp\tmpzl7e7wurwandb\2kokzgqh-wandb-metadata.json
+2022-11-16 23:51:48,160 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:51:50,175 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:51:52,188 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:51:54,217 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:51:56,240 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:51:56,948 DEBUG   HandlerThread:15604 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 23:51:56,949 DEBUG   SenderThread:15604 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 23:51:58,271 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:00,292 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:02,298 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:04,314 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:06,329 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:08,351 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:10,389 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:12,218 DEBUG   HandlerThread:15604 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 23:52:12,219 DEBUG   SenderThread:15604 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 23:52:12,404 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\config.yaml
+2022-11-16 23:52:12,405 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:14,414 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:16,425 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:18,457 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:20,472 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:22,480 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:24,508 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:26,518 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:27,536 DEBUG   HandlerThread:15604 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 23:52:27,537 DEBUG   SenderThread:15604 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 23:52:28,553 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:30,572 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:32,597 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:34,613 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:36,633 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:38,657 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:40,684 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:41,268 DEBUG   SystemMonitor:15604 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-16 23:52:41,270 DEBUG   SenderThread:15604 [sender.py:send():303] send: stats
+2022-11-16 23:52:42,693 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:42,867 DEBUG   HandlerThread:15604 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 23:52:42,868 DEBUG   SenderThread:15604 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 23:52:44,727 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log
+2022-11-16 23:52:46,737 INFO    Thread-23 :15604 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\owner\Desktop\경희대학교\2022-2학기\데캡톤\프로젝트\wandb\run-20221116_235140-1srzx764\files\output.log

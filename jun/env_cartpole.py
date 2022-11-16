@@ -97,10 +97,10 @@ class TradeEnv(Env):
             raise  ValueError('`action` should be 0 or 1 or 2')
 
     def _get(self):
-        print(self.current_step)
+        return self.current_step
 
     def step(self,action):
-
+        done = False
         self.action_method(action)
 
         self.current_step +=1
@@ -111,7 +111,7 @@ class TradeEnv(Env):
 
         reward = 1
 
-        return self._get_obs(), reward, False, False
+        return self._get_obs(), reward, done, False
 
     def render(self):
         print(f'Step: {self.current_step}')

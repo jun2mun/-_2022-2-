@@ -119,7 +119,7 @@ def custom_agent(S,balance):
   env = TradeEnv(S,balance)
   eval_env = TradeEnv(S,balance)
 
-  model = a2c_Model(env.observation_space.n,env.action_space.n)
+  model = a2c_Model(env.observation_space.shape[0],env.action_space.shape[0])
   agent = A2CAgent(model)
 
   rewards_history = agent.train(env, 64, 1000)
