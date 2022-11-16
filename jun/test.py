@@ -31,9 +31,10 @@ class A2CAgent:
         ep_rewards = [0.0]
         next_obs = env.reset()
         #env.render()
-        for update in range(updates):
+        for update in range(100):#updates):
             for step in range(batch_size):
                 observations[step]=next_obs.copy()
+                print(f'action[step] = {actions[step]}')
                 actions[step], values[step] = self.model.action_value(np.expand_dims(observations[step,:], axis=0))
                 next_obs, rewards[step], dones[step], _ = env.step(actions[step])
                 #env.render()

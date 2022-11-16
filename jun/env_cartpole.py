@@ -104,7 +104,7 @@ class TradeEnv(Env):
         self.current_step +=1
 
         if self.isLoss():
-            done = True
+            self.reward -= 0.6
         else:
             self.reward += 1
 

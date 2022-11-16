@@ -113,7 +113,7 @@ class Agent:
         self.global_critic = Critic(self.state_dim)
         self.num_workers = cpu_count()
 
-    def train(self, max_episodes=10):
+    def train(self, max_episodes=200):
         workers = []
 
         for i in range(self.num_workers):
@@ -183,10 +183,11 @@ class WorkerAgent(Thread):
                 # self.env.render()
                 action = self.actor.get_action(state)
                 #print(self.env._get())
-                action = np.clip(action, -self.action_bound, self.action_bound)
-
+                #action = np.clip(action, -self.action_bound, self.action_bound)
+                action = int(np.clip(action, 0, self.action_bound))
+                #print(f'action : {action}')
+                self.env.render()
                 next_state, reward, done, _ = self.env.step(action)
-
                 state = np.reshape(state, [1, self.state_dim])
                 action = np.reshape(action, [1, 1])
                 next_state = np.reshape(next_state, [1, self.state_dim])

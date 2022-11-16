@@ -81,14 +81,16 @@ class TradeEnv(Env):
     def step(self, action):
         done = False
         self.action_method(action)
-        self.current_step += 1
 
         if self.isLoss():
             done = True
         else:
             self.reward += 1
 
+        self.current_step += 1
         if self.current_step >= 30:
+            self.current_step =0
+            print("================================================self.curre")
             done = True
 
         return self._get_obs(), self.reward, done, False
@@ -103,7 +105,7 @@ class TradeEnv(Env):
     def isLoss(self):
         # 손실율 = (비용 - 현재주가 * (전량 매도)) / 현재 주가
         # if 손실율 > 0.1:
-        loss_rate = (self.getTotalValue() - self.start_balance) / self.start_balance  # 현재일 주가
-        if loss_rate <= -0.2:
+        loss_rate = (self.getTotalValue() - self.start_balance[self.current_step]) / self.start_balance[self.current_step]  # 현재일 주가
+        if loss_rate <= -0.02:
             return True
         else: return False

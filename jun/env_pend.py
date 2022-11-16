@@ -70,6 +70,8 @@ class TradeEnv(Env):
         possible_sell_amount = self.amount # 최대 판매 가능
         
         if action == 0: # 주식 사기
+            if possible_buy_amount == -1:
+                return
             random_percent = np.random.randint(0,possible_buy_amount+1) # 랜덤으로 (0~ 최대 구입가능 퍼센트에서 선택)
             random_percent = 1
             self.amount += random_percent
@@ -105,13 +107,18 @@ class TradeEnv(Env):
 
         self.current_step +=1
 
+        
+        if self.isLoss():
+            self.reward -= 0.6
+        else:
+            self.reward += 1
+
         if self.current_step >= 30:
             self.current_step = 0
             done = True
 
-        reward = 1
 
-        return self._get_obs(), reward, done, False
+        return self._get_obs(), self.reward, done, False
 
     def render(self):
         print(f'Step: {self.current_step}')
@@ -121,7 +128,7 @@ class TradeEnv(Env):
         # 손실율 = (비용 - 현재주가 * (전량 매도)) / 현재 주가
         # if 손실율 > 0.1:
         self.loss_Rate = self.total_cost / self.balance # 현재일 주가
-        if self.loss_Rate > 0.1:
+        if self.loss_Rate > 0.02:
             return True
         # terminate
         pass
