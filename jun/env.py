@@ -42,10 +42,13 @@ class TradeEnv(Env):
     def __init__(self,df,balance=100000):
         super(TradeEnv,self).__init__()        
         # Actions : [buy,stay,sell]
-        self.action_space = spaces.Discrete(3)
+        self.action_space = spaces.Box(
+            low=0 , high= 2 , shape=(1,), dtype=np.int32
+        )
         # Observations : [stock 주가 30일치]
-        self.observation_space = spaces.Discrete(4)
-
+        self.observation_space = spaces.Box(
+            low=-1.0 , high= 1.0 , shape=(4,), dtype=np.float32
+        )
         #################### 테스트 변수 #####################
         self.df = df # 주가 데이터
         
@@ -54,12 +57,10 @@ class TradeEnv(Env):
         self.amount = 0
         self.total_cost = 0
         self.current_step = 0
-        return self._next_observation()
+        return self._get_obs()
 
-    def _next_observation(self):
-        obs = [self.df[self.current_step],self.total_cost,self.balance,self.amount]
-
-        return obs
+    def _get_obs(self):
+        return np.array([self.df[self.current_step],self.total_cost,self.balance,self.amount],dtype=np.float32)
 
     def action_method(self,action):
 
@@ -95,6 +96,8 @@ class TradeEnv(Env):
         else:
             raise  ValueError('`action` should be 0 or 1 or 2')
 
+    def _get(self):
+        print(self.current_step)
 
     def step(self,action):
 
@@ -107,10 +110,8 @@ class TradeEnv(Env):
             done = True
 
         reward = 1
-        
-        obs = self._next_observation()
 
-        return obs, reward, done, {}
+        return self._get_obs(), reward, False, False
 
     def render(self):
         print(f'Step: {self.current_step}')
