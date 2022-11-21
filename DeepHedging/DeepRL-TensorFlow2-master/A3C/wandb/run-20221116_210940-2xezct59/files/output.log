@@ -1,0 +1,20 @@
+/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py:505: UserWarning: [33mWARN: The environment Pendulum-v0 is out of date. You should consider upgrading to version `v1` with the environment ID `Pendulum-v1`.
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 237, in <module>
+    main()
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 232, in main
+    agent = Agent(env_name)
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 100, in __init__
+    env = gym.make(env_name)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 676, in make
+    return registry.make(id, **kwargs)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 518, in make
+    spec = self.spec(path)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 540, in spec
+    return self.env_specs[id]
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 376, in __getitem__
+    self._assert_version_exists(namespace, name, version)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/gym/envs/registration.py", line 342, in _assert_version_exists
+    raise error.DeprecatedEnv(message)
+gym.error.DeprecatedEnv: Environment version `v0` for `Pendulum` is deprecated. Please use the latest version `v1`.

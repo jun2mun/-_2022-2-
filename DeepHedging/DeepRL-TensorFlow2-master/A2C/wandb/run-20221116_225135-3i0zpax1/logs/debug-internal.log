@@ -1,0 +1,167 @@
+2022-11-16 22:51:35,749 INFO    StreamThr :28837 [internal.py:wandb_internal():88] W&B internal server running at pid: 28837, started at: 2022-11-16 22:51:35.747099
+2022-11-16 22:51:35,750 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: status
+2022-11-16 22:51:35,752 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: status
+2022-11-16 22:51:35,752 DEBUG   SenderThread:28837 [sender.py:send():303] send: header
+2022-11-16 22:51:35,753 INFO    WriterThread:28837 [datastore.py:open_for_write():75] open: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/run-3i0zpax1.wandb
+2022-11-16 22:51:35,759 DEBUG   SenderThread:28837 [sender.py:send():303] send: run
+2022-11-16 22:51:36,441 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: check_version
+2022-11-16 22:51:36,443 INFO    SenderThread:28837 [dir_watcher.py:__init__():216] watching files in: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files
+2022-11-16 22:51:36,443 INFO    SenderThread:28837 [sender.py:_start_run_threads():928] run started: 3i0zpax1 with start time 1668606695.740596
+2022-11-16 22:51:36,443 DEBUG   SenderThread:28837 [sender.py:send():303] send: summary
+2022-11-16 22:51:36,443 INFO    SenderThread:28837 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 22:51:36,444 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: check_version
+2022-11-16 22:51:36,550 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: run_start
+2022-11-16 22:51:36,561 DEBUG   HandlerThread:28837 [system_info.py:__init__():31] System info init
+2022-11-16 22:51:36,562 DEBUG   HandlerThread:28837 [system_info.py:__init__():46] System info init done
+2022-11-16 22:51:36,562 INFO    HandlerThread:28837 [system_monitor.py:start():150] Starting system monitor
+2022-11-16 22:51:36,562 INFO    SystemMonitor:28837 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-16 22:51:36,563 INFO    HandlerThread:28837 [system_monitor.py:probe():168] Collecting system info
+2022-11-16 22:51:36,563 INFO    SystemMonitor:28837 [interfaces.py:start():168] Started cpu
+2022-11-16 22:51:36,563 DEBUG   HandlerThread:28837 [system_info.py:probe():195] Probing system
+2022-11-16 22:51:36,563 INFO    SystemMonitor:28837 [interfaces.py:start():168] Started disk
+2022-11-16 22:51:36,565 INFO    SystemMonitor:28837 [interfaces.py:start():168] Started gpuapple
+2022-11-16 22:51:36,567 INFO    SystemMonitor:28837 [interfaces.py:start():168] Started memory
+2022-11-16 22:51:36,568 INFO    SystemMonitor:28837 [interfaces.py:start():168] Started network
+2022-11-16 22:51:36,573 DEBUG   HandlerThread:28837 [system_info.py:_probe_git():180] Probing git
+2022-11-16 22:51:36,586 DEBUG   HandlerThread:28837 [system_info.py:_probe_git():188] Probing git done
+2022-11-16 22:51:36,587 DEBUG   HandlerThread:28837 [system_info.py:probe():241] Probing system done
+2022-11-16 22:51:36,587 DEBUG   HandlerThread:28837 [system_monitor.py:probe():177] {'os': 'macOS-13.0.1-arm64-arm-64bit', 'python': '3.10.6', 'heartbeatAt': '2022-11-16T13:51:36.563612', 'startedAt': '2022-11-16T13:51:35.728284', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/A2C_Continuous.py', 'codePath': 'DeepHedging/DeepRL-TensorFlow2-master/A2C/A2C_Continuous.py', 'git': {'remote': 'https://github.com/jun2mun/-_2022-2-.git', 'commit': '0d8ebff6195f33fed2eea6983bec4da2ea9269b2'}, 'email': 'eogns0321@gmail.com', 'root': '/Users/daehungo/Desktop/DataCapstone/github', 'host': 'DAEHUNs-MacBook-Pro.local', 'username': 'daehungo', 'executable': '/Users/daehungo/yes/envs/colab/bin/python', 'cpu_count': 10, 'cpu_count_logical': 10, 'disk': {'total': 460.4317207336426, 'used': 8.226261138916016}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2022-11-16 22:51:36,587 INFO    HandlerThread:28837 [system_monitor.py:probe():178] Finished collecting system info
+2022-11-16 22:51:36,587 INFO    HandlerThread:28837 [system_monitor.py:probe():181] Publishing system info
+2022-11-16 22:51:36,587 DEBUG   HandlerThread:28837 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-11-16 22:51:36,587 DEBUG   HandlerThread:28837 [system_info.py:_save_pip():67] Saving pip packages done
+2022-11-16 22:51:36,587 DEBUG   HandlerThread:28837 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-11-16 22:51:37,447 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/wandb-summary.json
+2022-11-16 22:51:37,447 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/conda-environment.yaml
+2022-11-16 22:51:37,447 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/requirements.txt
+2022-11-16 22:51:38,195 DEBUG   HandlerThread:28837 [system_info.py:_save_conda():86] Saving conda packages done
+2022-11-16 22:51:38,195 INFO    HandlerThread:28837 [system_monitor.py:probe():183] Finished publishing system info
+2022-11-16 22:51:38,211 DEBUG   SenderThread:28837 [sender.py:send():303] send: files
+2022-11-16 22:51:38,211 INFO    SenderThread:28837 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-16 22:51:38,214 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-16 22:51:38,214 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 22:51:38,451 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/conda-environment.yaml
+2022-11-16 22:51:38,451 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/wandb-metadata.json
+2022-11-16 22:51:38,452 DEBUG   SenderThread:28837 [sender.py:send():303] send: telemetry
+2022-11-16 22:51:38,844 DEBUG   SenderThread:28837 [sender.py:send():303] send: exit
+2022-11-16 22:51:38,844 INFO    SenderThread:28837 [sender.py:send_exit():442] handling exit code: 1
+2022-11-16 22:51:38,844 INFO    SenderThread:28837 [sender.py:send_exit():444] handling runtime: 2
+2022-11-16 22:51:38,845 INFO    SenderThread:28837 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 22:51:38,845 INFO    SenderThread:28837 [sender.py:send_exit():450] send defer
+2022-11-16 22:51:38,845 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:38,845 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 0
+2022-11-16 22:51:38,845 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:38,845 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-11-16 22:51:38,845 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 1
+2022-11-16 22:51:38,845 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:38,845 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 1
+2022-11-16 22:51:38,845 INFO    HandlerThread:28837 [system_monitor.py:finish():160] Stopping system monitor
+2022-11-16 22:51:38,869 DEBUG   SystemMonitor:28837 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-16 22:51:38,869 DEBUG   SystemMonitor:28837 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-11-16 22:51:38,869 DEBUG   SystemMonitor:28837 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-11-16 22:51:38,870 INFO    HandlerThread:28837 [interfaces.py:finish():173] Joined cpu
+2022-11-16 22:51:38,870 INFO    HandlerThread:28837 [interfaces.py:finish():173] Joined disk
+2022-11-16 22:51:38,870 INFO    HandlerThread:28837 [interfaces.py:finish():173] Joined gpuapple
+2022-11-16 22:51:38,870 INFO    HandlerThread:28837 [interfaces.py:finish():173] Joined memory
+2022-11-16 22:51:38,870 INFO    HandlerThread:28837 [interfaces.py:finish():173] Joined network
+2022-11-16 22:51:38,870 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:38,870 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-11-16 22:51:38,870 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 2
+2022-11-16 22:51:38,870 DEBUG   SenderThread:28837 [sender.py:send():303] send: telemetry
+2022-11-16 22:51:38,870 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:38,870 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 2
+2022-11-16 22:51:38,870 DEBUG   SenderThread:28837 [sender.py:send():303] send: stats
+2022-11-16 22:51:38,871 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 3
+2022-11-16 22:51:38,871 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:38,871 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 3
+2022-11-16 22:51:38,871 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 4
+2022-11-16 22:51:38,871 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:38,871 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 4
+2022-11-16 22:51:38,871 DEBUG   SenderThread:28837 [sender.py:send():303] send: summary
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 22:51:38,871 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 5
+2022-11-16 22:51:38,871 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:38,871 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 5
+2022-11-16 22:51:38,871 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:38,871 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-11-16 22:51:39,109 INFO    Thread-16 :28837 [upload_job.py:push():143] Uploaded file /var/folders/f0/3bzps_xn38s3vw7rxzzcjt5h0000gn/T/tmpa8jmw3vawandb/1dwhqvnn-wandb-metadata.json
+2022-11-16 22:51:39,130 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 6
+2022-11-16 22:51:39,131 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:39,131 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 6
+2022-11-16 22:51:39,131 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:39,131 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-11-16 22:51:39,457 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/wandb-summary.json
+2022-11-16 22:51:39,457 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/config.yaml
+2022-11-16 22:51:39,457 INFO    Thread-13 :28837 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/output.log
+2022-11-16 22:51:39,852 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 22:51:40,895 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 7
+2022-11-16 22:51:40,896 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 22:51:40,896 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:40,896 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 7
+2022-11-16 22:51:40,897 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:40,897 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-11-16 22:51:40,897 INFO    SenderThread:28837 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-16 22:51:41,467 INFO    SenderThread:28837 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/output.log
+2022-11-16 22:51:41,468 INFO    SenderThread:28837 [dir_watcher.py:finish():392] scan: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files
+2022-11-16 22:51:41,469 INFO    SenderThread:28837 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/requirements.txt requirements.txt
+2022-11-16 22:51:41,469 INFO    SenderThread:28837 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/output.log output.log
+2022-11-16 22:51:41,472 INFO    SenderThread:28837 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/config.yaml config.yaml
+2022-11-16 22:51:41,475 INFO    SenderThread:28837 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/wandb-summary.json wandb-summary.json
+2022-11-16 22:51:41,478 INFO    SenderThread:28837 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/conda-environment.yaml conda-environment.yaml
+2022-11-16 22:51:41,481 INFO    SenderThread:28837 [dir_watcher.py:finish():406] scan save: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/wandb-metadata.json wandb-metadata.json
+2022-11-16 22:51:41,481 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 8
+2022-11-16 22:51:41,484 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:41,485 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 8
+2022-11-16 22:51:41,485 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:41,485 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-11-16 22:51:41,485 INFO    SenderThread:28837 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-16 22:51:42,669 INFO    Thread-19 :28837 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/config.yaml
+2022-11-16 22:51:42,671 INFO    Thread-17 :28837 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/requirements.txt
+2022-11-16 22:51:42,671 INFO    Thread-18 :28837 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/output.log
+2022-11-16 22:51:42,672 INFO    Thread-21 :28837 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/conda-environment.yaml
+2022-11-16 22:51:42,673 INFO    Thread-20 :28837 [upload_job.py:push():143] Uploaded file /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/files/wandb-summary.json
+2022-11-16 22:51:42,880 INFO    Thread-12 (_thread_body):28837 [sender.py:transition_state():463] send defer: 9
+2022-11-16 22:51:42,882 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:42,882 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 9
+2022-11-16 22:51:42,882 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:42,883 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-11-16 22:51:42,883 INFO    SenderThread:28837 [file_pusher.py:join():173] waiting for file pusher
+2022-11-16 22:51:42,883 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 10
+2022-11-16 22:51:42,883 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:42,883 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 10
+2022-11-16 22:51:42,883 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:42,883 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-11-16 22:51:43,339 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 11
+2022-11-16 22:51:43,340 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:43,340 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 11
+2022-11-16 22:51:43,340 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:43,340 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-11-16 22:51:43,340 INFO    SenderThread:28837 [sender.py:transition_state():463] send defer: 12
+2022-11-16 22:51:43,341 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: defer
+2022-11-16 22:51:43,341 DEBUG   SenderThread:28837 [sender.py:send():303] send: final
+2022-11-16 22:51:43,341 INFO    HandlerThread:28837 [handler.py:handle_request_defer():162] handle defer: 12
+2022-11-16 22:51:43,341 DEBUG   SenderThread:28837 [sender.py:send():303] send: footer
+2022-11-16 22:51:43,341 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: defer
+2022-11-16 22:51:43,341 INFO    SenderThread:28837 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-11-16 22:51:43,342 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-16 22:51:43,342 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: server_info
+2022-11-16 22:51:43,342 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: poll_exit
+2022-11-16 22:51:43,343 DEBUG   SenderThread:28837 [sender.py:send_request():317] send_request: server_info
+2022-11-16 22:51:43,345 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: get_summary
+2022-11-16 22:51:43,345 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: sampled_history
+2022-11-16 22:51:43,855 INFO    MainThread:28837 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-11-16 22:51:43,855 INFO    MainThread:28837 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-11-16 22:51:43,855 INFO    MainThread:28837 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-11-16 22:51:43,856 DEBUG   HandlerThread:28837 [handler.py:handle_request():139] handle_request: shutdown
+2022-11-16 22:51:43,856 INFO    HandlerThread:28837 [handler.py:finish():814] shutting down handler
+2022-11-16 22:51:44,346 INFO    WriterThread:28837 [datastore.py:close():279] close: /Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/wandb/run-20221116_225135-3i0zpax1/run-3i0zpax1.wandb
+2022-11-16 22:51:44,857 INFO    SenderThread:28837 [sender.py:finish():1331] shutting down sender
+2022-11-16 22:51:44,857 INFO    SenderThread:28837 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-16 22:51:44,858 INFO    SenderThread:28837 [file_pusher.py:join():173] waiting for file pusher
+2022-11-16 22:51:45,463 INFO    MainThread:28837 [internal.py:handle_exit():78] Internal process exited

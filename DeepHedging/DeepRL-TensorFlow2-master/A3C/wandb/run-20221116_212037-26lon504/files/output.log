@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 239, in <module>
+    main()
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 234, in main
+    agent = Agent(env_name)
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 109, in __init__
+    self.global_actor = Actor(
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 31, in __init__
+    self.model = self.create_model()
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 37, in create_model
+    dense_1 = keras.Dense(32, activation='relu')(state_input)
+AttributeError: module 'keras.api._v2.keras' has no attribute 'Dense'
