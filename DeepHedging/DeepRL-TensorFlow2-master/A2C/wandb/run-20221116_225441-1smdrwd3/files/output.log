@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/A2C_Continuous.py", line 187, in <module>
+    main()
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/A2C_Continuous.py", line 182, in main
+    agent = Agent(env)
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A2C/A2C_Continuous.py", line 101, in __init__
+    self.state_dim = self.env.observation_space.shape[0]
+AttributeError: type object 'PendulumEnv' has no attribute 'observation_space'

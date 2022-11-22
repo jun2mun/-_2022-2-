@@ -29,19 +29,32 @@ class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
         self.current_step = 0
         self.reward = 0
 
+<<<<<<< HEAD
         random_action = np.random.randint(0,3)
         self.action_method(random_action)
+=======
+        self.action_method(1)
+>>>>>>> 652ff0b6de308d20c214478fee68f86f4b72bfc1
 
         return np.array([self.df[self.current_step], self.balance, self.amount])
 
     def step(self, action):
         self.action_method(action)
+<<<<<<< HEAD
         self.current_step += 1
 
         terminated = self.isLoss()
 
         if not terminated:
             self.reward += 1
+=======
+        self.reward = self.getTotalValue()
+        self.current_step += 1
+
+        terminated = self.isLoss()
+        # if not terminated:
+        #     self.reward += 1
+>>>>>>> 652ff0b6de308d20c214478fee68f86f4b72bfc1
 
         if self.current_step == len(self.df) -1:
             terminated = True
@@ -52,8 +65,13 @@ class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
     def action_method(self, action):
         random_percent = float(np.random.rand(1))
         cur_stock = self.df[self.current_step]  # 현재 주가
+<<<<<<< HEAD
         possible_buy_amount = int(self.balance / cur_stock)  # 최대 구매 가능 수량
         possible_sell_amount = self.amount  # 최대 판매 가능
+=======
+        possible_buy_amount = int((self.balance / cur_stock) / 5)  # 최대 구매 가능 수량
+        possible_sell_amount = int(self.amount / 5)  # 최대 판매 가능
+>>>>>>> 652ff0b6de308d20c214478fee68f86f4b72bfc1
 
         if action == 0: #주식 판매
             sell_amount = possible_sell_amount * random_percent

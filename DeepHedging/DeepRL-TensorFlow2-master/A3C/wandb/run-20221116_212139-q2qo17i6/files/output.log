@@ -1,0 +1,532 @@
+WARNING:tensorflow:5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x284749360> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+WARNING:tensorflow:6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x28474bac0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Exception in thread Exception in thread Exception in thread Exception in thread Thread-13Exception in thread Thread-12Thread-15Thread-8Thread-11:
+:
+Exception in thread :
+:
+:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Thread-14Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+:
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Traceback (most recent call last):
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+                  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+Exception in thread     self.run()self.run()self.run()self.run()Thread-7self.run()
+:
+self.train()  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+Traceback (most recent call last):
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+                  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+    self.train()self.train()self.train()self.train()    self.train()
+self.run()
+actor_loss = self.global_actor.train(  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+                      File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+actor_loss = self.global_actor.train(    actor_loss = self.global_actor.train(actor_loss = self.global_actor.train(actor_loss = self.global_actor.train(actor_loss = self.global_actor.train(
+self.train()
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+self.opt.apply_gradients(zip(grads, self.model.trainable_variables))  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+                      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+    self.opt.apply_gradients(zip(grads, self.model.trainable_variables))self.opt.apply_gradients(zip(grads, self.model.trainable_variables))self.opt.apply_gradients(zip(grads, self.model.trainable_variables))self.opt.apply_gradients(zip(grads, self.model.trainable_variables))self.opt.apply_gradients(zip(grads, self.model.trainable_variables))actor_loss = self.global_actor.train(
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+return tf.__internal__.distribute.interim.maybe_merge_call(  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+                  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+        return tf.__internal__.distribute.interim.maybe_merge_call(return tf.__internal__.distribute.interim.maybe_merge_call(return tf.__internal__.distribute.interim.maybe_merge_call(self.opt.apply_gradients(zip(grads, self.model.trainable_variables))return tf.__internal__.distribute.interim.maybe_merge_call(return tf.__internal__.distribute.interim.maybe_merge_call(
+Exception in thread
+Exception in thread   File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+Thread-9  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+Thread-10return fn(strategy, *args, **kwargs):
+                    :
+    Traceback (most recent call last):
+return fn(strategy, *args, **kwargs)return fn(strategy, *args, **kwargs)return fn(strategy, *args, **kwargs)return tf.__internal__.distribute.interim.maybe_merge_call(return fn(strategy, *args, **kwargs)Traceback (most recent call last):
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+return fn(strategy, *args, **kwargs)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+        update_op = distribution.extended.update(                Exception in thread     self.run()self.run()
+update_op = distribution.extended.update(update_op = distribution.extended.update(update_op = distribution.extended.update(return fn(strategy, *args, **kwargs)Thread-6update_op = distribution.extended.update(
+update_op = distribution.extended.update(  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+:
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+Traceback (most recent call last):
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+                          File "/Users/daehungo/yes/envs/colab/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+        self.train()self.train()    return self._update(var, fn, args, kwargs, group)return self._update(var, fn, args, kwargs, group)return self._update(var, fn, args, kwargs, group)return self._update(var, fn, args, kwargs, group)update_op = distribution.extended.update(return self._update(var, fn, args, kwargs, group)
+return self._update(var, fn, args, kwargs, group)
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+self.run()  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+                              File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 229, in run
+actor_loss = self.global_actor.train(actor_loss = self.global_actor.train(return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)    return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)return self._update(var, fn, args, kwargs, group)return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)
+return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+self.train()  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+            result = fn(*args, **kwargs)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+              File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 205, in train
+self.opt.apply_gradients(zip(grads, self.model.trainable_variables))    self.opt.apply_gradients(zip(grads, self.model.trainable_variables))
+    result = fn(*args, **kwargs)result = fn(*args, **kwargs)return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)
+result = fn(*args, **kwargs)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+result = fn(*args, **kwargs)
+result = fn(*args, **kwargs)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+actor_loss = self.global_actor.train(  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+                  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+return func(*args, **kwargs)      File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/DeepRL-TensorFlow2-master/A3C/A3C_Continuous.py", line 67, in train
+    return tf.__internal__.distribute.interim.maybe_merge_call(    return tf.__internal__.distribute.interim.maybe_merge_call(return func(*args, **kwargs)return func(*args, **kwargs)
+    result = fn(*args, **kwargs)return func(*args, **kwargs)
+return func(*args, **kwargs)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+return func(*args, **kwargs)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+self.opt.apply_gradients(zip(grads, self.model.trainable_variables))  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+          File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+        update_op = self._resource_apply_dense(grad, var, **apply_kwargs)          File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 738, in apply_gradients
+return fn(strategy, *args, **kwargs)update_op = self._resource_apply_dense(grad, var, **apply_kwargs)    return fn(strategy, *args, **kwargs)update_op = self._resource_apply_dense(grad, var, **apply_kwargs)
+return func(*args, **kwargs)update_op = self._resource_apply_dense(grad, var, **apply_kwargs)
+    update_op = self._resource_apply_dense(grad, var, **apply_kwargs)
+update_op = self._resource_apply_dense(grad, var, **apply_kwargs)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+return tf.__internal__.distribute.interim.maybe_merge_call(
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+          File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+    update_op = distribution.extended.update(return tf.raw_ops.ResourceApplyAdam(          File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/merge_call_interim.py", line 51, in maybe_merge_call
+return tf.raw_ops.ResourceApplyAdam(update_op = distribution.extended.update(        return tf.raw_ops.ResourceApplyAdam(
+return tf.raw_ops.ResourceApplyAdam(update_op = self._resource_apply_dense(grad, var, **apply_kwargs)
+return tf.raw_ops.ResourceApplyAdam(
+return tf.raw_ops.ResourceApplyAdam(  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+return fn(strategy, *args, **kwargs)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+              File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+    return f(**kwargs)      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 797, in _distributed_apply
+return f(**kwargs)
+    return self._update(var, fn, args, kwargs, group)return f(**kwargs)
+        return f(**kwargs)return self._update(var, fn, args, kwargs, group)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+return tf.raw_ops.ResourceApplyAdam(
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+return f(**kwargs)return f(**kwargs)
+update_op = distribution.extended.update(  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+                  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2633, in update
+    _ops.raise_from_not_ok_status(e, name)return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)_ops.raise_from_not_ok_status(e, name)_ops.raise_from_not_ok_status(e, name)        _ops.raise_from_not_ok_status(e, name)    return f(**kwargs)
+return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)_ops.raise_from_not_ok_status(e, name)
+_ops.raise_from_not_ok_status(e, name)
+return self._update(var, fn, args, kwargs, group)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+                  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3706, in _update
+result = fn(*args, **kwargs)        raise core._status_to_exception(e) from None  # pylint: disable=protected-access    raise core._status_to_exception(e) from None  # pylint: disable=protected-accessraise core._status_to_exception(e) from None  # pylint: disable=protected-accessraise core._status_to_exception(e) from None  # pylint: disable=protected-access
+_ops.raise_from_not_ok_status(e, name)result = fn(*args, **kwargs)
+raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+raise core._status_to_exception(e) from None  # pylint: disable=protected-access  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+tensorflow.python.framework.errors_impl
+tensorflow.python.framework.errors_implreturn self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)tensorflow.python.framework.errors_impltensorflow.python.framework.errors_impl
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+.tensorflow.python.framework.errors_impl    .
+..tensorflow.python.framework.errors_impl        InvalidArgumentError.return func(*args, **kwargs)InvalidArgumentError  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3712, in _update_non_slot
+InvalidArgumentErrorInvalidArgumentError.raise core._status_to_exception(e) from None  # pylint: disable=protected-accessreturn func(*args, **kwargs): InvalidArgumentError
+: :     : InvalidArgumentError
+Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]:   File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]result = fn(*args, **kwargs)Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]: tensorflow.python.framework.errors_impl  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]
+Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]    .
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/autograph/impl/api.py", line 595, in wrapper
+update_op = self._resource_apply_dense(grad, var, **apply_kwargs)InvalidArgumentErrorupdate_op = self._resource_apply_dense(grad, var, **apply_kwargs)
+:
+return func(*args, **kwargs)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+          File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/optimizer_v2.py", line 776, in apply_grad_to_update_var
+return tf.raw_ops.ResourceApplyAdam(return tf.raw_ops.ResourceApplyAdam(
+      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+update_op = self._resource_apply_dense(grad, var, **apply_kwargs)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/keras/optimizers/optimizer_v2/adam.py", line 177, in _resource_apply_dense
+    return f(**kwargs)
+return tf.raw_ops.ResourceApplyAdam(      File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+return f(**kwargs)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/util/tf_export.py", line 412, in wrapper
+          File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+_ops.raise_from_not_ok_status(e, name)return f(**kwargs)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+_ops.raise_from_not_ok_status(e, name)  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/ops/gen_training_ops.py", line 1427, in resource_apply_adam
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+    _ops.raise_from_not_ok_status(e, name)
+  File "/Users/daehungo/yes/envs/colab/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 7209, in raise_from_not_ok_status
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+raise core._status_to_exception(e) from None  # pylint: disable=protected-accesstensorflow.python.framework.errors_impl
+.tensorflow.python.framework.errors_implInvalidArgumentErrorraise core._status_to_exception(e) from None  # pylint: disable=protected-access.:
+InvalidArgumentErrorCannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]tensorflow.python.framework.errors_impl:
+.Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]InvalidArgumentError
+: Cannot assign a device for operation ResourceApplyAdam: Could not satisfy explicit device specification '/job:localhost/replica:0/task:0/device:GPU:0' because no supported kernel for GPU devices is available.
+Colocation Debug Info:
+Colocation group had the following types and supported devices:
+Root Member(assigned_device_name_index_=1 requested_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' assigned_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' resource_device_name_='/job:localhost/replica:0/task:0/device:GPU:0' supported_device_types_=[CPU] possible_devices_=[]
+ResourceApplyAdam: CPU
+_Arg: GPU CPU
+Colocation members, user-requested devices, and framework assigned devices, if any:
+  var (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  m (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  v (_Arg)  framework assigned device=/job:localhost/replica:0/task:0/device:GPU:0
+  ResourceApplyAdam (ResourceApplyAdam) /job:localhost/replica:0/task:0/device:GPU:0
+Op: ResourceApplyAdam
+Node attrs: use_locking=true, T=DT_DOUBLE, use_nesterov=false
+Registered kernels:
+  device='XLA_CPU_JIT'; T in [DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_BFLOAT16, DT_COMPLEX128, DT_HALF]
+  device='GPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_HALF]
+  device='CPU'; T in [DT_BFLOAT16]
+  device='CPU'; T in [DT_FLOAT]
+  device='CPU'; T in [DT_DOUBLE]
+  device='CPU'; T in [DT_COMPLEX64]
+  device='CPU'; T in [DT_COMPLEX128]
+	 [[{{node ResourceApplyAdam}}]] [Op:ResourceApplyAdam]
+1/1 [==============================] - 0s 209ms/step
+1/1 [==============================] - 0s 228ms/step
+1/1 [==============================] - 0s 171ms/step
+1/1 [==============================] - 0s 161ms/step
+1/1 [==============================] - 0s 178ms/step
+1/1 [==============================] - 0s 164ms/step
+1/1 [==============================] - 0s 203ms/step
+1/1 [==============================] - 0s 193ms/step
+1/1 [==============================] - 0s 226ms/step
+1/1 [==============================] - 0s 240ms/step
+1/1 [==============================] - 0s 25ms/step
+1/1 [==============================] - 0s 24ms/step
+1/1 [==============================] - 0s 20ms/step
+1/1 [==============================] - 0s 22ms/step
+1/1 [==============================] - 0s 21ms/step
+1/1 [==============================] - 0s 39ms/step
+1/1 [==============================] - 0s 23ms/step
+1/1 [==============================] - 0s 17ms/step
+1/1 [==============================] - 0s 19ms/step
+1/1 [==============================] - 0s 28ms/step
+1/1 [==============================] - 0s 20ms/step
+1/1 [==============================] - 0s 17ms/step
+1/1 [==============================] - 0s 21ms/step
+1/1 [==============================] - 0s 20ms/step
+1/1 [==============================] - 0s 24ms/step
+1/1 [==============================] - 0s 12ms/step
+1/1 [==============================] - 0s 22ms/step
+1/1 [==============================] - 0s 15ms/step
+1/1 [==============================] - 0s 24ms/step
+1/1 [==============================] - 0s 20ms/step
+1/1 [==============================] - 0s 20ms/step
+1/1 [==============================] - 0s 27ms/step
+1/1 [==============================] - 0s 25ms/step
+1/1 [==============================] - 0s 19ms/step
+1/1 [==============================] - 0s 19ms/step
+1/1 [==============================] - 0s 28ms/step
+1/1 [==============================] - 0s 15ms/step
+1/1 [==============================] - 0s 27ms/step
+1/1 [==============================] - 0s 14ms/step
+1/1 [==============================] - 0s 18ms/step
+1/1 [==============================] - 0s 14ms/step
+1/1 [==============================] - 0s 15ms/step
+1/1 [==============================] - 0s 20ms/step
+1/1 [==============================] - 0s 18ms/step
+1/1 [==============================] - 0s 19ms/step
+1/1 [==============================] - 0s 24ms/step
+1/1 [==============================] - 0s 86ms/step
+1/1 [==============================] - 0s 23ms/step
+1/1 [==============================] - 0s 18ms/step
+1/1 [==============================] - 0s 22ms/step
+1/1 [==============================] - 0s 138ms/step
+1/1 [==============================] - 0s 139ms/step
+1/1 [==============================] - 0s 130ms/step
+1/1 [==============================] - 0s 192ms/step
+1/1 [==============================] - 0s 127ms/step
+1/1 [==============================] - 0s 21ms/step
+1/1 [==============================] - 0s 25ms/step
+1/1 [==============================] - 0s 141ms/step
+1/1 [==============================] - 0s 169ms/step
+1/1 [==============================] - 0s 23ms/step
+1/1 [==============================] - 0s 159ms/step
+1/1 [==============================] - 0s 121ms/step
+1/1 [==============================] - 0s 26ms/step
+1/1 [==============================] - 0s 24ms/step
+1/1 [==============================] - 0s 97ms/step
+1/1 [==============================] - 0s 16ms/step
+1/1 [==============================] - 0s 14ms/step
+1/1 [==============================] - 0s 19ms/step
+1/1 [==============================] - 0s 13ms/step
+1/1 [==============================] - 0s 17ms/step
