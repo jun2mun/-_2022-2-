@@ -2,10 +2,6 @@ import yfinance as yf
 from pandas_datareader import data as pdr
 import math
 
-import A3C_Continuous
-#from agent import custom_agent
-# from test import custom_agent
-
 yf.pdr_override()
 
 # ======== 데이터셋 구성 ======== #
@@ -17,7 +13,7 @@ T = 31
 STOCK_DATA = pdr.get_data_yahoo(STOCK_CODE, start=start_date, end=end_date)["Close"]
 stockArray = STOCK_DATA.to_numpy()
 M = math.floor(len(stockArray)/(T))
-S = stockArray[:M*(T)].reshape(M,T)
+S = stockArray[:M*(T)].reshape(M,T) #(9,31)
 balance = 10000
 
 STOCK_CODE = "^KS11"
@@ -30,13 +26,7 @@ M2 = math.floor(len(stockArray)/(T2))
 S2 = stockArray[:M2*(T2)].reshape(M2,T2)
 balance = 10000
 
-from A3C_Continuous import main
-<<<<<<< Updated upstream
-main(S[0],S2[0])
-#custom_agent(S[0],S2[0])
-=======
-#main(S[0],S2[0])
-# custom_agent(S[0],S2[0])
-if __name__ == '__main__':
-    A3C_Continuous.main(S[0], 10000)
->>>>>>> Stashed changes
+##############################  시작 코드 ###############################
+
+from A3C import A3C
+A3C.main(S[0],S2[0])

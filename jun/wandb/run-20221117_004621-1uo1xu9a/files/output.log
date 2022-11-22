@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/daehungo/Desktop/DataCapstone/github/jun/A3C_Continuous.py", line 243, in <module>
-    main()
-TypeError: main() missing 2 required positional arguments: 'S' and 'balance'

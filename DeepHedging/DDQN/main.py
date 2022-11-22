@@ -1,6 +1,6 @@
 from env_trade import TradeEnv
 from ddqn import DQNAgent
-from DDQN.utils.getStocks import getStocks,getTotalStocks
+from utils.getStocks import getStocks,getTotalStocks
 import numpy as np
 import matplotlib.pyplot as plt
 
