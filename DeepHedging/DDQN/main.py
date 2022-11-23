@@ -1,6 +1,6 @@
 from env_trade import TradeEnv
 from ddqn import DQNAgent
-from DDQN.utils.getStocks import getStocks,getTotalStocks
+from utils.getStocks import getStocks,getTotalStocks
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -12,7 +12,7 @@ state_size = env.observation_space.shape[0]
 action_size = env.action_space.n
 
 agent = DQNAgent(state_size, action_size)
-agent.load("./save/hedge1000-ddqn_1.2.h5")
+#agent.load("./save/hedge1000-ddqn_1.2.h5")
 done = False
 batch_size = 32
 rewards_avg = []
@@ -47,11 +47,12 @@ for e in range(EPISODES):
 
     if (e+1) % 20 == 0:
         # plt.plot(np.arange(0, len(reward_history), 10), reward_history[::10])
+        print(np.arange(0, (e+1), 10))
         plt.plot(np.arange(0, (e+1), 10), rewards_avg)
         plt.xlabel('Episode')
         plt.ylabel('Total Reward')
         plt.show()
-        agent.save("./save/hedge{}-ddqn_1.2.h5".format(e+1 + 1000))
+        agent.save("./Deephedging/DDQN/save/hedge{}-ddqn_1.2.h5".format(e+1 + 1000)) # junbeom environment
 
 
 

@@ -1,10 +1,9 @@
 import numpy as np
-import gym
+from gym import Env
 from gym import spaces
-from typing import Union
 
 
-class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
+class TradeEnv(Env):
 
     start_balance = 1000000
 
@@ -17,7 +16,7 @@ class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
 
 
         # self.action_space = spaces.Box(low=0 , high= 2 , shape=(1,), dtype=np.int32)
-        self.action_space = spaces.Discrete(2)
+        self.action_space = spaces.Box(low=-1, high=1, shape=(1,), dtype=np.float32)
 
         # Observations
         self.observation_space = spaces.Box(

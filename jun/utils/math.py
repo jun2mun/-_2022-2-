@@ -26,26 +26,3 @@ def monte_carlo_paths(S_0, time_to_expiry, sigma, drift, seed, n_sims, n_timeste
     # See Advanced Monte Carlo methods for barrier and related exotic options by Emmanuel Gobet
     S_T = S * np.cumprod(np.exp((r-sigma**2/2)*dt+sigma*np.sqrt(dt)*stdnorm_random_variates), axis=1)
     return np.reshape(np.transpose(np.c_[np.ones(n_sims)*S_0, S_T]), (n_timesteps+1, n_sims, 1))
-
-
-
-def compute_avg_return(environment, policy, num_episodes):
-
-  total_return = 0.0
-  for _ in range(num_episodes):
-
-    time_step = environment.reset() # timestamp 형식 반환
-    episode_return = 0.0
-    print("-------------------iter start---------------")
-    while not time_step.is_last():
-      action_step = policy.action(time_step)
-      time_step = environment.step(action_step.action)
-      print(f'validate : {action_step.action}')
-      episode_return += time_step.reward
-
-      #print(episode_return)
-    print("----------------------------")
-    total_return += episode_return
-  avg_return = total_return / num_episodes
-  #if avg_return < 6000 : print("avg_return : {}".format(avg_return))
-  return avg_return.numpy()[0]

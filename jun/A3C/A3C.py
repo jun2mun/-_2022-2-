@@ -169,8 +169,10 @@ class WorkerAgent(Thread):
 
     def train(self):
         global CUR_EPISODE
-        y_list = []
-        while self.max_episodes >= CUR_EPISODE:
+        rewards_avg = []
+        reward_history = []
+        #while self.max_episodes >= CUR_EPISODE:
+        for CUR_EPISODE in range(self.max_episodes):
             state_batch = []
             action_batch = []
             reward_batch = []
@@ -178,14 +180,14 @@ class WorkerAgent(Thread):
 
             state = self.env.reset()
 
-            while not done:
+            #while not done:
+            for time in range(60):
                 # self.env.render()
                 action = self.actor.get_action(state)
                 #action = np.clip(action, -self.action_bound, self.action_bound)
                 action = int(np.clip(action, 0, self.action_bound))
 
                 next_state, reward, done, _ = self.env.step(action)
-                self.env.render()
                 state = np.reshape(state, [1, self.state_dim])
                 action = np.reshape(action, [1, 1])
                 next_state = np.reshape(next_state, [1, self.state_dim])
@@ -223,22 +225,32 @@ class WorkerAgent(Thread):
 
                 episode_reward += reward[0][0]
                 state = next_state[0]
+            
 
             print('EP{} EpisodeReward={}'.format(CUR_EPISODE, episode_reward))
-            y_list.append(episode_reward)
+            reward_history.append(episode_reward)
             #wandb.log({'Reward': episode_reward})
-            CUR_EPISODE += 1
-        
 
-        plt.plot(CUR_EPISODE,reward_batch)
-        plt.show()
+
+            if (CUR_EPISODE+1) % 10 == 0:
+                rewards_avg.append(np.average(reward_history))
+                reward_history.clear()
+
+            if (CUR_EPISODE+1) % 20 == 0:
+                print(np.arange(0, (CUR_EPISODE+1), 10))
+                plt.plot(np.arange(0, (CUR_EPISODE+1), 10), rewards_avg)
+                plt.xlabel('Episode')
+                plt.ylabel('Total Reward')
+                plt.show()
+            CUR_EPISODE += 1
 
     def run(self):
         self.train()
 
 import matplotlib.pyplot  as plt
-from env.env_continuous import TradeEnv
-def main(S,balance):
-    env = TradeEnv(S,balance)
+from env.env_trade import TradeEnv
+
+def main(S):
+    env = TradeEnv(S)
     agent = Agent(env)
     agent.train()
