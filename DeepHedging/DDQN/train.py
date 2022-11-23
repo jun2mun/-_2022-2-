@@ -16,6 +16,5 @@ plt_interval = 60
 model = DDqnModel()
 
 model.setTrainSet(STOCK_CODE, start_date, end_date)
-model.predict("./save/^KS11_900-ddqn.h5")
-# model.train(num_episodes, batch_size, update_interval, save_interval, plt_interval,
-#             is_load=False, load_file_name=None, save_file_name=STOCK_CODE)
+model.train(num_episodes, batch_size, update_interval, save_interval, plt_interval,
+            is_load=False, load_file_name=None, save_file_name=STOCK_CODE)

@@ -10,25 +10,24 @@ class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
 
     def __init__(self, df):
         self.balance = TradeEnv.start_balance  # 100000
-        self.df = df  # ex : (31,1)
+        self.df = df  # ex : (T,1)
         self.amount = 0
         self.current_step = 0
         self.reward = 0
 
 
         # self.action_space = spaces.Box(low=0 , high= 2 , shape=(1,), dtype=np.int32)
-        self.action_space = spaces.Discrete(2)
+        self.action_space = spaces.Discrete(3)
 
         # Observations
         self.observation_space = spaces.Box(
-            low=-TradeEnv.start_balance, high=-TradeEnv.start_balance, shape=(3,), dtype=np.float32)
+            low=-TradeEnv.start_balance, high=TradeEnv.start_balance, shape=(3,))
 
     def reset(self):
         self.balance = TradeEnv.start_balance  # 100000
         self.amount = 0
         self.current_step = 0
         self.reward = 0
-
         self.action_method(1)
 
         return np.array([self.df[self.current_step], self.balance, self.amount])
@@ -62,6 +61,8 @@ class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
             buy_amount = possible_buy_amount * random_percent
             self.balance -= buy_amount * cur_stock
             self.amount += buy_amount
+        elif action == 2: #그대로 유지
+            pass
 
 
     def getTotalValue(self):
