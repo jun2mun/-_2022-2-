@@ -1,9 +1,13 @@
 #%%
 from utiltool.getStocks import getStocks, getTotalStocks
+from env.env_trade import TradeEnv
 
 # ======== 데이터셋 구성 ======== #
 #S = getTotalStocks()
 S = getStocks()
-5
+
 from A3C import A3C
-A3C.main(S[0])
+env = TradeEnv(S[0])
+model = A3C.Agent(env)
+
+model.train()

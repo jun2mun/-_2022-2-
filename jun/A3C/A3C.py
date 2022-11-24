@@ -1,17 +1,14 @@
 #%%
-#import wandb
 import tensorflow as tf
 from tensorflow import keras
-
-
 
 import gym
 import argparse
 import numpy as np
 from threading import Thread
 from multiprocessing import cpu_count
+import matplotlib.pyplot  as plt
 tf.keras.backend.set_floatx('float64')
-#wandb.init(name='A3C', project="deep-rl-tf2")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--gamma', type=float, default=0.99)
@@ -42,20 +39,20 @@ class Actor:
         std_output = keras.layers.Dense(self.action_dim, activation='softplus')(dense_2)
         return tf.keras.models.Model(state_input, [mu_output, std_output])
 
-    def get_action(self, state):
+    def get_action(self, state): # act 함수
         state = np.reshape(state, [1, self.state_dim])
         mu, std = self.model.predict(state)
         mu, std = mu[0], std[0]
         return np.random.normal(mu, std, size=self.action_dim) # (mu ~ std)
 
-    def log_pdf(self, mu, std, action):
+    def log_pdf(self, mu, std, action): # pdf 함수
         std = tf.clip_by_value(std, self.std_bound[0], self.std_bound[1]) # std값을 bound[0] bound[1] 범위 안으로 만듬.
         var = std ** 2
         log_policy_pdf = -0.5 * (action - mu) ** 2 / \
             var - 0.5 * tf.math.log(var * 2 * np.pi)
         return tf.reduce_sum(log_policy_pdf, 1, keepdims=True)
 
-    def compute_loss(self, mu, std, actions, advantages):
+    def compute_loss(self, mu, std, actions, advantages): # loss 함수
         log_policy_pdf = self.log_pdf(mu, std, actions)
         loss_policy = log_policy_pdf * advantages
         return tf.reduce_sum(-loss_policy)
@@ -73,7 +70,6 @@ class Actor:
 
     def save(self, name):
         self.model.save_weights(name)
-
 
 class Critic:
     def __init__(self, state_dim):
@@ -108,7 +104,6 @@ class Critic:
 
     def save(self, name):
         self.model.save_weights(name)
-
 
 class Agent:
     def __init__(self, env):
@@ -167,11 +162,17 @@ class WorkerAgent(Thread):
                            self.action_bound, self.std_bound)
         self.critic = Critic(self.state_dim)
 
-        self.actor.model.load_weights('C:\\Users\\owner\\Desktop\\경희대학교\\2022-2학기\\데캡톤\\프로젝트\\jun\\save\\hedge11000-A3C_actor_1.2.h5')
-        self.critic.model.load_weights('C:\\Users\\owner\\Desktop\\경희대학교\\2022-2학기\\데캡톤\\프로젝트\\jun\\save\\hedge11000-A3C_crtic_1.2.h5')
+        #self.actor.model.load_weights('C:\\Users\\owner\\Desktop\\경희대학교\\2022-2학기\\데캡톤\\프로젝트\\jun\\save\\hedge11000-A3C_actor_1.2.h5')
+        #self.critic.model.load_weights('C:\\Users\\owner\\Desktop\\경희대학교\\2022-2학기\\데캡톤\\프로젝트\\jun\\save\\hedge11000-A3C_crtic_1.2.h5')
+
+        self.update_target_model()
         
-        #self.actor.model.set_weights(self.global_actor.model.get_weights())
-        #self.critic.model.set_weights(self.global_critic.model.get_weights())
+    def update_target_model(self):
+        self.actor.model.set_weights(self.global_actor.model.get_weights())
+        self.critic.model.set_weights(self.global_critic.model.get_weights())
+
+        #print(f'global_actor model weights : {self.global_actor.model.get_weights()}')
+        #print(f'global_crtici model weights : {self.global_critic.model.get_weights()}')
 
     def n_step_td_target(self, rewards, next_v_value, done):
         td_targets = np.zeros_like(rewards)
@@ -197,13 +198,13 @@ class WorkerAgent(Thread):
         CUR_EPISODE = 0
         rewards_avg = []
         reward_history = []
+
         #while self.max_episodes >= CUR_EPISODE:
         for CUR_EPISODE in range(self.max_episodes):
             state_batch = []
             action_batch = []
             reward_batch = []
             episode_reward, done = 0, False
-
             state = self.env.reset()
 
             #while not done:
@@ -211,15 +212,13 @@ class WorkerAgent(Thread):
             for time in range(MAX_EP_STEP):
                 print(f'======= my id is : {self.id} and cur step is : {CUR_EPISODE} =======')
                 
-                action = self.actor.get_action(state)
+                action = self.actor.get_action(state) # 1. action
+                print(f'my action is {action}')
                 #action = np.clip(action, -self.action_bound, self.action_bound)
-                action = int(np.clip(action, 0, self.action_bound))
+                action = np.clip(action, 0, self.action_bound)
 
 
-                next_state, reward, done, _ = self.env.step(action)
-
-                if time == MAX_EP_STEP -1 :
-                    done = True
+                next_state, reward, done, _ = self.env.step(action) # 2. step 
 
                 state = np.reshape(state, [1, self.state_dim])
                 action = np.reshape(action, [1, 1])
@@ -231,27 +230,31 @@ class WorkerAgent(Thread):
                 reward_batch.append(reward)
 
                 episode_reward += reward[0][0]
+
+                #if time == MAX_EP_STEP -1 :
+                #    done = True
+                state = next_state[0]
+
+
                 if len(state_batch) >= args.update_interval or done:
 
                     states = self.list_to_batch(state_batch)
                     actions = self.list_to_batch(action_batch)
                     rewards = self.list_to_batch(reward_batch)
 
-                    next_v_value = self.critic.model.predict(next_state) # (1,1)
+                    next_v_value = self.critic.model.predict(next_state.astype(np.float32)) # (1,1)
+                    #print(f' v_value = {next_v_value}')
                     td_targets = self.n_step_td_target(
                         (rewards+8)/8, next_v_value, done)
                     advantages = td_targets - self.critic.model.predict(states)
-
+                    
                     actor_loss = self.global_actor.train(
                         states, actions, advantages)
                     critic_loss = self.global_critic.train(
                         states, td_targets)
-
-                    self.actor.model.set_weights(
-                        self.global_actor.model.get_weights())
-                    self.critic.model.set_weights(
-                        self.global_critic.model.get_weights())
-
+                    #print(f'{td_targets} {advantages} {actor_loss}')
+                    self.update_target_model() # 가중치 업데이트
+                    
                     state_batch = []
                     action_batch = []
                     reward_batch = []
@@ -262,35 +265,34 @@ class WorkerAgent(Thread):
                     reward_history.append(episode_reward)
                     break
                 
-                state = next_state[0]
                     
             if (CUR_EPISODE+1) % 10 == 0:
                 rewards_avg.append(np.average(reward_history))
                 print(rewards_avg)
                 reward_history.clear()
 
-            if (CUR_EPISODE+1) % 10000 == 0:
+            if (CUR_EPISODE+1) % 1000 == 0:
                 self.actor.model.save_weights(
                         "./jun/save/hedge{}-A3C_actor_1.2.h5".format(CUR_EPISODE+1 + 1000))
                 self.critic.model.save_weights(
                         "./jun/save/hedge{}-A3C_crtic_1.2.h5".format(CUR_EPISODE+1 + 1000))
 
-            if (CUR_EPISODE+1) % 20 == 0:
+            if (CUR_EPISODE+1) % 50 == 0:
                 print(np.arange(0, (CUR_EPISODE+1), 10))
                 plt.plot(np.arange(0, (CUR_EPISODE+1), 10), rewards_avg)
                 plt.xlabel('Episode')
                 plt.ylabel('Total Reward')
                 plt.show()
-            CUR_EPISODE += 1
 
-    def run(self):
+    def save(self,filepath):
+        self.actor.save(filepath) # Actor 가중치 저장
+        self.critic.save(filepath) # Critic 가중치 저장
+
+    def load(self,filepath):
+        self.actor.load(filepath) # Actor 가중치 저장
+        self.critic.load(filepath) # Critic 가중치 저장
+
+    def run(self): # Thread 실행하기 위한 run 함수(thread.start())
         self.train()
 
 
-import matplotlib.pyplot  as plt
-from env.env_trade import TradeEnv
-
-def main(S):
-    env = TradeEnv(S)
-    agent = Agent(env)
-    agent.train()
