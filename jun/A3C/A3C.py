@@ -1,3 +1,4 @@
+#%%
 #import wandb
 import tensorflow as tf
 from tensorflow import keras
@@ -67,6 +68,12 @@ class Actor:
         self.opt.apply_gradients(zip(grads, self.model.trainable_variables))
         return loss
 
+    def load(self, name):
+        self.model.load_weights(name)
+
+    def save(self, name):
+        self.model.save_weights(name)
+
 
 class Critic:
     def __init__(self, state_dim):
@@ -96,6 +103,12 @@ class Critic:
         self.opt.apply_gradients(zip(grads, self.model.trainable_variables))
         return loss
 
+    def load(self, name):
+        self.model.load_weights(name)
+
+    def save(self, name):
+        self.model.save_weights(name)
+
 
 class Agent:
     def __init__(self, env):
@@ -112,25 +125,35 @@ class Agent:
         self.global_critic = Critic(self.state_dim)
         self.num_workers = cpu_count()
 
-    def train(self, max_episodes=50):
+    def train(self, max_episodes=100000):
         workers = []
+        global id
+        id = 0
 
+        env = self.env
+        env.setid(1)
+        worker =WorkerAgent(env, self.global_actor, self.global_critic, max_episodes,id)
+        worker.start()
+        '''
         for i in range(self.num_workers):
             #env = gym.make(self.env_name)
             env = self.env
+            env.setid(i)
+            id +=1
             workers.append(WorkerAgent(
-                env, self.global_actor, self.global_critic, max_episodes))
+                env, self.global_actor, self.global_critic, max_episodes,id))
 
         for worker in workers:
             worker.start()
 
         for worker in workers:
             worker.join()
-
+        '''
 
 class WorkerAgent(Thread):
-    def __init__(self, env, global_actor, global_critic, max_episodes):
+    def __init__(self, env, global_actor, global_critic, max_episodes,id):
         Thread.__init__(self)
+        self.id = id
         self.env = env
         self.state_dim = self.env.observation_space.shape[0]
         self.action_dim = self.env.action_space.shape[0]
@@ -144,8 +167,11 @@ class WorkerAgent(Thread):
                            self.action_bound, self.std_bound)
         self.critic = Critic(self.state_dim)
 
-        self.actor.model.set_weights(self.global_actor.model.get_weights())
-        self.critic.model.set_weights(self.global_critic.model.get_weights())
+        self.actor.model.load_weights('C:\\Users\\owner\\Desktop\\경희대학교\\2022-2학기\\데캡톤\\프로젝트\\jun\\save\\hedge11000-A3C_actor_1.2.h5')
+        self.critic.model.load_weights('C:\\Users\\owner\\Desktop\\경희대학교\\2022-2학기\\데캡톤\\프로젝트\\jun\\save\\hedge11000-A3C_crtic_1.2.h5')
+        
+        #self.actor.model.set_weights(self.global_actor.model.get_weights())
+        #self.critic.model.set_weights(self.global_critic.model.get_weights())
 
     def n_step_td_target(self, rewards, next_v_value, done):
         td_targets = np.zeros_like(rewards)
@@ -168,7 +194,7 @@ class WorkerAgent(Thread):
         return batch
 
     def train(self):
-        global CUR_EPISODE
+        CUR_EPISODE = 0
         rewards_avg = []
         reward_history = []
         #while self.max_episodes >= CUR_EPISODE:
@@ -181,13 +207,20 @@ class WorkerAgent(Thread):
             state = self.env.reset()
 
             #while not done:
-            for time in range(60):
-                # self.env.render()
+            MAX_EP_STEP = 30
+            for time in range(MAX_EP_STEP):
+                print(f'======= my id is : {self.id} and cur step is : {CUR_EPISODE} =======')
+                
                 action = self.actor.get_action(state)
                 #action = np.clip(action, -self.action_bound, self.action_bound)
                 action = int(np.clip(action, 0, self.action_bound))
 
+
                 next_state, reward, done, _ = self.env.step(action)
+
+                if time == MAX_EP_STEP -1 :
+                    done = True
+
                 state = np.reshape(state, [1, self.state_dim])
                 action = np.reshape(action, [1, 1])
                 next_state = np.reshape(next_state, [1, self.state_dim])
@@ -197,7 +230,9 @@ class WorkerAgent(Thread):
                 action_batch.append(action)
                 reward_batch.append(reward)
 
+                episode_reward += reward[0][0]
                 if len(state_batch) >= args.update_interval or done:
+
                     states = self.list_to_batch(state_batch)
                     actions = self.list_to_batch(action_batch)
                     rewards = self.list_to_batch(reward_batch)
@@ -222,19 +257,23 @@ class WorkerAgent(Thread):
                     reward_batch = []
                     td_target_batch = []
                     advatnage_batch = []
-
-                episode_reward += reward[0][0]
+                    
+                    print('ID {} EP{} EpisodeReward={}'.format(self.id,CUR_EPISODE, episode_reward))
+                    reward_history.append(episode_reward)
+                    break
+                
                 state = next_state[0]
-            
-
-            print('EP{} EpisodeReward={}'.format(CUR_EPISODE, episode_reward))
-            reward_history.append(episode_reward)
-            #wandb.log({'Reward': episode_reward})
-
-
+                    
             if (CUR_EPISODE+1) % 10 == 0:
                 rewards_avg.append(np.average(reward_history))
+                print(rewards_avg)
                 reward_history.clear()
+
+            if (CUR_EPISODE+1) % 10000 == 0:
+                self.actor.model.save_weights(
+                        "./jun/save/hedge{}-A3C_actor_1.2.h5".format(CUR_EPISODE+1 + 1000))
+                self.critic.model.save_weights(
+                        "./jun/save/hedge{}-A3C_crtic_1.2.h5".format(CUR_EPISODE+1 + 1000))
 
             if (CUR_EPISODE+1) % 20 == 0:
                 print(np.arange(0, (CUR_EPISODE+1), 10))
@@ -246,6 +285,7 @@ class WorkerAgent(Thread):
 
     def run(self):
         self.train()
+
 
 import matplotlib.pyplot  as plt
 from env.env_trade import TradeEnv

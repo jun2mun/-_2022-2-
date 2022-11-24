@@ -8,6 +8,7 @@ class TradeEnv(Env):
     start_balance = 1000000
 
     def __init__(self, df):
+        self.id = 'default'
         self.balance = TradeEnv.start_balance  # 100000
         self.df = df  # ex : (31,1)
         self.amount = 0
@@ -34,17 +35,17 @@ class TradeEnv(Env):
 
     def step(self, action):
         self.action_method(action)
+        print(f'current id =  {self.id} , current_step = {self.current_step}')
         self.reward = self.getTotalValue()
-        self.current_step += 1
+        if int(self.current_step) == int(len(self.df)-1):
+            terminated = True
+            return np.array([self.df[self.current_step], self.balance, self.amount]), self.reward, terminated, False
+        else:
+            self.current_step += 1
 
         terminated = self.isLoss()
         # if not terminated:
         #     self.reward += 1
-
-        if self.current_step == len(self.df) -1:
-            terminated = True
-
-
         return np.array([self.df[self.current_step], self.balance, self.amount]), self.reward, terminated, False
 
     def action_method(self, action):
@@ -62,9 +63,17 @@ class TradeEnv(Env):
             self.balance -= buy_amount * cur_stock
             self.amount += buy_amount
 
+    def setid(self,id):
+        self.id = id
+
+    def render(self):
+        return self.current_step
 
     def getTotalValue(self):
         return self.amount * self.df[self.current_step] + self.balance
+
+
+
 
     def isLoss(self):
         # 손실율 = (비용 - 현재주가 * (전량 매도)) / 현재 주가
