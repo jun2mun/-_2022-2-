@@ -6,8 +6,8 @@ from env.env_trade import TradeEnv
 #S = getTotalStocks()
 S = getStocks()
 
-from A3C import A3C
+from A2C import A2C
 env = TradeEnv(S[0])
-model = A3C.Agent(env)
+model = A2C.Agent(env)
 
 model.train()

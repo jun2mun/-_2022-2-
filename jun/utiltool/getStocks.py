@@ -12,7 +12,9 @@ def getStocks():
     T = 31
 
     STOCK_DATA = pdr.get_data_yahoo(STOCK_CODE, start=start_date, end=end_date)["Close"]
+
     stockArray = STOCK_DATA.to_numpy()
+    
     M = math.floor(len(stockArray) / (T))
     S = stockArray[:M * (T)].reshape(M, T)
     return S

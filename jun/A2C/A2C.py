@@ -1,135 +1,198 @@
-import os
-import numpy as np
-import gym
-import matplotlib.pyplot as plt
+#%%
 import tensorflow as tf
-from keras.models import Model, load_model
-from keras.layers import Input, Dense, BatchNormalization, Dropout
-from keras.optimizers import RMSprop
-from keras.losses import mean_squared_error, SparseCategoricalCrossentropy, CategoricalCrossentropy
-from jun.A2C.ac2_model import a2c_Model
+from tensorflow import keras
 
-class A2CAgent:
-    def __init__(self, model, lr=5e-3, gamma=0.95, value_c=0.5, entropy_c=1e-4):
-        #hyperparameters for the training process
-        self.gamma = gamma
-        self.lr = lr
-        self.value_c = value_c
-        self.entropy_c = entropy_c
+import gym
+import argparse
+import numpy as np
+import matplotlib.pyplot as plt
 
-        #loading a2c model
-        self.model = model
-        #we compile the network with 2 custom losses, one for the logits(actor) and one for the value function(critic)
-        self.model.network.compile(optimizer=RMSprop(lr=self.lr), loss=[self.logits_loss, self.valuefn_loss])
+tf.keras.backend.set_floatx('float64')
 
-    def train(self, env, batch_size=64, updates=250):
-        #defining storage for all the variables
-        actions = np.empty((batch_size, ), dtype=np.int32)
-        rewards, dones, values = np.empty((3, batch_size))
-        observations = np.empty((batch_size,)+env.observation_space.shape)
 
-        ep_rewards = [0.0]
-        next_obs = env.reset()
-        #env.render()
-        for update in range(100):#updates):
-            for step in range(batch_size):
-                observations[step]=next_obs.copy()
-                print(f'action[step] = {actions[step]}')
-                actions[step], values[step] = self.model.action_value(np.expand_dims(observations[step,:], axis=0))
-                next_obs, rewards[step], dones[step], _ = env.step(actions[step])
-                #env.render()
+parser = argparse.ArgumentParser()
+parser.add_argument('--gamma', type=float, default=0.99)
+parser.add_argument('--update_interval', type=int, default=5)
+parser.add_argument('--actor_lr', type=float, default=0.0005)
+parser.add_argument('--critic_lr', type=float, default=0.001)
 
-                ep_rewards[-1]+=rewards[step]
-                if dones[step]:
-                    ep_rewards.append(0.0)
-                    next_obs = env.reset()
-                    #env.render()
-                    print("Episode: %03d || Reward: %03d" % (len(ep_rewards)-1,ep_rewards[-2]))
+args = parser.parse_args()
 
-            _, next_value = self.model.action_value(next_obs[None,:])  #finding the estimated value function of the last observation
-            returns, advs = self.return_advantages(rewards, dones, values, next_value) #finding the estimated returns and the advantages
-            acts_and_advs = np.concatenate([actions[:,None], advs[:,None]], axis=-1) #passing actions and advantages together for the loss function
-            losses=self.model.network.train_on_batch(observations, [acts_and_advs, returns])
-            print("[%d/%d] Losses: %s" % (update+1, update, losses))
-            self.model.network.save('models/model'+str(update)+'.h5')
 
-        return ep_rewards
+class Actor:
+    def __init__(self, state_dim, action_dim, action_bound, std_bound):
+        self.state_dim = state_dim
+        self.action_dim = action_dim
+        self.action_bound = action_bound
+        self.std_bound = std_bound
+        self.model = self.create_model()
+        self.opt = tf.keras.optimizers.Adam(args.actor_lr)
 
-    def test_model(self, env, network, episodes):
-        self.model.network = load_model(network, custom_objects={'logits_loss':self.logits_loss, 'valuefn_loss':self.valuefn_loss})
-        episode_rewards=[]
-        for episode in range(episodes):
-            next_obs = env.reset()
-            env.render()
-            done=False
-            episode_rewards.append(0.0)
+    def create_model(self):
+        state_input = keras.layers.Input((self.state_dim,))
+        dense_1 = keras.layers.Dense(32, activation='relu')(state_input)
+        dense_2 = keras.layers.Dense(32, activation='relu')(dense_1)
+        out_mu = keras.layers.Dense(self.action_dim, activation='tanh')(dense_2)
+        mu_output = keras.layers.Lambda(lambda x: x * self.action_bound)(out_mu)
+        std_output = keras.layers.Dense(self.action_dim, activation='softplus')(dense_2)
+        return tf.keras.models.Model(state_input, [mu_output, std_output])
+
+    def get_action(self, state):
+        state = np.reshape(state, [1, self.state_dim])
+        mu, std = self.model.predict(state.astype(np.float32))
+        print(mu,std)
+        mu, std = mu[0], std[0]
+        return np.random.normal(mu, std, size=self.action_dim)
+
+    def log_pdf(self, mu, std, action):
+        std = tf.clip_by_value(std, self.std_bound[0], self.std_bound[1])
+        var = std ** 2
+        log_policy_pdf = -0.5 * (action - mu) ** 2 / \
+            var - 0.5 * tf.math.log(var * 2 * np.pi)
+        return tf.reduce_sum(log_policy_pdf, 1, keepdims=True)
+
+    def compute_loss(self, mu, std, actions, advantages):
+        log_policy_pdf = self.log_pdf(mu, std, actions)
+        loss_policy = log_policy_pdf * advantages
+        return tf.reduce_sum(-loss_policy)
+
+    def train(self, states, actions, advantages):
+        with tf.GradientTape() as tape:
+            mu, std = self.model(states.astype(np.float32), training=True)
+            loss = self.compute_loss(mu, std, actions, advantages)
+        grads = tape.gradient(loss, self.model.trainable_variables)
+        self.opt.apply_gradients(zip(grads, self.model.trainable_variables))
+        return loss
+
+
+class Critic:
+    def __init__(self, state_dim):
+        self.state_dim = state_dim
+        self.model = self.create_model()
+        self.opt = tf.keras.optimizers.Adam(args.critic_lr)
+
+    def create_model(self):
+        return tf.keras.Sequential([
+            keras.layers.Input((self.state_dim,)),
+            keras.layers.Dense(32, activation='relu'),
+            keras.layers.Dense(32, activation='relu'),
+            keras.layers.Dense(16, activation='relu'),
+            keras.layers.Dense(1, activation='linear')
+        ])
+
+    def compute_loss(self, v_pred, td_targets):
+        mse = tf.keras.losses.MeanSquaredError()
+        return mse(td_targets, v_pred)
+
+    def train(self, states, td_targets):
+        with tf.GradientTape() as tape:
+            v_pred = self.model(states.astype(np.float32), training=True)
+            assert v_pred.shape == td_targets.shape
+            loss = self.compute_loss(v_pred, tf.stop_gradient(td_targets))
+        grads = tape.gradient(loss, self.model.trainable_variables)
+        self.opt.apply_gradients(zip(grads, self.model.trainable_variables))
+        return loss
+
+
+class Agent:
+    def __init__(self, env):
+        self.env = env
+        self.state_dim = self.env.observation_space.shape[0]
+        self.action_dim = self.env.action_space.shape[0]
+        self.action_bound = self.env.action_space.high[0]
+        self.std_bound = [1e-2, 1.0]
+        
+        self.actor = Actor(self.state_dim, self.action_dim,
+                           self.action_bound, self.std_bound)
+        self.critic = Critic(self.state_dim)
+
+    def td_target(self, reward, next_state, done):
+        if done:
+            return reward
+        v_value = self.critic.model.predict(
+            np.reshape(next_state, [1, self.state_dim]).astype(np.float32))
+        return np.reshape(reward + args.gamma * v_value[0], [1, 1])
+
+    def advatnage(self, td_targets, baselines):
+        return td_targets - baselines
+
+    def list_to_batch(self, list):
+        batch = list[0]
+        for elem in list[1:]:
+            batch = np.append(batch, elem, axis=0)
+        return batch
+
+    def train(self, max_episodes=1000):
+        rewards_avg = []
+        reward_history = []
+        for ep in range(max_episodes):
+            state_batch = []
+            action_batch = []
+            td_target_batch = []
+            advatnage_batch = []
+            episode_reward, done = 0, False
+
+            state = self.env.reset()
+
             while not done:
-                action,value = self.model.action_value(np.expand_dims(next_obs, axis=0))
-                next_obs, reward, done, _ = env.step(action)
-                env.render()
-                episode_rewards[-1]+=reward
-                if done:
-                    episode_rewards.append(0.0)
-                    print("Episode Rewards: "+str(episode_rewards[-2]))
-        plt.style.use('seaborn')
-        plt.plot(np.arange(0, len(episode_rewards), 10), episode_rewards[::10])
-        plt.xlabel('Episode')
-        plt.ylabel('Total Reward')
-        plt.show()
-     
+                # self.env.render()
+                action = self.actor.get_action(state)
+                if action <1 and action >-1:
+                    print(f'action is {action}')
+                action = np.clip(action, -self.action_bound, self.action_bound)
+                #print(f'action is {action}')
 
-    def return_advantages(self, rewards, dones, values, next_value):
-        #function to return the advantages for all the timesteps
-        returns = np.append(np.zeros_like(rewards), next_value, axis=-1)
-        for t in reversed(range(rewards.shape[0])):
-            if t>61:
-                continue
-            #loop to find the return for all the timesteps
-            #the value function estimate for all the timsesteps is made using MC value function estimate
-            #however, if the last observation is not the end of the episode then there is some break
-            returns[t] = rewards[t] + self.gamma*returns[t+1]*(1-dones[t])
-        returns = returns[:-1]
-        #subtracting baseline to reduce variance
-        advantages = returns - values
-        return returns, advantages
+                next_state, reward, done, _ = self.env.step(action)
 
-    def valuefn_loss(self, returns, value):
-        #custom valuefn_loss
-        #defined as mse between the estimated return and the valuefn predicted by the network
-        #used to update value function network parameters
-        return self.value_c * mean_squared_error(returns, value)
+                state = np.reshape(state, [1, self.state_dim])
+                action = np.reshape(action, [1, self.action_dim])
+                next_state = np.reshape(next_state, [1, self.state_dim])
+                reward = np.reshape(reward, [1, 1])
 
-    def logits_loss(self, actions_and_advantages, logits):
-        #function to calculate the policy gradients
-        actions, advantages = tf.split(actions_and_advantages, 2, axis=-1)
-        #sparse categorical crossentropy can be used to calculate loss between stochastic policy predictions and the true action taken 
-        #instead of taking gradients of log probabilites of the predictions, I've calculated the loss between the policy and the true action directly
-        weighted_sparse_ce = SparseCategoricalCrossentropy(from_logits=True) 
-        actions = tf.cast(actions, tf.int32)
-        #we also give advantages as sample_weights 
-        policy_loss = weighted_sparse_ce(actions, logits, sample_weight=advantages)
-        probs = tf.nn.softmax(logits)
-        cce = CategoricalCrossentropy()
-        entropy_loss = cce(probs, probs)
-        return policy_loss - self.entropy_c * entropy_loss
+                td_target = self.td_target((reward+8)/8, next_state, done)
+                advantage = self.advatnage(
+                    td_target, self.critic.model.predict(state.astype(np.float32)))
 
-from jun.env.env_cartpole import TradeEnv
-def custom_agent(S,balance):
-  #env = gym.make('CartPole-v0')
-  #env.render()
-  env = TradeEnv(S,balance)
-  eval_env = TradeEnv(S,balance)
+                state_batch.append(state)
+                action_batch.append(action)
+                td_target_batch.append(td_target)
+                advatnage_batch.append(advantage)
 
-  model = a2c_Model(env.observation_space.shape[0],env.action_space.n)
-  agent = A2CAgent(model)
+                if len(state_batch) >= args.update_interval or done:
+                    states = self.list_to_batch(state_batch)
+                    actions = self.list_to_batch(action_batch)
+                    td_targets = self.list_to_batch(td_target_batch)
+                    advantages = self.list_to_batch(advatnage_batch)
 
-  rewards_history = agent.train(env, 64, 1000)
-  print("Finished training. Testing...")
-  agent.test_model(env, 'models/model999.h5', 100)
+                    actor_loss = self.actor.train(states, actions, advantages)
+                    critic_loss = self.critic.train(states, td_targets)
 
-  plt.style.use('seaborn')
-  plt.plot(np.arange(0, len(rewards_history), 10), rewards_history[::10])
-  plt.xlabel('Episode')
-  plt.ylabel('Total Reward')
-  plt.show()
-  print("stop")
+                    state_batch = []
+                    action_batch = []
+                    td_target_batch = []
+                    advatnage_batch = []
+
+                episode_reward += reward[0][0]
+                state = next_state[0]
+                reward_history.append(episode_reward)
+            print('EP{} EpisodeReward={}'.format(ep, episode_reward))
+            
+                    
+            if (ep+1) % 10 == 0:
+                rewards_avg.append(np.average(reward_history))
+                print(rewards_avg)
+                reward_history.clear()
+
+            if (ep+1) % 1000 == 0:
+                self.actor.model.save_weights(
+                        "./jun/save/hedge{}-A3C_actor_1.2.h5".format(ep+1 + 1000))
+                self.critic.model.save_weights(
+                        "./jun/save/hedge{}-A3C_crtic_1.2.h5".format(ep+1 + 1000))
+
+            if (ep+1) % 20 == 0:
+                print(np.arange(0, (ep+1), 10))
+                plt.plot(np.arange(0, (ep+1), 10), rewards_avg)
+                plt.xlabel('Episode')
+                plt.ylabel('Total Reward')
+                plt.show()
+                print("plot")

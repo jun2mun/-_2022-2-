@@ -41,7 +41,7 @@ class Actor:
 
     def get_action(self, state): # act 함수
         state = np.reshape(state, [1, self.state_dim])
-        mu, std = self.model.predict(state)
+        mu, std = self.model.predict(state.astype(np.float32))
         mu, std = mu[0], std[0]
         return np.random.normal(mu, std, size=self.action_dim) # (mu ~ std)
 
@@ -59,7 +59,7 @@ class Actor:
 
     def train(self, states, actions, advantages):
         with tf.GradientTape() as tape:
-            mu, std = self.model(states, training=True)
+            mu, std = self.model(states.astype(np.float32), training=True)
             loss = self.compute_loss(mu, std, actions, advantages)
         grads = tape.gradient(loss, self.model.trainable_variables)
         self.opt.apply_gradients(zip(grads, self.model.trainable_variables))
@@ -92,7 +92,7 @@ class Critic:
 
     def train(self, states, td_targets):
         with tf.GradientTape() as tape:
-            v_pred = self.model(states, training=True)
+            v_pred = self.model(states.astype(np.float32), training=True)
             assert v_pred.shape == td_targets.shape
             loss = self.compute_loss(v_pred, tf.stop_gradient(td_targets))
         grads = tape.gradient(loss, self.model.trainable_variables)
@@ -215,7 +215,8 @@ class WorkerAgent(Thread):
                 action = self.actor.get_action(state) # 1. action
                 print(f'my action is {action}')
                 #action = np.clip(action, -self.action_bound, self.action_bound)
-                action = np.clip(action, 0, self.action_bound)
+
+                action = np.clip(action, -self.action_bound, self.action_bound)
 
 
                 next_state, reward, done, _ = self.env.step(action) # 2. step 
@@ -246,7 +247,7 @@ class WorkerAgent(Thread):
                     #print(f' v_value = {next_v_value}')
                     td_targets = self.n_step_td_target(
                         (rewards+8)/8, next_v_value, done)
-                    advantages = td_targets - self.critic.model.predict(states)
+                    advantages = td_targets - self.critic.model.predict(states.astype(np.float32))
                     
                     actor_loss = self.global_actor.train(
                         states, actions, advantages)
