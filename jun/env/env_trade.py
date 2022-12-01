@@ -47,6 +47,7 @@ class TradeEnv(Env):
         if self.current_step == len(self.df) -2:
         #    self.reward = self.gamma_reward
             terminated = True
+            print(f'reward is {self.reward}')
         
         self.current_step +=1
        

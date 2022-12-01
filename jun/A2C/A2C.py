@@ -40,8 +40,8 @@ class Actor:
     def get_action(self, state):
         state = np.reshape(state, [1, self.state_dim])
         mu, std = self.model.predict(state.astype(np.float32))
-        print(mu,std)
         mu, std = mu[0], std[0]
+        print(f'std is {std}')
         return np.random.normal(mu, std, size=self.action_dim)
 
     def log_pdf(self, mu, std, action):
@@ -137,13 +137,14 @@ class Agent:
             while not done:
                 # self.env.render()
                 action = self.actor.get_action(state)
+                action = np.clip(action, -self.action_bound, self.action_bound)
                 if action <1 and action >-1:
                     print(f'action is {action}')
-                action = np.clip(action, -self.action_bound, self.action_bound)
-                #print(f'action is {action}')
+                #print(f'action is : {action}')
 
                 next_state, reward, done, _ = self.env.step(action)
 
+                print(f'next_state : {next_state} \n reward : {reward}')
                 state = np.reshape(state, [1, self.state_dim])
                 action = np.reshape(action, [1, self.action_dim])
                 next_state = np.reshape(next_state, [1, self.state_dim])
@@ -183,11 +184,11 @@ class Agent:
                 print(rewards_avg)
                 reward_history.clear()
 
-            if (ep+1) % 1000 == 0:
+            if (ep+1) % 100 == 0:
                 self.actor.model.save_weights(
-                        "./jun/save/hedge{}-A3C_actor_1.2.h5".format(ep+1 + 1000))
+                        "./jun/saves/hedge{}-A3C_actor_1.2.h5".format(ep+1 + 1000))
                 self.critic.model.save_weights(
-                        "./jun/save/hedge{}-A3C_crtic_1.2.h5".format(ep+1 + 1000))
+                        "./jun/saves/hedge{}-A3C_crtic_1.2.h5".format(ep+1 + 1000))
 
             if (ep+1) % 20 == 0:
                 print(np.arange(0, (ep+1), 10))
