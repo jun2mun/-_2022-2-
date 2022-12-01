@@ -1,7 +1,10 @@
+from dataclasses import dataclass
+
 import numpy as np
 import gym
 from gym import spaces
 from typing import Union
+
 
 
 class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
@@ -10,7 +13,7 @@ class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
 
     def __init__(self, df):
         self.balance = TradeEnv.start_balance  # 100000
-        self.df = df  # ex : (T,1)
+        self.df = df  # ex : (T,11)
         self.amount = 0
         self.current_step = 0
         self.reward = 0
@@ -21,7 +24,7 @@ class TradeEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
 
         # Observations
         self.observation_space = spaces.Box(
-            low=-TradeEnv.start_balance, high=TradeEnv.start_balance, shape=(3,))
+            low=-TradeEnv.start_balance * 100, high=TradeEnv.start_balance * 100, shape=(11,))
 
     def reset(self):
         self.balance = TradeEnv.start_balance  # 100000

@@ -25,7 +25,7 @@ class DDqnModel:
         state_size = env.observation_space.shape[0]
         action_size = env.action_space.n
         agent = DQNAgent(state_size, action_size)
-        history = [TradeEnv.start_balance]
+        history = []
 
 
         # agent.load("./save/^KS11_900-ddqn.h5")

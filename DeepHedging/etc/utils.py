@@ -23,7 +23,7 @@ def monte_carlo_paths(S_0, time_to_expiry, sigma, drift, seed, n_sims, n_timeste
     S = S_0
     dt = time_to_expiry / stdnorm_random_variates.shape[1]
     r = drift
-    # See Advanced Monte Carlo methods for barrier and related exotic options by Emmanuel Gobet
+    # See Advanced Monte Carlo methods.py for barrier and related exotic options by Emmanuel Gobet
     S_T = S * np.cumprod(np.exp((r-sigma**2/2)*dt+sigma*np.sqrt(dt)*stdnorm_random_variates), axis=1)
     return np.reshape(np.transpose(np.c_[np.ones(n_sims)*S_0, S_T]), (n_timesteps+1, n_sims, 1))
 
