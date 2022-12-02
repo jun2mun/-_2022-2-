@@ -1,6 +1,6 @@
 #%%
 from utiltool.getStocks import getStocks, getTotalStocks
-from env.env_trade import TradeEnv
+from environment.env import TradeEnv
 
 
 
@@ -13,11 +13,11 @@ os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
 
 # ======== 데이터셋 구성 ======== #
-#S = getTotalStocks()
+from utiltool.getStocks import getStockDataToTrain
 S = getStocks()
 
-from A2C import A2C
+from model.A2C import Agent
 env = TradeEnv(S[0])
-model = A2C.Agent(env)
+model = Agent(env)
 
 model.train()
