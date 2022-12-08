@@ -1,3 +1,5 @@
+import datetime
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -8,12 +10,16 @@ from src.how_it_works import how_it_works
 from src.methods import evaluate_model
 from src.agent import Agent
 from src.utils import add_technical_features, load_data, results_df, plot_trades, get_portfolio_stats, plot_benchmark, \
-  plot_benchmark2
+  plot_benchmark2, load_data2
 
+@st.cache
+def load_data_2(symbol, window_size):
+  data_ = add_technical_features(load_data2(symbol), window=window_size).sort_values(by=['Date'], ascending=True)
+  return data_
 
 @st.cache
 def load_data_(symbol, window_size):
-  data_ = add_technical_features(load_data(f'data/{symbol}.csv'), window = window_size).sort_values(by=['Date'], ascending=True)
+  data_ = add_technical_features(load_data(f'data/{symbol}.csv'), window=window_size).sort_values(by=['Date'], ascending=True)
   return data_
 
 @st.cache
@@ -28,8 +34,8 @@ def evaluate(agent, test_data, window_size, verbose = True):
   return result, history, shares
 
 def sidebar(index):
-  start_date = st.sidebar.date_input('Start', index[0])
-  end_date = st.sidebar.date_input('End', index[-1])
+  start_date = st.sidebar.date_input('Start', index[0], min_value=index[0])
+  end_date = st.sidebar.date_input('End', index[-1], max_value=index[-1])
   window_size = st.sidebar.slider('Window Size', 1, 30, 10)
   return start_date, end_date, window_size
 
@@ -50,7 +56,8 @@ def get_heuristic_results(symbol, data, window_size=10):
 
 # Streamlit App
 st.title('DeepRL Trader')
-st.subheader('Model uses Double Deep Q Network to generate a policy of optimal trades')
+st.header("DDQN 강화학습 모델 이용한 최적의 투자 전략 생성")
+st.subheader('2022년 2학기 데이터분석캡스톤디자인 - F팀')
 
 symbols = ['AAPL', 'AMZN', 'FB', 'GOOG', 'IBM','JNJ', 'NFLX', 'SPY', 'TSLA']
 symbol = st.sidebar.selectbox('Stock Symbol:', symbols)
@@ -58,14 +65,14 @@ symbol = st.sidebar.selectbox('Stock Symbol:', symbols)
 index = load_data_(symbol, 10).index
 start_date, end_date, window_size = sidebar(index)
 submit = st.sidebar.button('Run')
+submit2 = st.sidebar.button('Test')
 if st.sidebar.checkbox('How Does This Work?'):
   how_it_works()
 
 
-
-if submit:
+if submit2:
   model_name = symbol
-  data = load_data_(symbol, window_size)
+  data = load_data_2(symbol, window_size)
   filtered_data = filter_data_by_date(data, start_date, end_date)
 
   agent = load_model(filtered_data.shape[1], model_name = model_name)
@@ -127,3 +134,19 @@ if submit:
 
   st.subheader('Heuristic')
   st.write(heuristic_results)
+
+
+
+if submit: #TEST
+  model_name = symbol
+  data = load_data_(symbol, window_size)
+  filtered_data = filter_data_by_date(data, start_date, end_date)
+
+  agent = load_model(filtered_data.shape[1], model_name = model_name)
+  profit, history, shares = evaluate(agent, filtered_data, window_size = window_size, verbose = False)
+  results = results_df(filtered_data.price, shares, starting_value = 1_000)
+  cum_return, avg_daily_returns, std_daily_returns, sharpe_ratio = get_portfolio_stats(results.Port_Vals)
+
+  st.write(f'### Cumulative Return for {symbol}: {np.around(cum_return * 100, 2)}%')
+  fig = plot_trades(filtered_data, results.Shares, symbol)
+  st.plotly_chart(fig)

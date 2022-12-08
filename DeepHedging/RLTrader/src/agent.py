@@ -46,8 +46,8 @@ class Agent:
 
 
   def load(self):
-    model = load_model(f"models/{self.model_name}", custom_objects = self.custom_objects, compile=False)
-    model.compile(optimizer = self.optimizer, loss = self.loss())
+    model = load_model(f"models/{self.model_name}", custom_objects=self.custom_objects, compile=False)
+    model.compile(optimizer=self.optimizer, loss=self.loss())
     return model
 
   def save(self, episode):

@@ -1,3 +1,4 @@
+import yfinance as yf
 import datetime as dt
 import math
 import logging
@@ -68,6 +69,27 @@ def load_data(path):
 
   temp = temp.loc[:, ['adjusted_close', 'high', 'close', 'open', 'low', 'volume']]
   return temp
+
+def load_data2(symbol):
+  data = yf.download(symbol)
+
+  data.rename(columns={f'Adj Close': 'adjusted_close'}, inplace=True)
+  data.columns = map(str.lower, data.columns)
+
+  # if "Date" in data.columns:
+  #     data.index = data["Date"]
+  #     data.index = pd.to_datetime(data.index, infer_datetime_format=True)
+  #     data.drop('Date', axis = 1, inplace = True)
+  #
+  # else:
+  #     data.index = data['timestamp']
+  #     data.index = pd.to_datetime(data.index, infer_datetime_format=True)
+  #     data.index.name = 'Date'
+  #     data.drop('timestamp', axis = 1, inplace = True)
+
+  data = data.loc[:, ['adjusted_close', 'high', 'close', 'open', 'low', 'volume']]
+  return data
+
 
 def add_technical_features(data, window, fillna = True):
   inds = indicators_dict(data, window = window)

@@ -20,7 +20,7 @@ def how_it_works():
   st.subheader('Reinforcement Learning Primer')
 
   st.write('We will frame market trading in a reinforcement learning context.')
-  rl_diagram = Image.open('../public/rl_diagram.png')
+  rl_diagram = Image.open('./public/rl_diagram.png')
   st.image(rl_diagram, caption='Reinforcement Learning Process', use_column_width=True)
 
   st.markdown('1. The Agent observes the environment, in the form of a state \n 2. Based on that state, the Agent takes a certain action based upon a policy \n 3. For that given action, and state, the Agent receives a reward from the environment. \n 4. The action mutates the environment to transition to a new state. \n 5. Repeat.')
@@ -32,12 +32,12 @@ def how_it_works():
   st.write('Instead of storing a massive lookup table, we can instead approximate Q(s,a) with neural networks, named a Deep Q Network (DQN)')
 
 
-  dqn = Image.open('../public/dqn.png')
+  dqn = Image.open('./public/dqn.png')
   st.image(dqn, caption = 'Using a Deep Q Network can approximate Q(s,a)', use_column_width = True)
 
   st.write('In 2015, Google DeepMind showed that in stochastic environments, Q-learning and DQN tends to overestimate and learn very poorly. From a high level perspective, these overestimations tend to result from a positive bias due to taking the maximum expected action value. Hasselt, et.al proposed using a double estimator to construct DQN and showed that the Double DQN (DDQN) converged to a more optimal policy and tended to estimate the true value more closely.')
 
-  estimate = Image.open('../public/ddqn_estimate.png')
+  estimate = Image.open('./public/ddqn_estimate.png')
   st.image(estimate, use_column_width = True, caption = 'DQN tends to overestimate action values')
 
   st.subheader('Data Process')
@@ -48,7 +48,7 @@ def how_it_works():
     data_ = add_technical_features(load_data(f'data/{symbol}.csv'), window = window_size).sort_values(by=['Date'], ascending=True)
     return data_
 
-  data = pd.read_csv('../data/GOOG.csv')
+  data = pd.read_csv('./data/GOOG.csv')
   st.dataframe(data.head())
   st.markdown('From the above data example, feature generation occurs.\n Technical indicators are derived from fundamental price and volume in the categories of:')
   st.markdown('* Trend \n * Momentum \n* Volatility \n* Volume')
