@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/A3C/main.py", line 6, in <module>
-    agent = Agent(env)
-  File "/Users/daehungo/Desktop/DataCapstone/github/DeepHedging/A3C/agent.py", line 11, in __init__
-    self.action_dim = env.action_space.shape[0]
-IndexError: tuple index out of range
