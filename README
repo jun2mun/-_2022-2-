@@ -4,13 +4,16 @@ PYTHON == 3.9.0
 ### Training
 
 To train the model, use the following command:
-```shell
+
 $ python3 train.py --train data/GOOG.csv --valid GOOG_2018.csv --episode-count 50 --window-size 10
-```
+
 
 ### Evaluation
 
 To evaluate the given model, use the following command:
-```shell
+
 $ python3 evaluate.py --eval data/GOOG.csv --model-name GOOG --window-size 10 --verbose True
-```
+
+
+### 데모 영상
+
