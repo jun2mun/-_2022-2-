@@ -16,4 +16,4 @@ $ python3 evaluate.py --eval data/GOOG.csv --model-name GOOG --window-size 10 --
 
 
 ### 데모 영상
-
+데모영상.mp4 참조
